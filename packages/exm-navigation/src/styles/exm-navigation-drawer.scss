@@ -1,0 +1,29 @@
+:host {
+  display: block;
+  height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+mwc-drawer {
+  --mdc-drawer-width: 240px;
+}
+
+@media screen and (min-width: 961px) {
+  :host {
+    padding-left: 0;
+  }
+  mwc-drawer {
+    margin-left: 88px;
+  }
+}
+
+@media screen and (max-width: 961px) {
+  :host {
+    padding-left: 0;
+  }
+  mwc-drawer {
+    margin-left: 0;
+    --mdc-drawer-width: 319px;
+  }
+}

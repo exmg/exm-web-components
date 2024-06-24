@@ -1,0 +1,22 @@
+@use '@material/web/dialog/internal/dialog-styles';
+
+[slot='headline'] {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+[showing-fullscreen] [slot='headline'] {
+  flex-direction: row;
+}
+
+.headline {
+  flex: 1;
+  display: block;
+  text-align: left;
+}
+
+exm-upload,
+::slotted(exm-upload) {
+  width: 460px;
+}

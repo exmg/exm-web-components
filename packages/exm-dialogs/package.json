@@ -1,0 +1,44 @@
+{
+  "name": "@exm/exm-dialogs",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "module": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./exm-dialog-confirm.js": "./src/exm-dialog-confirm.js",
+    "./exm-dialog-form.js": "./src/exm-dialog-form.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:exmg/exm-web-components.git",
+    "directory": "packages/exm-dialogs"
+  },
+  "files": [
+    "**/*.scss",
+    "**/*.js",
+    "**/*.d.ts"
+  ],
+  "homepage": "https://github.com/exmg/exmachina-web-components",
+  "license": "MIT",
+  "dependencies": {
+    "@exm/exm-button": "file:../exm-button",
+    "@exm/exm-form": "file:../exm-form",
+    "@exmg/lit-base": "^2.0.1",
+    "@polymer/iron-form": "^3.0.0",
+    "@polymer/paper-dialog": "^3.0.0",
+    "@polymer/paper-dialog-scrollable": "^3.0.0",
+    "lit": "^3.0.0",
+    "tslib": "^2.6.2"
+  },
+  "devDependencies": {
+    "@exmg/lit-cli": "1.1.13",
+    "codemirror": "^5.54.0"
+  },
+  "scripts": {
+    "build:styles": "exmg-lit-cli sass -f \"./**/*.scss\""
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

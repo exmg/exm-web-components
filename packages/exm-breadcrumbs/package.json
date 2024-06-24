@@ -1,0 +1,43 @@
+{
+  "name": "@exm/exm-breadcrumbs",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "module": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./exm-breadcrumbs.js": "./src/exm-breadcrumbs.js"
+  },
+  "dependencies": {
+    "@exmg/lit-base": "^2.0.1",
+    "@material/typography": "^14.0.0",
+    "lit": "^3.0.0",
+    "tslib": "^2.6.2"
+  },
+  "devDependencies": {
+    "@exmg/lit-cli": "1.1.13"
+  },
+  "keywords": [
+    "web-components",
+    "lit",
+    "button"
+  ],
+  "files": [
+    "**/*.scss",
+    "**/*.js",
+    "**/*.d.ts"
+  ],
+  "homepage": "https://github.com/exmg/exmachina-web-components",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:exmg/exm-web-components.git",
+    "directory": "packages/exm-breadcrumbs"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build:styles": "exmg-lit-cli sass -f \"./**/*.scss\""
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

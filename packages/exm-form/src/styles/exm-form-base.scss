@@ -1,0 +1,79 @@
+:host {
+  display: block;
+
+  --_exm-form-content-margin-left: var(--exm-form-content-margin-left, 0);
+  --_exm-form-container-margin-top: var(--exm-form-container-margin-top, 1rem);
+  --_exm-form-container-margin-bottom: var(--exm-form-container-margin-bottom, 1rem);
+  --_exm-form-divider-margin-top: var(--exm-form-divider-margin-top, 2rem);
+
+  // Aside
+  --_exm-form-aside-font-size: var(--exm-form-aside-font-size, 0.875rem);
+  --_exm-form-aside-line-height: var(--exm-form-aside-line-height, 1.25rem);
+  --_exm-form-aside-letter-spacing: var(--exm-form-aside-letter-spacing, 0.0142857143em);
+  --_exm-form-aside-font-weight: var(--exm-form-aside-font-weight, 400);
+  --_exm-form-aside-margin-left: var(--exm-form-aside-margin-left, 1rem);
+  --_exm-form-aside-margin-right: var(--exm-form-aside-margin-right, 5rem);
+  --_exm-form-aside-min-width: var(--exm-form-aside-min-width, 180px);
+}
+
+.aside {
+  line-height: var(--_exm-form-aside-line-height);
+  font-size: var(--_exm-form-aside-font-size);
+  letter-spacing: var(--_exm-form-aside-letter-spacing);
+  font-weight: var(--_exm-form-aside-font-weight);
+  color: var(--_exm-form-aside-color, var(--md-sys-color-on-surface));
+  border-left: 1px solid var(--md-sys-color-outline-variant);
+  box-sizing: border-box;
+  margin-left: var(--_exm-form-aside-margin-left);
+  margin-right: var(--_exm-form-aside-margin-right);
+  min-height: 2rem;
+  padding-left: 1rem;
+  vertical-align: top;
+  height: 100%;
+  min-width: var(--_exm-form-aside-min-width);
+  flex: 0;
+}
+
+.aside.empty {
+  display: none;
+}
+
+.content,
+.container {
+  display: flex;
+}
+.content {
+  flex: 1;
+}
+
+.container {
+  margin-top: var(--_exm-form-container-margin-top);
+  margin-bottom: var(--_exm-form-container-margin-bottom);
+}
+
+.actions {
+  display: flex;
+  padding: 8px 4px;
+  justify-content: flex-end;
+}
+
+.actions > * {
+  margin-right: 8px;
+}
+
+.divider {
+  margin-top: var(--_exm-form-divider-margin-top);
+}
+
+.content {
+  margin-left: var(--_exm-form-content-margin-left);
+}
+
+.form-error {
+  background-color: var(--_exm-form-error-background, var(--md-sys-color-error-container, red));
+  color: var(--_exm-form-error-color, var(--md-sys-color-on-error-container, white));
+}
+
+.form-error > div {
+  padding: 1rem;
+}

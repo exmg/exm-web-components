@@ -1,0 +1,7 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  --_exm-navigation-rail-nav-width: var(--exm-navigation-rail-nav-width, 88px);
+  width: var(--_exm-navigation-rail-nav-width);
+  margin-top: 20px;
+}

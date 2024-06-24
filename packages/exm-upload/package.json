@@ -1,0 +1,53 @@
+{
+  "name": "@exm/exm-upload",
+  "version": "1.0.0",
+  "dependencies": {
+    "@exm/exm-button": "file:../exm-button",
+    "@exm/exm-collapsed": "file:../exm-collapsed",
+    "@exm/exm-dialogs": "file:../exm-dialogs",
+    "@exmg/lit-base": "^2.0.1",
+    "@material/web": "^1.3.0",
+    "cropperjs": "^1.5.13",
+    "lit": "^3.0.0",
+    "tslib": "^2.6.2"
+  },
+  "files": [
+    "**/*.scss",
+    "**/*.js",
+    "**/*.d.ts"
+  ],
+  "keywords": [
+    "web-components",
+    "lit-element",
+    "upload"
+  ],
+  "type": "module",
+  "main": "index.js",
+  "module": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./exm-upload.js": "./src/exm-upload.js",
+    "./exm-upload-item.js": "./src/exm-upload-item.js",
+    "./exm-upload-drop-area.js": "./src/exm-upload-drop-area.js",
+    "./exm-upload-input.js": "./src/exm-upload-input.js",
+    "./exm-upload-crop.js": "./src/exm-upload-crop.js",
+    "./exm-dialog-upload.js": "./src/exm-dialog-upload.js"
+  },
+  "homepage": "https://github.com/exmg/exmachina-web-components",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:exmg/exm-web-components.git",
+    "directory": "packages/exm-upload"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@exmg/lit-cli": "1.1.13"
+  },
+  "scripts": {
+    "build:styles": "exmg-lit-cli sass -f \"./**/*.scss\""
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "9cc37bdc36b4117c1192349443f4eec03d62fa50"
+}

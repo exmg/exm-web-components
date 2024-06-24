@@ -1,0 +1,46 @@
+:host {
+  display: flex;
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    margin: 0;
+    padding: 20px;
+    border-bottom: 1px solid
+      var(--exm-form-drawer-header-separator-color, var(--mdc-theme-on-surface, rgba(#02182b, 0.1)));
+
+    .title {
+      font-size: 1.4rem;
+    }
+  }
+
+  .form-elements {
+    padding: 0 0px;
+  }
+}
+
+.header-buttons {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: flex-end;
+
+  > * {
+    margin-left: 20px;
+  }
+}
+
+:host(:not([disable-sticky-header])) .header {
+  position: sticky;
+  top: 0;
+  background-color: var(--exm-drawer-bg-color, var(--md-sys-color-surface-variant, white));
+  z-index: 2;
+}
+
+form {
+  margin: 0 !important;
+  padding: 0.5rem 1rem;
+  box-sizing: border-box;
+}

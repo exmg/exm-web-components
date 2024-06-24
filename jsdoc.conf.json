@@ -1,0 +1,49 @@
+{
+  "plugins": ["plugins/markdown"],
+  "recurseDepth": 10,
+  "opts": {
+    "template": "./node_modules/tui-jsdoc-template",
+    "destination": "./docs",
+    "recurse": true
+  },
+  "source": {
+    "include": [
+      "packages/exm-breadcrumbs",
+      "packages/exm-button",
+      "packages/exm-collapsed",
+      "packages/exm-copy-to-clipboard",
+      "packages/exm-dialogs",
+      "packages/exm-form-drawer",
+      "packages/exm-grid",
+      "packages/exm-markdown-editor",
+      "packages/exm-radio-group",
+      "packages/exm-sidemenu",
+      "packages/exm-snackbar",
+      "packages/exm-sortable",
+      "packages/exm-tooltip",
+      "packages/exm-upload"
+    ]
+  },
+  "sourceType": "module",
+  "tags": {
+    "allowUnknownTags": true,
+    "dictionaries": ["jsdoc"]
+  },
+  "templates": {
+    "logo": {
+      "url": "https://www.exmachinagroup.com/images/svg/ExMachinaPrimary.svg",
+      "width": "100px",
+      "height": "50px",
+      "link": ""
+    },
+    "cleverLinks": false,
+    "monospaceLinks": false,
+    "name": "",
+    "footerText": "",
+    "useCollapsibles": true,
+    "tabNames": {
+      "api": "Documentation",
+      "tutorials": "Demos"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+:host {
+  --_exm-navigation-rail-background-color: var(
+    --exm-navigation-rail-background-color,
+    var(--md-sys-color-surface-container)
+  );
+
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  background: var(--_exm-navigation-rail-background-color);
+  overflow-y: auto;
+  z-index: 8;
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 961px) {
+  :host {
+    display: flex;
+  }
+}
+
+.nav {
+  flex: 1;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: flex-end;
+}

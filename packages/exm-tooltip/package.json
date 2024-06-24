@@ -1,0 +1,42 @@
+{
+  "name": "@exm/exm-tooltip",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "module": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./exm-tooltip.js": "./src/exm-tooltip.js"
+  },
+  "dependencies": {
+    "@exmg/lit-base": "^2.0.1",
+    "lit": "^3.0.0",
+    "tslib": "^2.6.2"
+  },
+  "files": [
+    "**/*.scss",
+    "**/*.js",
+    "**/*.d.ts"
+  ],
+  "keywords": [
+    "web-components",
+    "lit-element",
+    "tooltip"
+  ],
+  "homepage": "https://github.com/exmg/exmachina-web-components",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:exmg/exm-web-components.git",
+    "directory": "packages/exm-tooltip"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@exmg/lit-cli": "1.1.13"
+  },
+  "scripts": {
+    "build:styles": "exmg-lit-cli sass -f \"./**/*.scss\""
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

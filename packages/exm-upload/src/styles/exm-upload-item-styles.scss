@@ -1,0 +1,119 @@
+:host {
+  display: flex;
+  align-items: center;
+  height: 65px;
+  border-bottom: 1px solid var(--md-sys-color-outline-variant);
+  padding-bottom: 6px;
+  margin-bottom: 6px;
+}
+
+.item {
+  display: grid;
+  height: 65px;
+  width: 100%;
+  grid-template-columns: 2rem 1fr 6rem;
+  grid-auto-flow: column;
+  align-items: center;
+}
+
+.vertical-center {
+  display: flex;
+  align-items: center;
+}
+
+.loader {
+  width: 18px;
+  height: 18px;
+  border: 3px solid var(--md-sys-color-primary);
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+.name-container {
+  margin-left: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+
+.file-name {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.file-error {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.file-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.file-error {
+  font-size: 0.7rem;
+  background-color: var(--md-sys-color-error-container, #b00020);
+  color: var(--md-sys-color-on-error-container, white);
+  padding: 2px 4px;
+  border-radius: 6px;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  justify-self: flex-end;
+  width: 60px;
+}
+
+.error-icon,
+.error-icon svg {
+  fill: #b00020;
+  font-weight: bold;
+  width: 32px;
+  height: 32px;
+}
+
+.success-icon {
+  --md-icon-color: green;
+  --md-icon-size: 32px;
+  --md-icon-weight: 400;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  background-color: var(--md-ref-palette-primary-primary50);
+  margin-right: 4px;
+  border-radius: 4px;
+  color: var(--md-ref-palette-primary-primary80);
+  padding: 6px;
+  font-size: 0.6rem;
+  height: 0.4rem;
+  font-weight: bold;
+  line-height: 1.75;
+  letter-spacing: 0.5px;
+}
+
+.status {
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

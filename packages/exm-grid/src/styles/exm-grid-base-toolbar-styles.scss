@@ -1,0 +1,89 @@
+@use '@material/typography/mixins' as typography;
+
+$exm-grid-toolbar-bg-color: #ffffff;
+$exm-grid-toolbar-active-bg-color: #e1f0fe;
+$exm-grid-toolbar-color: #02182b;
+$exm-grid-toolbar-active-color: #000000;
+
+:host {
+  display: block;
+  @include typography.base;
+
+  border-top-left-radius: var(--exm-theme-table-radius, var(--exm-surface-border-radius, 16px));
+  border-top-right-radius: var(--exm-theme-table-radius, var(--exm-surface-border-radius, 16px));
+
+  --toolbar-bg-color: var(--exm-theme-table-toolbar-background-color, var(--md-sys-color-surface-container));
+  --toolbar-color: var(--exm-theme-table-toolbar-color, var(--md-sys-color-on-surface-container));
+  background-color: var(--toolbar-bg-color);
+  color: var(--toolbar-color);
+}
+.wrapper {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 16px 10px 16px;
+
+  overflow-x: var(--exm-theme-table-toolbar-overflow-x, initial);
+  white-space: nowrap;
+
+  &.active {
+    --active-toolbar-bg-color: var(--exm-theme-table-toolbar-active-bg-color, var(--md-sys-color-secondary-container));
+    --active-toolbar-color: var(--exm-theme-table-toolbar-active-color, var(--md-sys-color-on-secondary-container));
+
+    background-color: var(--active-toolbar-bg-color);
+    color: var(--active-toolbar-color);
+    border-top-left-radius: var(--exm-theme-table-radius, var(--exm-surface-border-radius, 16px));
+    border-top-right-radius: var(--exm-theme-table-radius, var(--exm-surface-border-radius, 16px));
+
+    .seperator {
+      &.with-action-separator {
+        border-left: 1px solid var(--active-toolbar-color);
+      }
+    }
+    .description {
+      color: var(--active-toolbar-color);
+      flex: 1;
+      margin-left: 8px;
+    }
+  }
+  .seperator {
+    min-height: 32px;
+    &.with-action-separator {
+      border-left: 1px solid var(--active-toolbar-color);
+    }
+  }
+  .description {
+    @include typography.typography('headline5');
+    color: var(--toolbar-color);
+    font-size: 1.25rem;
+    padding: 0;
+    height: 48px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.actions {
+  padding: 0 8px 0 0;
+  color: var(--mdc-theme-primary);
+}
+
+.filters {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.settings {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+@media (max-width: 500px) {
+  .wrapper .description {
+    display: none;
+  }
+}

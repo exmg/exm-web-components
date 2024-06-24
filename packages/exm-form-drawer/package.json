@@ -1,0 +1,50 @@
+{
+  "name": "@exm/exm-form-drawer",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "module": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./exm-form-drawer.js": "./src/exm-form-drawer.js",
+    "./exm-drawer.js": "./src/exm-drawer.js"
+  },
+  "description": "Form side drawer element",
+  "contributors": [
+    "Ex Machina"
+  ],
+  "keywords": [
+    "web-components",
+    "lit",
+    "form"
+  ],
+  "files": [
+    "**/*.scss",
+    "**/*.js",
+    "**/*.d.ts"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:exmg/exm-web-components.git",
+    "directory": "packages/exm-form-drawer"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@exm/exm-button": "file:../exm-button",
+    "@exm/exm-form": "file:../exm-form",
+    "@material/typography": "^14.0.0",
+    "@polymer/neon-animation": "^3.0.1",
+    "@polymer/paper-dialog": "^3.0.1",
+    "lit": "^3.0.0",
+    "tslib": "^2.6.2"
+  },
+  "devDependencies": {
+    "@exmg/lit-cli": "1.1.13"
+  },
+  "scripts": {
+    "build:styles": "exmg-lit-cli sass -f \"./**/*.scss\""
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

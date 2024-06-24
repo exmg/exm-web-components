@@ -1,0 +1,42 @@
+{
+  "name": "@exm/exm-collapsed",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "module": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./exm-collapsed.js": "./src/exm-collapsed.js"
+  },
+  "dependencies": {
+    "@exmg/lit-base": "^2.0.1",
+    "lit": "^3.0.0",
+    "tslib": "^2.6.2"
+  },
+  "devDependencies": {
+    "@exmg/lit-cli": "1.1.13"
+  },
+  "keywords": [
+    "web-components",
+    "lit",
+    "collapsed"
+  ],
+  "files": [
+    "**/*.scss",
+    "**/*.js",
+    "**/*.d.ts"
+  ],
+  "homepage": "https://github.com/exmg/exmachina-web-components",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:exmg/exm-web-components.git",
+    "directory": "packages/exm-collapsed"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build:styles": "exmg-lit-cli sass -f \"./**/*.scss\""
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

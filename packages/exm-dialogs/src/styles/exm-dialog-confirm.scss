@@ -1,0 +1,5 @@
+@use '@material/web/dialog/internal/dialog-styles';
+
+md-dialog {
+  --md-dialog-container-max-inline-size: 320px;
+}

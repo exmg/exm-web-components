@@ -1,0 +1,390 @@
+@use '@material/typography/mixins' as typography;
+
+@mixin sortable-col-padding() {
+  padding-right: calc(var(--exm-table-th-sort-icon-height) + var(--exm-table-th-sort-margin-left));
+  &.grid-col-number {
+    padding-right: calc(
+      var(--exm-table-th-sort-icon-height) + var(--exm-table-th-sort-margin-left) +
+        var(--exm-table-col-number-padding-right)
+    );
+  }
+}
+
+@mixin table-layout-fixed() {
+  &[data-table-layout='fixed'] {
+    table-layout: fixed;
+    td:not(.grid-checkbox-cell):not(.menu-cell) {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    th,
+    td {
+      &.grid-checkbox-cell {
+        width: var(--exm-table-checkbox-cell-width);
+      }
+      &.no-ellipsis {
+        text-overflow: initial;
+      }
+    }
+  }
+}
+
+:host {
+  @include typography.base;
+  display: block;
+
+  --exm-arrow-upward-url: url('/node_modules/@exm/exm-grid/assets/arrow-upward.svg');
+  --exm-table-card-width: var(--exm-theme-table-card-width, 100%);
+  --exm-table-card-margin-bottom: var(--exm-theme-table-card-margin-bottom, 5px);
+
+  --exm-table-color: var(--exm-theme-table-on-surface, var(--md-sys-color-on-surface-container));
+  --exm-table-card-background-color: var(--exm-theme-table-surface, var(--md-sys-color-surface-container));
+  --exm-table-row-divider-color: var(--exm-theme-table-row-divider-color, var(--md-sys-color-surface-variant));
+
+  --exm-table-row-selected-color: var(
+    --exm-theme-table-row-selected-color,
+    var(--md-sys-color-on-secondary-container)
+  );
+  --exm-table-row-selected-background-color: var(
+    --exm-theme-table-row-selected-background-color,
+    var(--md-sys-color-secondary-container)
+  );
+  --exm-table-row-hover-color: var(--exm-theme-table-row-hover-color, var(--md-sys-color-on-surface));
+  --exm-table-row-hover-background-color: var(
+    --exm-theme-table-row-hover-background-color,
+    var(--md-sys-color-surface-container-highest)
+  );
+  --exm-table-row-dragged-background-color: var(
+    --exm-theme-table-row-dragged-background-color,
+    var(--md-sys-color-surface-container-low)
+  );
+  --exm-table-rows-expanded-divider-border: var(--exm-theme-table-rows-expanded-divider-border, none);
+  --exm-table-rows-expanded-border: var(--exm-theme-table-rows-expanded-border, none);
+  --exm-table-rows-expanded-background-color: var(
+    --exm-theme-table-rows-expanded-background-color,
+    var(--md-sys-color-surface-container-low)
+  );
+  --exm-table-rows-expanded-color: var(--exm-theme-table-rows-expanded-color, var(--md-sys-color-on-surface));
+  --exm-table-th-color: var(--exm-theme-table-th-on-surface, var(--md-sys-color-on-surface-container));
+  --exm-table-th-background-color: var(--exm-theme-table-th-surface, var(--md-sys-color-surface-container));
+  --exm-table-th-sortable-hover-color: var(--exm-theme-table-th-sortable-hover-color, var(--md-sys-color-on-surface));
+  --exm-table-columns-background-color: var(--exm-theme-table-columns-background-color, var(--md-sys-color-surface));
+
+  --exm-table-th-height: var(--exm-theme-table-th-height, 48px);
+  --exm-table-th-sort-margin-left: var(--exm-theme-table-th-sort-margin-left, 0px);
+  --exm-table-td-height: var(--exm-theme-table-td-height, 48px);
+  --exm-table-th-sort-icon-height: var(--exm-theme-table-th-sort-icon-height, 1em);
+  --exm-table-th-sort-icon-width: var(--exm-theme-table-th-sort-icon-width, 1em);
+
+  --exm-table-col-number-padding-right: var(--exm-theme-table-col-number-padding-right, 10px);
+  --exm-table-checkbox-cell-width: var(--exm-theme-table-checkbox-cell-width, 24px);
+
+  --exm-paper-combobox-selected-item-color: var(var(--md-sys-color-primary), #000000);
+  --exm-paper-combobox-color: var(--md-sys-color-on-surface);
+
+  /* Adjust toolbar to grid */
+  --exm-table-toolbar-setting-position: var(--exm-theme-table-toolbar-setting-position, absolute);
+  /* End Adjust toolbar to grid */
+}
+
+::slotted([slot='pagination']) {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  //  overflow-x: auto;
+  border-top: 1px solid var(--exm-table-row-divider-color);
+}
+
+::slotted([slot='toolbar']) {
+  display: block;
+}
+
+.table-card-container {
+  @include typography.base;
+  border: none;
+  width: var(--exm-table-card-width);
+  margin: 0;
+  padding: 0;
+  box-shadow: var(--exm-theme-table-box-shadow, none);
+}
+:host([with-toolbar]) {
+  .table-card {
+    border-top: 1px solid var(--exm-table-row-divider-color);
+  }
+}
+.table-card {
+  @include typography.base;
+  border: none;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  width: var(--exm-table-card-width);
+  background-color: var(--exm-table-card-background-color);
+  margin-bottom: var(--exm-table-card-margin-bottom);
+  border-top-left-radius: var(--exm-theme-table-radius, var(--exm-surface-border-radius, 16px));
+  border-top-right-radius: var(--exm-theme-table-radius, var(--exm-surface-border-radius, 16px));
+  border-bottom-left-radius: var(--exm-theme-table-radius, var(--exm-surface-border-radius, 16px));
+  border-bottom-right-radius: var(--exm-theme-table-radius, var(--exm-surface-border-radius, 16px));
+}
+
+/*.table-container {
+   overflow-x: auto;
+}*/
+
+table {
+  @include table-layout-fixed();
+  width: 100%;
+  color: var(--exm-table-color);
+  border-spacing: 0;
+  border: none;
+
+  thead {
+    tr,
+    th {
+      @include typography.typography('caption');
+    }
+  }
+
+  tbody,
+  tfoot {
+    tr,
+    td {
+      @include typography.typography('body2');
+    }
+  }
+}
+
+td {
+  height: var(--exm-table-td-height);
+}
+
+.grid-toolbar th {
+  padding: 0;
+  text-align: left;
+  > * {
+    overflow-x: auto;
+  }
+}
+
+.grid-columns {
+  th {
+    height: var(--exm-table-th-height);
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    text-transform: uppercase;
+    line-height: 1.33;
+    letter-spacing: 2px;
+    color: var(--exm-table-th-color);
+    background-color: var(--exm-table-th-background-color);
+    vertical-align: middle;
+    text-align: left;
+
+    user-select: none;
+    white-space: nowrap;
+
+    > span {
+      vertical-align: middle;
+      max-width: 100%;
+      display: inline-block;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    svg {
+      fill: var(--exm-table-th-color);
+    }
+  }
+}
+
+.grid-columns th,
+tbody td {
+  padding-left: 16px;
+}
+
+.grid-columns th:last-child,
+tbody td:last-child {
+  padding-right: 10px;
+}
+
+th,
+td {
+  border-top: 1px solid var(--exm-table-row-divider-color);
+}
+
+tbody {
+  td {
+    height: var(--exm-table-td-height);
+    @include typography.typography('body2');
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.43px;
+    letter-spacing: 0.3px;
+    color: var(--exm-table-color);
+    svg {
+      fill: var(--exm-table-color);
+    }
+  }
+}
+
+/**** COLUMN SORT *********/
+th[data-sort] {
+  cursor: pointer;
+
+  &:hover {
+    color: var(--exm-table-th-sortable-hover-color);
+  }
+
+  &::after {
+    display: inline-block;
+    content: '';
+    -webkit-mask-image: var(--exm-arrow-upward-url);
+    mask-image: var(--exm-arrow-upward-url);
+    background-color: currentColor;
+    background-size: contain;
+    height: var(--exm-table-th-sort-icon-height);
+    width: var(--exm-table-th-sort-icon-width);
+    margin-left: var(--exm-table-th-sort-margin-left);
+    vertical-align: middle;
+    opacity: 0;
+  }
+}
+
+th[data-sort-direction]::after {
+  opacity: 1;
+  transition: transform 0.1s linear;
+}
+
+th[data-sort-direction='ASC']::after {
+  transform: rotate(0deg);
+}
+
+th[data-sort-direction='DESC']::after {
+  transform: rotate(180deg);
+}
+/**** COLUMN SORT END *********/
+
+/**** SELECTABLE ROW *********/
+tbody > tr:not(.grid-row-detail):hover {
+  color: var(--exm-table-row-hover-color);
+  background-color: var(--exm-table-row-hover-background-color);
+  td {
+    color: var(--exm-table-row-hover-color);
+  }
+  svg {
+    fill: var(--exm-table-row-hover-color);
+  }
+}
+
+tr[data-selected] {
+  color: var(--exm-table-row-selected-color);
+  background-color: var(--exm-table-row-selected-background-color);
+  td {
+    color: var(--exm-table-row-selected-color);
+  }
+  svg {
+    fill: var(--exm-table-row-selected-color);
+  }
+}
+/**** END SELECTABLE  ROW *********/
+
+/**** EXPANDABLE ROW *********/
+tbody {
+  tr[data-has-expanded-detail],
+  tr[data-has-expanded-detail]:hover,
+  tr[data-is-row-expanded] {
+    background-color: var(--exm-table-rows-expanded-background-color);
+    border: var(--exm-table-rows-expanded-border);
+
+    td {
+      color: var(--exm-table-rows-expanded-color);
+      svg {
+        fill: var(--exm-table-rows-expanded-color);
+      }
+    }
+  }
+
+  tr[data-is-row-expanded] td {
+    border-bottom: none;
+  }
+
+  tr[data-has-expanded-detail] td,
+  tr[data-has-expanded-detail]:hover td {
+    border-bottom: var(--exm-table-rows-expanded-divider-border);
+  }
+}
+
+tr.grid-row-detail {
+  display: none;
+
+  &[data-is-row-expanded] {
+    display: table-row;
+  }
+
+  td {
+    padding: 20px;
+  }
+}
+
+tr .grid-icon-rotate[data-is-expanded] > * {
+  transition: transform 0.1s linear;
+  transform: rotate(180deg);
+}
+
+tr .grid-icon-rotate[data-is-expandable]:not([data-is-expanded]) > * {
+  transition: transform 0.1s linear;
+  transform: rotate(0deg);
+}
+/**** END EXPANDABLE ROW *********/
+
+/**** START SORTABLE ROW *********/
+.grid-row-drag-handler {
+  cursor: move;
+  vertical-align: middle;
+  > * {
+    vertical-align: middle;
+  }
+}
+tr {
+  &.dragged {
+    background-color: var(--exm-table-row-dragged-background-color);
+    opacity: 0.25;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5) inset;
+  }
+
+  &.cloned {
+    background-color: var(--exm-table-row-dragged-background-color);
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    opacity: 0.9;
+  }
+}
+/**** END EXPANDABLE ROW *********/
+
+/***** GRID UTILS ***/
+tr td.grid-cell-visible-on-hover {
+  text-align: center;
+}
+
+tr td.grid-cell-visible-on-hover > * {
+  visibility: hidden;
+}
+
+tr:hover td.grid-cell-visible-on-hover > *,
+tr[data-has-expanded-detail] td.grid-cell-visible-on-hover > * {
+  visibility: visible;
+}
+
+tr td.grid-col-number,
+tr th.grid-col-number {
+  padding-right: var(--exm-table-col-number-padding-right);
+  text-align: right;
+}
+
+tr th.grid-col-number {
+  > span {
+    width: 100%;
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "extends": "@exmg/ts-config-lit",
+  "compilerOptions": {
+    "lib": ["esnext", "dom", "dom.iterable"],
+    "module": "node16",
+    "moduleResolution": "node16",
+    "declaration": true,
+    "sourceMap": true,
+    "inlineSources": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "noImplicitAny": false,
+    "outDir": "./",
+    "baseUrl": "./packages",
+    "paths": {
+      "@exm/exm-th": ["./*"]
+    },
+    "composite": true,
+    "importHelpers": true,
+    "plugins": [
+      {
+        "name": "ts-lit-plugin",
+        "rules": {
+          "no-unknown-tag-name": "error",
+          "no-unclosed-tag": "error",
+          "no-unknown-property": "error",
+          "no-unintended-mixed-binding": "error",
+          "no-invalid-boolean-binding": "error",
+          "no-expressionless-property-binding": "error",
+          "no-noncallable-event-binding": "error",
+          "no-boolean-in-attribute-binding": "error",
+          "no-complex-attribute-binding": "error",
+          "no-nullable-attribute-binding": "error",
+          "no-incompatible-type-binding": "error",
+          "no-invalid-directive-binding": "error",
+          "no-incompatible-property-type": "error",
+          "no-unknown-property-converter": "error",
+          "no-invalid-attribute-name": "error",
+          "no-invalid-tag-name": "error",
+          "no-property-visibility-mismatch": "error",
+          "no-unknown-attribute": "off",
+          "no-unknown-event": "off",
+          "no-unknown-slot": "off",
+          "no-invalid-css": "off"
+        }
+      }
+    ]
+  },
+  "include": ["*.ts"],
+  "references": [
+    {
+      "path": "packages/exm-button"
+    },
+    {
+      "path": "packages/exm-chip-input"
+    },
+    {
+      "path": "packages/exm-grid"
+    },
+    {
+      "path": "packages/exm-dialogs"
+    },
+    {
+      "path": "packages/exm-tooltip"
+    },
+    {
+      "path": "packages/exm-radio"
+    },
+    {
+      "path": "packages/exm-sortable"
+    },
+    {
+      "path": "packages/exm-markdown-editor"
+    },
+    {
+      "path": "packages/exm-copy-to-clipboard"
+    },
+    {
+      "path": "packages/exm-form-drawer"
+    },
+    {
+      "path": "packages/exm-form"
+    },
+    {
+      "path": "packages/exm-breadcrumbs"
+    },
+    {
+      "path": "packages/exm-collapsed"
+    },
+    {
+      "path": "packages/exm-snackbar"
+    },
+    {
+      "path": "packages/exm-upload"
+    },
+    {
+      "path": "packages/exm-navigation"
+    },
+    {
+      "path": "packages/exm-search"
+    },
+    {
+      "path": "packages/exm-theme"
+    },
+    {
+      "path": "demo"
+    }
+  ],
+  "exclude": []
+}
