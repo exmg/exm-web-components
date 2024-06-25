@@ -1,4 +1,4 @@
-# @exm/exm-theme
+# @exmg/exm-theme
 
 This package is designed for the easy integration and management of material theming. It offers a streamlined process to implement dynamic themes in web components.
 
@@ -6,10 +6,10 @@ This package is designed for the easy integration and management of material the
 
 ## Getting Started: Installation
 
-To incorporate @exm/exm-theme into your project, use the following command:
+To incorporate @exmg/exm-theme into your project, use the following command:
 
 ```sh
-npm install @exm/exm-theme
+npm install @exmg/exm-theme
 ```
 
 ## Example Initialisation
@@ -19,7 +19,7 @@ In your main JavaScript file, add the following snippet to initialize the theme.
 Default Initialisation Parameters:
 
 ```
-import { initTheme } from '@exm/exm-theme';
+import { initTheme } from '@exmg/exm-theme';
 
 initTheme({ themeColor: 'blue', colorMode: 'dark' });
 ```
@@ -39,7 +39,7 @@ React to changes in theme color or mode using the following implementation:
 ```
 import { LitElement, html, css, nothing } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
-import { ColorMode, ThemeUtils, ThemeMixin } from '@exm/exm-theme';
+import { ColorMode, ThemeUtils, ThemeMixin } from '@exmg/exm-theme';
 
 @customElement('customer-logo')
 export class CustomerLogo extends ThemeMixin(LitElement) {

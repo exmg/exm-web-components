@@ -1,11 +1,11 @@
 import { LitElement, html, css } from 'lit';
 import { customElement } from 'lit/decorators.js';
 
-import '@exm/exm-chip-input/exm-chip-input-dropdown.js';
-import '@exm/exm-chip-input/exm-chip-input.js';
-import '@exm/exm-chip-input/exm-chip.js';
-import '@exm/exm-form/exm-form.js';
-import { ExmgForm } from '@exm/exm-form/exm-form.js';
+import '@exmg/exm-chip-input/exm-chip-input-dropdown.js';
+import '@exmg/exm-chip-input/exm-chip-input.js';
+import '@exmg/exm-chip-input/exm-chip.js';
+import '@exmg/exm-form/exm-form.js';
+import { ExmgForm } from '@exmg/exm-form/exm-form.js';
 
 import '@material/web/chips/chip-set.js';
 import '@material/web/chips/filter-chip.js';

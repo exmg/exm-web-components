@@ -1,9 +1,9 @@
-# `<exm-upload>` [![Published on npm](https://img.shields.io/npm/v/@exm/exm-upload.svg)](https://www.npmjs.com/package/@exm/exm-upload)
+# `<exm-upload>` [![Published on npm](https://img.shields.io/npm/v/@exmg/exm-upload.svg)](https://www.npmjs.com/package/@exmg/exm-upload)
 
 ## Installation
 
 ```sh
-npm install @exm/exm-upload
+npm install @exmg/exm-upload
 ```
 
 ## Example Usage

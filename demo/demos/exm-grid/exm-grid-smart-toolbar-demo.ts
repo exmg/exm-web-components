@@ -6,13 +6,13 @@ import {
   FilterSingleSelectConfig,
   FilterConfigType,
   SettingSelectionListItem,
-} from '@exm/exm-grid/src/table/types/exm-grid-toolbar-types.js';
+} from '@exmg/exm-grid/src/table/types/exm-grid-toolbar-types.js';
 import {
   ActionAmountSelectedItemsCondition,
   ActionWithCondition,
   ActionConditionType,
-} from '@exm/exm-grid/src/table/types/exm-grid-smart-toolbar-types.js';
-import '@exm/exm-grid/src/table/exm-grid-smart-toolbar.js';
+} from '@exmg/exm-grid/src/table/types/exm-grid-smart-toolbar-types.js';
+import '@exmg/exm-grid/src/table/exm-grid-smart-toolbar.js';
 
 @customElement('exm-grid-smart-toolbar-demo')
 export class ExmgGridSmartToolbarDemo extends LitElement {

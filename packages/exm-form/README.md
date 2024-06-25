@@ -1,4 +1,4 @@
-# `<exm-button>` [![Published on npm](https://img.shields.io/npm/v/@exm/exm-button.svg)](https://www.npmjs.com/package/@exm/exm-button)
+# `<exm-button>` [![Published on npm](https://img.shields.io/npm/v/@exmg/exm-button.svg)](https://www.npmjs.com/package/@exmg/exm-button)
 
 # exm-form
 
@@ -12,7 +12,7 @@ The Exmg Form enhances form design by offering a more intuitive layout visualiza
 ## Installation
 
 ```sh
-npm install @exm/exm-form
+npm install @exmg/exm-form
 ```
 
 ## Example Usage

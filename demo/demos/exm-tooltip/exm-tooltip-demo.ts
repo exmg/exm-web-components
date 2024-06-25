@@ -1,6 +1,6 @@
 import { LitElement, html, css } from 'lit';
 import { customElement } from 'lit/decorators/custom-element.js';
-import '@exm/exm-tooltip/exm-tooltip.js';
+import '@exmg/exm-tooltip/exm-tooltip.js';
 import { style } from '../demo-page-styles-css.js';
 
 @customElement('exm-tooltip-demo')

@@ -2,7 +2,7 @@ import { html } from 'lit';
 import { ExmgElement } from '@exmg/lit-base/index.js';
 import { property, customElement, state } from 'lit/decorators.js';
 import { cache } from 'lit/directives/cache.js';
-import '@exm/exm-sortable/exm-sortable.js';
+import '@exmg/exm-sortable/exm-sortable.js';
 import { style as exmgGridTableStyles } from '../styles/exm-grid-styles-css.js';
 import { ExmgRowSelectable } from './featrues/exm-row-selectable.js';
 import { ExmgQuerySelectors } from './utils/exm-query-selectors.js';

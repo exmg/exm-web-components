@@ -1,14 +1,14 @@
-# `<exm-copy-to-clipboard>` [![Published on npm](https://img.shields.io/npm/v/@exm/exm-copy-to-clipboard.svg)](https://www.npmjs.com/package/@exm/exm-copy-to-clipboard)
+# `<exm-copy-to-clipboard>` [![Published on npm](https://img.shields.io/npm/v/@exmg/exm-copy-to-clipboard.svg)](https://www.npmjs.com/package/@exmg/exm-copy-to-clipboard)
 
-# @exm/exm-grid
+# @exmg/exm-grid
 
 ## Install
 
 ```bash
-npm install @exm/exm-grid
+npm install @exmg/exm-grid
 ```
 
-Before start ensure that you have installed `web-animation-js`. It is required by `@exm/exm-paper-combobox`.
+Before start ensure that you have installed `web-animation-js`. It is required by `@exmg/exm-paper-combobox`.
 
 ```bash
 npm install web-animation-js
@@ -445,42 +445,42 @@ export class DemoSimpleGridTable extends LitELement {
 
 Additionally you can also override css variables:
 
-| Custom property                                                | Description                                             | Default                                                         |
-| -------------------------------------------------------------- | ------------------------------------------------------- | --------------------------------------------------------------- |
-| `--exm-arrow-upward-url`                                      | Url to icon that is used for soring direction indicator | `url('/node_modules/@exm/exm-grid/assets/arrow-upward.svg');` |
-| `--exm-theme-table-card-width`                                | table card width                                        | `100%;`                                                         |
-| `--exm-theme-table-card-margin-bottom`                        | table bottom margin                                     | `5px;`                                                          |
-| `--exm-theme-table-on-surface`                                | table text color                                        | `#02182b;`                                                      |
-| `--exm-theme-table-surface`                                   | table background color                                  | `#ffffff;`                                                      |
-| `--exm-theme-table-box-shadow`                                | table box shadow                                        | `none`                                                          |
-| `--exm-theme-table-row-divider-color`                         | table rows separator color                              | `#02182b; 0.14`                                                 |
-| `--exm-theme-table-row-selected-color`                        | selected row text color                                 | `#02182b;`                                                      |
-| `--exm-theme-table-row-selected-background-color`             | selected row background color                           | `#e2f1fe;`                                                      |
-| `--exm-theme-table-row-hover-color`                           | row hover text color                                    | `#02182b;`                                                      |
-| `--exm-theme-table-row-hover-background-color`                | row hover background color                              | `#f1f1f1;`                                                      |
-| `--exm-theme-table-row-dragged-background-color`              | sortable row background color when dragged              | `#f1f1f1;`                                                      |
-| `--exm-theme-table-rows-expanded-divider-border`              | border between row and expanded row detail              | `none;`                                                         |
-| `--exm-theme-table-rows-expanded-border`                      | border around row and expanded row detail               | `1px solid #dbdbdb;`                                            |
-| `--exm-theme-table-rows-expanded-background-color`            | background color of row and expanded row detail         | `#e2f1fe;`                                                      |
-| `--exm-theme-table-rows-expanded-color`                       | text color of row and expanded row detail               | `#02182b;`                                                      |
-| `--exm-theme-table-th-color`                                  | header text color                                       | `#0071dc;`                                                      |
-| `--exm-theme-table-columns-background-color`                  | header background color                                 | `#ffffff;`                                                      |
-| `--exm-theme-table-th-sortable-hover-color`                   | sortable header hover text color                        | `#02182b;`                                                      |
-| `--exm-theme-table-th-height`                                 | header height                                           | `48px;`                                                         |
-| `--exm-theme-table-th-sort-margin-left`                       | header margin after text but before icon                | `0px;`                                                          |
-| `--exm-theme-table-td-height`                                 | row cell height                                         | `48px;`                                                         |
-| `--exm-theme-table-th-sort-icon-height`                       | sort icon height                                        | `1em;`                                                          |
-| `--exm-theme-table-th-sort-icon-width`                        | sort icon width                                         | `1em;`                                                          |
-| `--exm-theme-table-toolbar-background-color`                  | Toolbar background color                                | `$background;`                                                  |
-| `--exm-theme-table-toolbar-color`                             | Toolbar text color                                      | `$onBackground`                                                 |
-| `--exm-theme-table-toolbar-active-bg-color`                   | Toolbar background color when any action available      | `$background;`                                                  |
-| `--exm-theme-table-toolbar-active-color`                      | Toolbar text color when any action available            | `$onBackground`                                                 |
-| `--exm-theme-table-pagination-bg-color`                       | Pagination background color                             | `--mdc-theme-surface`                                           |
-| `--exm-theme-table-pagination-color`                          | Pagination text color                                   | `--mdc-theme-on-surface`                                        |
-| `--exm-theme-table-on-surface-disabled`                       | Disabled color                                          | `--mdc-theme-on-surface with filter .38`                        |
-| `--exm-theme-table-toolbar-filter-item-active-bg-color`       | Background color for combobox                           | `--mdc-theme-surface`                                           |
-| `--exm-theme-grid-setting-checkbox-bg-color`                  | Background color of setting checkbox                    | `$mdcThemeSecondary`                                            |
-| `--exm-theme-table-toolbar-setting-list-item-active-bg-color` | Background color of active list item color              | `$mdcThemeSecondary`                                            |
+| Custom property                                               | Description                                             | Default                                                        |
+| ------------------------------------------------------------- | ------------------------------------------------------- | -------------------------------------------------------------- |
+| `--exm-arrow-upward-url`                                      | Url to icon that is used for soring direction indicator | `url('/node_modules/@exmg/exm-grid/assets/arrow-upward.svg');` |
+| `--exm-theme-table-card-width`                                | table card width                                        | `100%;`                                                        |
+| `--exm-theme-table-card-margin-bottom`                        | table bottom margin                                     | `5px;`                                                         |
+| `--exm-theme-table-on-surface`                                | table text color                                        | `#02182b;`                                                     |
+| `--exm-theme-table-surface`                                   | table background color                                  | `#ffffff;`                                                     |
+| `--exm-theme-table-box-shadow`                                | table box shadow                                        | `none`                                                         |
+| `--exm-theme-table-row-divider-color`                         | table rows separator color                              | `#02182b; 0.14`                                                |
+| `--exm-theme-table-row-selected-color`                        | selected row text color                                 | `#02182b;`                                                     |
+| `--exm-theme-table-row-selected-background-color`             | selected row background color                           | `#e2f1fe;`                                                     |
+| `--exm-theme-table-row-hover-color`                           | row hover text color                                    | `#02182b;`                                                     |
+| `--exm-theme-table-row-hover-background-color`                | row hover background color                              | `#f1f1f1;`                                                     |
+| `--exm-theme-table-row-dragged-background-color`              | sortable row background color when dragged              | `#f1f1f1;`                                                     |
+| `--exm-theme-table-rows-expanded-divider-border`              | border between row and expanded row detail              | `none;`                                                        |
+| `--exm-theme-table-rows-expanded-border`                      | border around row and expanded row detail               | `1px solid #dbdbdb;`                                           |
+| `--exm-theme-table-rows-expanded-background-color`            | background color of row and expanded row detail         | `#e2f1fe;`                                                     |
+| `--exm-theme-table-rows-expanded-color`                       | text color of row and expanded row detail               | `#02182b;`                                                     |
+| `--exm-theme-table-th-color`                                  | header text color                                       | `#0071dc;`                                                     |
+| `--exm-theme-table-columns-background-color`                  | header background color                                 | `#ffffff;`                                                     |
+| `--exm-theme-table-th-sortable-hover-color`                   | sortable header hover text color                        | `#02182b;`                                                     |
+| `--exm-theme-table-th-height`                                 | header height                                           | `48px;`                                                        |
+| `--exm-theme-table-th-sort-margin-left`                       | header margin after text but before icon                | `0px;`                                                         |
+| `--exm-theme-table-td-height`                                 | row cell height                                         | `48px;`                                                        |
+| `--exm-theme-table-th-sort-icon-height`                       | sort icon height                                        | `1em;`                                                         |
+| `--exm-theme-table-th-sort-icon-width`                        | sort icon width                                         | `1em;`                                                         |
+| `--exm-theme-table-toolbar-background-color`                  | Toolbar background color                                | `$background;`                                                 |
+| `--exm-theme-table-toolbar-color`                             | Toolbar text color                                      | `$onBackground`                                                |
+| `--exm-theme-table-toolbar-active-bg-color`                   | Toolbar background color when any action available      | `$background;`                                                 |
+| `--exm-theme-table-toolbar-active-color`                      | Toolbar text color when any action available            | `$onBackground`                                                |
+| `--exm-theme-table-pagination-bg-color`                       | Pagination background color                             | `--mdc-theme-surface`                                          |
+| `--exm-theme-table-pagination-color`                          | Pagination text color                                   | `--mdc-theme-on-surface`                                       |
+| `--exm-theme-table-on-surface-disabled`                       | Disabled color                                          | `--mdc-theme-on-surface with filter .38`                       |
+| `--exm-theme-table-toolbar-filter-item-active-bg-color`       | Background color for combobox                           | `--mdc-theme-surface`                                          |
+| `--exm-theme-grid-setting-checkbox-bg-color`                  | Background color of setting checkbox                    | `$mdcThemeSecondary`                                           |
+| `--exm-theme-table-toolbar-setting-list-item-active-bg-color` | Background color of active list item color              | `$mdcThemeSecondary`                                           |
 
 ## Responsiveness
 

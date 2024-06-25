@@ -1,8 +1,8 @@
 import { html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import { ExmgFormDrawerBase, formDrawerStyles } from '@exm/exm-form-drawer';
+import { ExmgFormDrawerBase, formDrawerStyles } from '@exmg/exm-form-drawer';
 import { ifDefined } from 'lit/directives/if-defined.js';
-import { exmgFormStyles } from '@exm/exm-form';
+import { exmgFormStyles } from '@exmg/exm-form';
 
 function sleep(ms: number) {
   return new Promise((resolve) => setTimeout(resolve, ms));

@@ -1,4 +1,4 @@
-import { ExmgFormBase, exmgFormBaseStyles, exmgFormStyles } from '@exm/exm-form';
+import { ExmgFormBase, exmgFormBaseStyles, exmgFormStyles } from '@exmg/exm-form';
 import { html } from 'lit';
 import { customElement } from 'lit/decorators.js';
 

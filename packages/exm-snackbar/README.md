@@ -1,6 +1,6 @@
-# `<exm-snackbar>` [![Published on npm](https://img.shields.io/npm/v/@exm/exm-snackbar.svg)](https://www.npmjs.com/package/@exm/exm-snackbar)
+# `<exm-snackbar>` [![Published on npm](https://img.shields.io/npm/v/@exmg/exm-snackbar.svg)](https://www.npmjs.com/package/@exmg/exm-snackbar)
 
-# @exm/exm-snackbar
+# @exmg/exm-snackbar
 
 Snackbar element to show information and feedback based on user interaction.
 
@@ -9,7 +9,7 @@ Based on `mwc-snackbar`
 ## Installation
 
 ```sh
-npm install @exm/exm-snackbar
+npm install @exmg/exm-snackbar
 ```
 
 ## Example Usage

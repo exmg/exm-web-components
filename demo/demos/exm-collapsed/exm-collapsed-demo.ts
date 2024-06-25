@@ -1,6 +1,6 @@
 import { LitElement, html, css } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import '@exm/exm-collapsed/exm-collapsed.js';
+import '@exmg/exm-collapsed/exm-collapsed.js';
 import '@material/web/button/outlined-button.js';
 import '@material/web/list/list.js';
 import '@material/web/list/list-item.js';

@@ -1,4 +1,4 @@
-import { UploadAdapter, UploadConfig } from '@exm/exm-upload';
+import { UploadAdapter, UploadConfig } from '@exmg/exm-upload';
 
 interface FileUploadPayload {
   filename: string;

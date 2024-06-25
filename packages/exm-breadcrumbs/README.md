@@ -1,13 +1,13 @@
-# `<exm-breadcrumbs>` [![Published on npm](https://img.shields.io/npm/v/@exm/exm-breadcrumbs.svg)](https://www.npmjs.com/package/@exm/exm-breadcrumbs)
+# `<exm-breadcrumbs>` [![Published on npm](https://img.shields.io/npm/v/@exmg/exm-breadcrumbs.svg)](https://www.npmjs.com/package/@exmg/exm-breadcrumbs)
 
-# @exm/exm-breadcrumbs
+# @exmg/exm-breadcrumbs
 
 Component to render breadcrumbs within a page or component with the option to enable / disable arrow seperator
 
 ## Installation
 
 ```sh
-npm install @exm/exm-breadcrumbs
+npm install @exmg/exm-breadcrumbs
 ```
 
 ## Example Usage

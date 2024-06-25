@@ -1,6 +1,6 @@
-# `<exm-tooltip>` [![Published on npm](https://img.shields.io/npm/v/@exm/exm-tooltip.svg)](https://www.npmjs.com/package/@exm/exm-tooltip)
+# `<exm-tooltip>` [![Published on npm](https://img.shields.io/npm/v/@exmg/exm-tooltip.svg)](https://www.npmjs.com/package/@exmg/exm-tooltip)
 
-# @exm/exm-tooltip
+# @exmg/exm-tooltip
 
 Tooltip element to display small amounts of information bound to an element.
 
@@ -9,7 +9,7 @@ Tooltip element to display small amounts of information bound to an element.
 ## Installation
 
 ```sh
-npm install @exm/exm-tooltip
+npm install @exmg/exm-tooltip
 ```
 
 ## Example Usage
@@ -51,8 +51,8 @@ _None_
 
 ### CSS Custom Properties
 
-| Name                           | Default   | Description               |
-| ------------------------------ | --------- | ------------------------- |
+| Name                          | Default   | Description               |
+| ----------------------------- | --------- | ------------------------- |
 | `--exm-tooltip-font-size`     | `10px`    | Font size of tooltip text |
 | `--exm-tooltip-line-height`   | `1`       | Text line height          |
 | `--exm-tooltip-background`    | `#616161` | Background color          |

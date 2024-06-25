@@ -3,7 +3,7 @@ import { html } from 'lit';
 import '@material/web/dialog/dialog.js';
 import { MdDialog } from '@material/web/dialog/dialog.js';
 import '@material/web/button/text-button.js';
-import '@exm/exm-button/exm-filled-button.js';
+import '@exmg/exm-button/exm-filled-button.js';
 import '@material/web/icon/icon.js';
 
 import { property, query } from 'lit/decorators.js';

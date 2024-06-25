@@ -1,6 +1,6 @@
 {
-  "name": "@exm/exm-markdown-editor",
-  "version": "1.0.1",
+  "name": "@exmg/exm-markdown-editor",
+  "version": "0.0.1",
   "type": "module",
   "main": "index.js",
   "module": "index.js",
@@ -51,5 +51,6 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "gitHead": "1973df6ecaaf0a57b688f5eb8852516295bc04d6"
 }

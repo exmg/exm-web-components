@@ -2,10 +2,10 @@ import { LitElement, css, html } from 'lit';
 import { customElement, property, query } from 'lit/decorators.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
 
-import { ExmgDialogForm } from '@exm/exm-dialogs';
-import '@exm/exm-upload';
-import { ExmgUpload } from '@exm/exm-upload';
-import '@exm/exm-upload/src/exm-upload-dialog.js';
+import { ExmgDialogForm } from '@exmg/exm-dialogs';
+import '@exmg/exm-upload';
+import { ExmgUpload } from '@exmg/exm-upload';
+import '@exmg/exm-upload/src/exm-upload-dialog.js';
 
 @customElement('file-upload-dialog')
 export class FileUploadDialog extends LitElement {

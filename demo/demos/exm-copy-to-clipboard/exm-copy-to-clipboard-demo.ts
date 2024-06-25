@@ -1,7 +1,7 @@
 import { LitElement, html } from 'lit';
 import { customElement } from 'lit/decorators/custom-element.js';
 import '@material/web/button/filled-button.js';
-import '@exm/exm-copy-to-clipboard/exm-copy-to-clipboard.js';
+import '@exmg/exm-copy-to-clipboard/exm-copy-to-clipboard.js';
 import { style } from '../demo-page-styles-css.js';
 
 @customElement('exm-copy-to-clipboard-demo')

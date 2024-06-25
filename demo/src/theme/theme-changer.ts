@@ -16,8 +16,8 @@ import { css, html, LitElement } from 'lit';
 import { customElement, query, queryAll, state } from 'lit/decorators.js';
 import { live } from 'lit/directives/live.js';
 
-import { ThemeChangeColorEvent, ThemeChangeDarkModeEvent, ThemeUtils } from '@exm/exm-theme';
-import type { ColorMode } from '@exm/exm-theme';
+import { ThemeChangeColorEvent, ThemeChangeDarkModeEvent, ThemeUtils } from '@exmg/exm-theme';
+import type { ColorMode } from '@exmg/exm-theme';
 
 import type { HCTSlider } from './hct-slider.js';
 

@@ -5,8 +5,8 @@ import {
   Filter,
   FilterSingleSelectConfig,
   FilterConfigType,
-} from '@exm/exm-grid/src/table/types/exm-grid-toolbar-types.js';
-import '@exm/exm-grid/src/table/exm-grid-toolbar.js';
+} from '@exmg/exm-grid/src/table/types/exm-grid-toolbar-types.js';
+import '@exmg/exm-grid/src/table/exm-grid-toolbar.js';
 
 @customElement('exm-grid-toolbar-demo')
 export class ExmgGridToolbarDemo extends LitElement {

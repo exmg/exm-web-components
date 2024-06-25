@@ -1,6 +1,6 @@
 import { LitElement, html } from 'lit';
 import { customElement } from 'lit/decorators/custom-element.js';
-import '@exm/exm-search/exm-search.js';
+import '@exmg/exm-search/exm-search.js';
 
 import { style } from '../demo-page-styles-css.js';
 

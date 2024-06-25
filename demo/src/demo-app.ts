@@ -14,7 +14,7 @@ import '@material/web/menu/menu.js';
 import { demos } from '../demos/demos.js';
 import { repeat } from 'lit/directives/repeat.js';
 
-import { initTheme } from '@exm/exm-theme';
+import { initTheme } from '@exmg/exm-theme';
 
 initTheme();
 
@@ -57,7 +57,7 @@ export class DemoApp extends LitElement {
     const elementName = searchParams.get('el');
 
     if (elementName) {
-      this.selectedElement = elements.find((e) => e.name === `@exm/${elementName}`);
+      this.selectedElement = elements.find((e) => e.name === `@exmg/${elementName}`);
     } else {
       this.selectedElement = elements[0];
       const url = new URL(window.location.href);
@@ -87,7 +87,7 @@ export class DemoApp extends LitElement {
   private renderElements() {
     return repeat(elements, (element) => {
       const active = this.selectedElement && this.selectedElement.name === element.name;
-      const elementHref = element.name.replace('@exm/', '');
+      const elementHref = element.name.replace('@exmg/', '');
       return html`
         <md-list-item @click=${() => this.handleNavigation(elementHref)} class=${`element ${active ? 'active' : ''}`}
           >${element.name.substr(9).replaceAll('-', ' ')}
@@ -97,7 +97,7 @@ export class DemoApp extends LitElement {
   }
 
   handleNavigation(elementName: string) {
-    this.selectedElement = elements.find((e) => e.name === `@exm/${elementName}`);
+    this.selectedElement = elements.find((e) => e.name === `@exmg/${elementName}`);
     const url = new URL(window.location.href);
     url.searchParams.set('el', elementName);
     // @ts-ignore
@@ -137,7 +137,7 @@ export class DemoApp extends LitElement {
 
   protected render() {
     if (!this.selectedElement) return nothing;
-    const elementHref = this.selectedElement.name.replace('@exm/', '');
+    const elementHref = this.selectedElement.name.replace('@exmg/', '');
     console.log('elementHref', elementHref, this.selectedElement);
     return html`
       <main>

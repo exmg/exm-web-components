@@ -1,1 +1,1 @@
-# `<exm-chip-input>` https://www.npmjs.com/package/@exm/exm-chip-input
+# `<exm-chip-input>` https://www.npmjs.com/package/@exmg/exm-chip-input

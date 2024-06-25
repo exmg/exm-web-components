@@ -1,5 +1,5 @@
-import { exmgDialogUploadStyles } from '@exm/exm-upload';
-import { ExmgDialogUploadBase } from '@exm/exm-upload';
+import { exmgDialogUploadStyles } from '@exmg/exm-upload';
+import { ExmgDialogUploadBase } from '@exmg/exm-upload';
 import { html } from 'lit';
 import { customElement } from 'lit/decorators.js';
 

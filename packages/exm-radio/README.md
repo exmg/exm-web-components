@@ -1,5 +1,5 @@
-# `<exm-radio>` [![Published on npm](https://img.shields.io/npm/v/@exm/exm-radio-group.svg)](https://www.npmjs.com/package/@exm/exm-radio)
+# `<exm-radio>` [![Published on npm](https://img.shields.io/npm/v/@exmg/exm-radio-group.svg)](https://www.npmjs.com/package/@exmg/exm-radio)
 
-# @exm/exm-radio
+# @exmg/exm-radio
 
 This package provides radio functionality.

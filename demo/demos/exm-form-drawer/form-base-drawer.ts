@@ -1,7 +1,7 @@
 import { LitElement, html } from 'lit';
 import { customElement, query } from 'lit/decorators.js';
-import '@exm/exm-button/exm-button.js';
-import '@exm/exm-form-drawer/exm-form-drawer.js';
+import '@exmg/exm-button/exm-button.js';
+import '@exmg/exm-form-drawer/exm-form-drawer.js';
 import './user-update-drawer.js';
 import { UserUpdateDrawer } from './user-update-drawer.js';
 

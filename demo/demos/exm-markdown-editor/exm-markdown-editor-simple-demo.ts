@@ -1,7 +1,7 @@
 import { html, css, LitElement } from 'lit';
 import { customElement } from 'lit/decorators.js';
 import { markdown } from './markdown.js';
-import '@exm/exm-markdown-editor';
+import '@exmg/exm-markdown-editor';
 
 @customElement('exm-markdown-editor-simple-demo')
 export class ExmgMarkdownEditorSimpleDemo extends LitElement {

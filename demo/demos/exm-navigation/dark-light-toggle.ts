@@ -3,7 +3,7 @@ import { customElement, state } from 'lit/decorators.js';
 
 import '@material/web/icon/icon.js';
 import '@material/web/iconbutton/icon-button.js';
-import { ColorMode, ThemeUtils, ThemeChangeDarkModeEvent } from '@exm/exm-theme';
+import { ColorMode, ThemeUtils, ThemeChangeDarkModeEvent } from '@exmg/exm-theme';
 
 @customElement('dark-light-toggle')
 export class DarkLightToggle extends LitElement {

@@ -1,7 +1,7 @@
 import { LitElement, html, css } from 'lit';
 import { customElement, query } from 'lit/decorators.js';
-import { ExmgDialogUpload } from '@exm/exm-upload/exm-dialog-upload.js';
-import '@exm/exm-upload/exm-upload.js';
+import { ExmgDialogUpload } from '@exmg/exm-upload/exm-dialog-upload.js';
+import '@exmg/exm-upload/exm-upload.js';
 import './example-upload-dialog.js';
 import { ExampleUploadDialog } from './example-upload-dialog.js';
 

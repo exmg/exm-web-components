@@ -1,8 +1,8 @@
 import { LitElement, html } from 'lit';
 import { customElement } from 'lit/decorators.js';
 
-import '@exm/exm-form/exm-form.js';
-import { ExmgForm, exmgFormStyles } from '@exm/exm-form';
+import '@exmg/exm-form/exm-form.js';
+import { ExmgForm, exmgFormStyles } from '@exmg/exm-form';
 import { style } from '../demo-page-styles-css.js';
 
 import './form-base-example.js';

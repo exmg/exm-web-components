@@ -1,4 +1,4 @@
-# `<exm-form-drawer>` [![Published on npm](https://img.shields.io/npm/v/@exm/exm-form-drawer.svg)](https://www.npmjs.com/package/@exm/exm-form-drawer)
+# `<exm-form-drawer>` [![Published on npm](https://img.shields.io/npm/v/@exmg/exm-form-drawer.svg)](https://www.npmjs.com/package/@exmg/exm-form-drawer)
 
 This package provides dialog drawer functionality.
 
@@ -10,7 +10,7 @@ Components included:
 ## Install
 
 ```bash
-npm install @exm/exm-form-drawer
+npm install @exmg/exm-form-drawer
 ```
 
 Before start ensure that you have installed `web-animation-js`. It is required by `@polymer/paper-dialog`.
@@ -26,7 +26,7 @@ Load this script in index.html
 <script src="../node_modules/web-animations-js/web-animations-next-lite.min.js"></script>
 ```
 
-Some dependencies `@exm/exm-paper-combobox` use `@apply` to apply css mixins.
+Some dependencies `@exmg/exm-paper-combobox` use `@apply` to apply css mixins.
 This require to load script in index.html
 
 ```html
@@ -72,19 +72,19 @@ Provides form functionality to drawer:
 
 ### Events
 
-| Name                         | Description              |
-| ---------------------------- | ------------------------ |
+| Name                        | Description              |
+| --------------------------- | ------------------------ |
 | `exm-drawer-opened-changed` | when drawer shown/hidden |
 
 ### CSS Custom Properties
 
-| Name                                        | Description                                                                          |
-| ------------------------------------------- | ------------------------------------------------------------------------------------ |
+| Name                                       | Description                                                                          |
+| ------------------------------------------ | ------------------------------------------------------------------------------------ |
 | `--exm-drawer-color`                       | set the height of slot container - handy when wanting to control max-height of form. |
 | `--exm-drawer-bg-color`                    | set the padding right for the form internal element.                                 |
-| `--mdc-theme-primary`                       | _None_                                                                               |
-| `--mdc-theme-on-surface`                    | _None_                                                                               |
-| `--mdc-theme-surface`                       | _None_                                                                               |
+| `--mdc-theme-primary`                      | _None_                                                                               |
+| `--mdc-theme-on-surface`                   | _None_                                                                               |
+| `--mdc-theme-surface`                      | _None_                                                                               |
 | `--exm-form-drawer-header-separator-color` | Color of header seperator of form                                                    |
 | `--exm-drawer-max-width`                   | Max width of drawer                                                                  |
 

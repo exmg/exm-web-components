@@ -34,7 +34,7 @@
   @include typography.base;
   display: block;
 
-  --exm-arrow-upward-url: url('/node_modules/@exm/exm-grid/assets/arrow-upward.svg');
+  --exm-arrow-upward-url: url('/node_modules/@exmg/exm-grid/assets/arrow-upward.svg');
   --exm-table-card-width: var(--exm-theme-table-card-width, 100%);
   --exm-table-card-margin-bottom: var(--exm-theme-table-card-margin-bottom, 5px);
 
@@ -42,10 +42,7 @@
   --exm-table-card-background-color: var(--exm-theme-table-surface, var(--md-sys-color-surface-container));
   --exm-table-row-divider-color: var(--exm-theme-table-row-divider-color, var(--md-sys-color-surface-variant));
 
-  --exm-table-row-selected-color: var(
-    --exm-theme-table-row-selected-color,
-    var(--md-sys-color-on-secondary-container)
-  );
+  --exm-table-row-selected-color: var(--exm-theme-table-row-selected-color, var(--md-sys-color-on-secondary-container));
   --exm-table-row-selected-background-color: var(
     --exm-theme-table-row-selected-background-color,
     var(--md-sys-color-secondary-container)

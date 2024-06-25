@@ -3,11 +3,11 @@ import { customElement } from 'lit/decorators.js';
 import { repeat } from 'lit/directives/repeat.js';
 import { ExmgBaseGridDemo } from './exm-grid-base.js';
 
-import '@exm/exm-grid/src/table/exm-grid-smart-toolbar.js';
-import '@exm/exm-grid/src/table/exm-grid.js';
-import '@exm/exm-grid/src/table/exm-grid-pagination.js';
+import '@exmg/exm-grid/src/table/exm-grid-smart-toolbar.js';
+import '@exmg/exm-grid/src/table/exm-grid.js';
+import '@exmg/exm-grid/src/table/exm-grid-pagination.js';
 
-import { style as tableStyles } from '@exm/exm-grid/src/styles/exm-grid-styles-css.js';
+import { style as tableStyles } from '@exmg/exm-grid/src/styles/exm-grid-styles-css.js';
 import { style as demoStyles } from './demo-common-css.js';
 
 @customElement('search-toolbar-demo')

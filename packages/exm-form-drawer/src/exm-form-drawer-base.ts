@@ -2,10 +2,10 @@ import { html, nothing } from 'lit';
 import { property, state } from 'lit/decorators.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
 import './exm-drawer.js';
-import '@exm/exm-button/exm-filled-button.js';
+import '@exmg/exm-button/exm-filled-button.js';
 import '@material/web/button/text-button.js';
 import { ExmgElement } from '@exmg/lit-base';
-import { serializeForm } from '@exm/exm-form';
+import { serializeForm } from '@exmg/exm-form';
 
 export class ExmgFormDrawerBase extends ExmgElement {
   /**

@@ -1,6 +1,6 @@
-# `<exm-sortable>` [![Published on npm](https://img.shields.io/npm/v/@exm/exm-sortable.svg)](https://www.npmjs.com/package/@exm/exm-sortable)
+# `<exm-sortable>` [![Published on npm](https://img.shields.io/npm/v/@exmg/exm-sortable.svg)](https://www.npmjs.com/package/@exmg/exm-sortable)
 
-# @exm/exm-sortable
+# @exmg/exm-sortable
 
 Enables drag and drop sorting of items in a list or table
 
@@ -9,7 +9,7 @@ Enables drag and drop sorting of items in a list or table
 ## Installation
 
 ```sh
-npm install @exm/exm-sortable
+npm install @exmg/exm-sortable
 ```
 
 ## Example Usage

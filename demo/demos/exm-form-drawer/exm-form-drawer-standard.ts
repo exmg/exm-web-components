@@ -1,9 +1,9 @@
 import { LitElement, html } from 'lit';
 import { customElement, property, query } from 'lit/decorators.js';
-import '@exm/exm-form-drawer/exm-form-drawer.js';
+import '@exmg/exm-form-drawer/exm-form-drawer.js';
 import '@material/web/button/text-button.js';
-import { ExmgFormDrawer, formDrawerStyles } from '@exm/exm-form-drawer';
-import { exmgFormStyles } from '@exm/exm-form';
+import { ExmgFormDrawer, formDrawerStyles } from '@exmg/exm-form-drawer';
+import { exmgFormStyles } from '@exmg/exm-form';
 
 export const regexEmail = '[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,3}$';
 function sleep(ms: number) {

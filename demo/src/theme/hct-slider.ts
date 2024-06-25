@@ -11,7 +11,7 @@ import { css, html, LitElement } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { styleMap } from 'lit/directives/style-map.js';
 
-import { ThemeUtils } from '@exm/exm-theme';
+import { ThemeUtils } from '@exmg/exm-theme';
 
 /**
  * A tuple denoting an inclusive value range.

@@ -1,9 +1,9 @@
 import { LitElement, html, css, nothing } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 
-import '@exm/exm-collapsed/exm-collapsed.js';
-import '@exm/exm-form/exm-form.js';
-import { exmgFormStyles } from '@exm/exm-form';
+import '@exmg/exm-collapsed/exm-collapsed.js';
+import '@exmg/exm-form/exm-form.js';
+import { exmgFormStyles } from '@exmg/exm-form';
 
 import '@material/web/button/text-button.js';
 import '@material/web/icon/icon.js';

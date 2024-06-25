@@ -1,6 +1,6 @@
-# `<exm-copy-to-clipboard>` [![Published on npm](https://img.shields.io/npm/v/@exm/exm-copy-to-clipboard.svg)](https://www.npmjs.com/package/@exm/exm-copy-to-clipboard)
+# `<exm-copy-to-clipboard>` [![Published on npm](https://img.shields.io/npm/v/@exmg/exm-copy-to-clipboard.svg)](https://www.npmjs.com/package/@exmg/exm-copy-to-clipboard)
 
-# @exm/exm-copy-to-clipboard
+# @exmg/exm-copy-to-clipboard
 
 Helper element to create icon/buttons that lets the user copy content to the clipboard. Just wrap it around
 the button or icon and set the value that needs to be copied.
@@ -8,7 +8,7 @@ the button or icon and set the value that needs to be copied.
 ## Installation
 
 ```sh
-npm install @exm/exm-copy-to-clipboard
+npm install @exmg/exm-copy-to-clipboard
 ```
 
 ## Example Usage

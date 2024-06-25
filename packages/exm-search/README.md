@@ -1,4 +1,4 @@
-# `<exm-search>` [![Published on npm](https://img.shields.io/npm/v/@exm/exm-search.svg)](https://www.npmjs.com/package/@exm/exm-search)
+# `<exm-search>` [![Published on npm](https://img.shields.io/npm/v/@exmg/exm-search.svg)](https://www.npmjs.com/package/@exmg/exm-search)
 
 # exm-search
 
@@ -7,7 +7,7 @@ Exmg search provides an search input in material 3 style
 ## Installation
 
 ```sh
-npm install @exm/exm-search
+npm install @exmg/exm-search
 ```
 
 ## Example Usage
@@ -27,8 +27,8 @@ npm install @exm/exm-search
 
 ## Styles
 
-| Custom property                        | Description            | Default                                      |
-| -------------------------------------- | ---------------------- | -------------------------------------------- |
+| Custom property                       | Description            | Default                                      |
+| ------------------------------------- | ---------------------- | -------------------------------------------- |
 | `--exm-search-outline-color`          | outline color          | `--md-outlined-field-hover-outline-width`;   |
 | `--exm-search-outline-width`          | outline width          | `1px`;                                       |
 | `--exm-search-container-shape`        | container shape        | `4px`;                                       |

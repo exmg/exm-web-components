@@ -1,7 +1,7 @@
 import { customElement } from 'lit/decorators.js';
 
 import { style } from './styles/exm-dialog-form-css.js';
-import { exmgFormStyles } from '@exm/exm-form';
+import { exmgFormStyles } from '@exmg/exm-form';
 import { ExmgDialogFormBase } from './exm-dialog-form-base.js';
 
 @customElement('exm-dialog-form')

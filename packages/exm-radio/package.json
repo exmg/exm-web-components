@@ -1,6 +1,6 @@
 {
-  "name": "@exm/exm-radio",
-  "version": "1.0.1",
+  "name": "@exmg/exm-radio",
+  "version": "0.0.1",
   "description": "Material style radio element",
   "contributors": [
     "Ex Machina"
@@ -45,5 +45,6 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "gitHead": "1973df6ecaaf0a57b688f5eb8852516295bc04d6"
 }

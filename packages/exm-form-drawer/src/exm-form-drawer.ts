@@ -2,7 +2,7 @@ import { customElement } from 'lit/decorators.js';
 
 import { style } from './styles/exm-form-drawer-styles-css.js';
 import { ExmgFormDrawerBase } from './exm-form-drawer-base.js';
-import { exmgFormStyles } from '@exm/exm-form';
+import { exmgFormStyles } from '@exmg/exm-form';
 
 @customElement('exm-form-drawer')
 export class ExmgFormDrawer extends ExmgFormDrawerBase {

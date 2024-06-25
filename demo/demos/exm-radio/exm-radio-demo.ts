@@ -2,8 +2,8 @@ import { LitElement, css, html } from 'lit';
 import { customElement } from 'lit/decorators.js';
 import { style } from '../demo-page-styles-css.js';
 
-import '@exm/exm-radio/exm-radio-item.js';
-import '@exm/exm-form/exm-form.js';
+import '@exmg/exm-radio/exm-radio-item.js';
+import '@exmg/exm-form/exm-form.js';
 import '@material/web/icon/icon.js';
 
 @customElement('exm-radio-demo')

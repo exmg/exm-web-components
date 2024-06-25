@@ -1,7 +1,7 @@
 import { html, css } from 'lit';
 import { customElement } from 'lit/decorators.js';
 
-import { style as tableStyles } from '@exm/exm-grid/src/styles/exm-grid-styles-css.js';
+import { style as tableStyles } from '@exmg/exm-grid/src/styles/exm-grid-styles-css.js';
 import { style as demoStyles } from './demo-common-css.js';
 
 import './exm-complex-grid-with-slotted-toolbar.js';

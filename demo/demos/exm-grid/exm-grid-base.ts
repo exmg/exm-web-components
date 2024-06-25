@@ -2,14 +2,14 @@
 import { LitElement } from 'lit';
 import { property, state } from 'lit/decorators.js';
 import '@material/web/checkbox/checkbox.js';
-import '@exm/exm-grid/src/table/exm-grid.js';
-import '@exm/exm-grid/src/table/exm-grid-pagination.js';
-import '@exm/exm-grid/src/table/exm-grid-smart-toolbar.js';
+import '@exmg/exm-grid/src/table/exm-grid.js';
+import '@exmg/exm-grid/src/table/exm-grid-pagination.js';
+import '@exmg/exm-grid/src/table/exm-grid-smart-toolbar.js';
 import {
   ActionAmountSelectedItemsCondition,
   ActionConditionType,
   ActionWithCondition,
-} from '@exm/exm-grid/src/table/types/exm-grid-smart-toolbar-types.js';
+} from '@exmg/exm-grid/src/table/types/exm-grid-smart-toolbar-types.js';
 import {
   EventDetailGridToolbarSettingChanged,
   Filter,
@@ -17,13 +17,13 @@ import {
   FilterSingleSelectConfig,
   SettingConfigId,
   SettingSelectionListItem,
-} from '@exm/exm-grid/src/table/types/exm-grid-toolbar-types.js';
+} from '@exmg/exm-grid/src/table/types/exm-grid-toolbar-types.js';
 import {
   EventDetailRowsOrderChanged,
   EventDetailSelectedRowsChange,
   EventDetailSortChange,
-} from '@exm/exm-grid/src/table/types/exm-grid-types.js';
-import { EventSelectPayload } from '@exm/exm-grid/src/table/exm-grid-toolbar-filters.js';
+} from '@exmg/exm-grid/src/table/types/exm-grid-types.js';
+import { EventSelectPayload } from '@exmg/exm-grid/src/table/exm-grid-toolbar-filters.js';
 
 function isString(x: any): x is string {
   return typeof x === 'string';

@@ -1,8 +1,8 @@
 import { html, css } from 'lit';
 import { property } from 'lit/decorators.js';
 
-import { ExmgDialogFormBase, exmgDialogFormStyles } from '@exm/exm-dialogs';
-import { exmgFormStyles } from '@exm/exm-form';
+import { ExmgDialogFormBase, exmgDialogFormStyles } from '@exmg/exm-dialogs';
+import { exmgFormStyles } from '@exmg/exm-form';
 
 import '@material/web/textfield/filled-text-field.js';
 import '@material/web/radio/radio.js';

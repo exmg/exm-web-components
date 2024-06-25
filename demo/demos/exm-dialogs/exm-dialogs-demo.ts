@@ -3,10 +3,10 @@ import { customElement } from 'lit/decorators/custom-element.js';
 import '@material/web/button/filled-button.js';
 import '@polymer/paper-input/paper-input.js';
 
-import '@exm/exm-dialogs/exm-dialog-confirm.js';
-import { ExmgDialogConfirm } from '@exm/exm-dialogs/exm-dialog-confirm.js';
-import '@exm/exm-dialogs/exm-dialog-form.js';
-import { ExmgDialogForm } from '@exm/exm-dialogs/exm-dialog-form.js';
+import '@exmg/exm-dialogs/exm-dialog-confirm.js';
+import { ExmgDialogConfirm } from '@exmg/exm-dialogs/exm-dialog-confirm.js';
+import '@exmg/exm-dialogs/exm-dialog-form.js';
+import { ExmgDialogForm } from '@exmg/exm-dialogs/exm-dialog-form.js';
 import '@material/web/textfield/filled-text-field.js';
 import { style } from '../demo-page-styles-css.js';
 

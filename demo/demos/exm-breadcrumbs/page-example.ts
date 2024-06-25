@@ -1,9 +1,9 @@
 import { html, css } from 'lit';
 import { customElement, query } from 'lit/decorators.js';
 import { ExmgElement } from '@exmg/lit-base/index.js';
-import { BreadcrumbsMixin } from '@exm/exm-breadcrumbs';
-import '@exm/exm-breadcrumbs/exm-breadcrumbs.js';
-import { ExmgBreadcrumbs } from '@exm/exm-breadcrumbs/exm-breadcrumbs.js';
+import { BreadcrumbsMixin } from '@exmg/exm-breadcrumbs';
+import '@exmg/exm-breadcrumbs/exm-breadcrumbs.js';
+import { ExmgBreadcrumbs } from '@exmg/exm-breadcrumbs/exm-breadcrumbs.js';
 
 const dummyItems = [
   { href: '/home', content: 'Home page1' },

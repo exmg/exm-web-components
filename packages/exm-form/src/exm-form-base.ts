@@ -1,7 +1,7 @@
 import { html, nothing } from 'lit';
 import { property } from 'lit/decorators.js';
 
-import '@exm/exm-button/exm-text-button.js';
+import '@exmg/exm-button/exm-text-button.js';
 import '@material/web/button/text-button.js';
 import '@material/web/divider/divider.js';
 

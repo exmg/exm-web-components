@@ -1,12 +1,12 @@
 import { LitElement, html, css } from 'lit';
 import { property } from 'lit/decorators/property.js';
 import { customElement } from 'lit/decorators/custom-element.js';
-import '@exm/exm-snackbar/exm-snackbar.js';
+import '@exmg/exm-snackbar/exm-snackbar.js';
 import '@material/web/button/text-button.js';
 import '@material/web/button/filled-button.js';
 import '@material/web/icon/icon.js';
 import '@material/web/iconbutton/icon-button.js';
-import { ExmgSnackbar } from '@exm/exm-snackbar';
+import { ExmgSnackbar } from '@exmg/exm-snackbar';
 import { style } from '../demo-page-styles-css.js';
 
 @customElement('exm-snackbar-demo')

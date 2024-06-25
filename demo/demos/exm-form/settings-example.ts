@@ -1,16 +1,16 @@
 import { LitElement, html, css, nothing } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 
-import '@exm/exm-collapsed/exm-collapsed.js';
-import '@exm/exm-form/exm-form.js';
-import { exmgFormStyles } from '@exm/exm-form';
+import '@exmg/exm-collapsed/exm-collapsed.js';
+import '@exmg/exm-form/exm-form.js';
+import { exmgFormStyles } from '@exmg/exm-form';
 
 import '@material/web/button/text-button.js';
 import '@material/web/icon/icon.js';
 import '@material/web/divider/divider.js';
 import '@material/web/textfield/filled-text-field.js';
 import '@material/web/checkbox/checkbox.js';
-import '@exm/exm-radio/exm-radio-item.js';
+import '@exmg/exm-radio/exm-radio-item.js';
 
 @customElement('settings-example')
 export class SettingsExample extends LitElement {

@@ -2,8 +2,8 @@ import { LitElement, html } from 'lit';
 import { customElement } from 'lit/decorators/custom-element.js';
 import { property } from 'lit/decorators.js';
 
-import '@exm/exm-button/exm-filled-button.js';
-import '@exm/exm-button/exm-text-button.js';
+import '@exmg/exm-button/exm-filled-button.js';
+import '@exmg/exm-button/exm-text-button.js';
 
 import { style } from '../demo-page-styles-css.js';
 

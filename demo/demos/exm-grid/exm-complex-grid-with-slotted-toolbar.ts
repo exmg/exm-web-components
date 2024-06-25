@@ -6,12 +6,12 @@ import '@polymer/paper-item';
 import '@material/web/icon/icon.js';
 import '@material/web/iconbutton/icon-button.js';
 
-import '@exm/exm-grid/src/table/exm-grid-toolbar-filters.js';
-import '@exm/exm-grid/src/table/exm-grid.js';
-import '@exm/exm-grid/src/table/exm-grid-pagination.js';
-import '@exm/exm-grid/src/table/exm-grid-base-toolbar.js';
+import '@exmg/exm-grid/src/table/exm-grid-toolbar-filters.js';
+import '@exmg/exm-grid/src/table/exm-grid.js';
+import '@exmg/exm-grid/src/table/exm-grid-pagination.js';
+import '@exmg/exm-grid/src/table/exm-grid-base-toolbar.js';
 
-import { style as tableStyles } from '@exm/exm-grid/src/styles/exm-grid-styles-css.js';
+import { style as tableStyles } from '@exmg/exm-grid/src/styles/exm-grid-styles-css.js';
 import { style as demoStyles } from './demo-common-css.js';
 
 import { DEFAULT_SORT_COLUMN, DEFAULT_SORT_DIRECTION, ExmgBaseGridDemo } from './exm-grid-base.js';

@@ -1,4 +1,4 @@
-# `<exm-dialogs>` [![Published on npm](https://img.shields.io/npm/v/@exm/exm-dialogs.svg)](https://www.npmjs.com/package/@exm/exm-dialogs)
+# `<exm-dialogs>` [![Published on npm](https://img.shields.io/npm/v/@exmg/exm-dialogs.svg)](https://www.npmjs.com/package/@exmg/exm-dialogs)
 
 ## Exmg Dialogs
 

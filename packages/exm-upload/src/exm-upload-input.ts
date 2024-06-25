@@ -1,6 +1,6 @@
 import { LitElement, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import '@exm/exm-collapsed';
+import '@exmg/exm-collapsed';
 import { style } from './styles/exm-upload-input-css.js';
 import { ExmgUpload } from './exm-upload.js';
 

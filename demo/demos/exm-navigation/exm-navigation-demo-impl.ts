@@ -3,13 +3,13 @@ import { customElement } from 'lit/decorators.js';
 
 import '@material/web/iconbutton/icon-button.js';
 
-import '@exm/exm-navigation/exm-navigation-toolbar.js';
-import '@exm/exm-navigation/exm-navigation-rail.js';
-import '@exm/exm-navigation/exm-navigation-rail-nav.js';
-import '@exm/exm-navigation/exm-navigation-rail-nav-item.js';
-import '@exm/exm-navigation/exm-navigation-drawer.js';
-import '@exm/exm-navigation/exm-navigation-drawer-nav.js';
-import '@exm/exm-collapsed/exm-collapsed.js';
+import '@exmg/exm-navigation/exm-navigation-toolbar.js';
+import '@exmg/exm-navigation/exm-navigation-rail.js';
+import '@exmg/exm-navigation/exm-navigation-rail-nav.js';
+import '@exmg/exm-navigation/exm-navigation-rail-nav-item.js';
+import '@exmg/exm-navigation/exm-navigation-drawer.js';
+import '@exmg/exm-navigation/exm-navigation-drawer-nav.js';
+import '@exmg/exm-collapsed/exm-collapsed.js';
 
 import './dark-light-toggle.js';
 import './customer-logo.js';
@@ -29,13 +29,13 @@ import {
   navigationSubSelected,
   ExmgNavigationBase,
   exmgNavigationDrawerStyles,
-} from '@exm/exm-navigation';
+} from '@exmg/exm-navigation';
 import { style } from './exm-navigation-demo-styles-css.js';
 import { MenuItem, menu as MENU } from './menu.js';
 
 import { style as baseStyle } from '../demo-page-styles-css.js';
 
-import { initTheme } from '@exm/exm-theme';
+import { initTheme } from '@exmg/exm-theme';
 
 initTheme();
 

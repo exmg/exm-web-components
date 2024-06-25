@@ -1,6 +1,6 @@
 {
-  "name": "@exm/exm-grid",
-  "version": "1.0.1",
+  "name": "@exmg/exm-grid",
+  "version": "0.0.1",
   "type": "module",
   "description": "exmg grid element",
   "contributors": [
@@ -28,7 +28,7 @@
     "directory": "packages/exm-grid"
   },
   "dependencies": {
-    "@exm/exm-sortable": "file:../exm-sortable",
+    "@exmg/exm-sortable": "^0.0.1",
     "@exmg/lit-base": "^2.0.1",
     "@material/typography": "^14.0.0",
     "@material/web": "^1.3.0",
@@ -54,5 +54,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "a80268a43889f54fc67cafc66405d1f622f7528e"
+  "gitHead": "1973df6ecaaf0a57b688f5eb8852516295bc04d6"
 }

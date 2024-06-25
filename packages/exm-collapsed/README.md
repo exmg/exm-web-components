@@ -1,4 +1,4 @@
-# `<exm-collapsed>` [![Published on npm](https://img.shields.io/npm/v/@exm/exm-collapsed.svg)](https://www.npmjs.com/package/@exm/exm-collapsed)
+# `<exm-collapsed>` [![Published on npm](https://img.shields.io/npm/v/@exmg/exm-collapsed.svg)](https://www.npmjs.com/package/@exmg/exm-collapsed)
 
 Collapsed element contains a slot that can be expanded or collapsed to reveal additional content or information.
 
@@ -7,7 +7,7 @@ Collapsed element contains a slot that can be expanded or collapsed to reveal ad
 ## Installation
 
 ```sh
-npm install @exm/exm-collapsed
+npm install @exmg/exm-collapsed
 ```
 
 ## Example Usage
@@ -20,11 +20,11 @@ opened = false;
 ```
 
 ```html
-<exm-button @click=${() => (this.opened = !this.opened)}>Open</exm-button>
+<exm-button @click="${()" =""> (this.opened = !this.opened)}>Open</exm-button>
 
-<exm-collapsed  ?opened=${this.opened}>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua.
+<exm-collapsed ?opened="${this.opened}">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+  aliqua.
 </exm-collapsed>
 ```
 

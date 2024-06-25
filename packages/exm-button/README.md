@@ -1,4 +1,4 @@
-# `<exm-button>` [![Published on npm](https://img.shields.io/npm/v/@exm/exm-button.svg)](https://www.npmjs.com/package/@exm/exm-button)
+# `<exm-button>` [![Published on npm](https://img.shields.io/npm/v/@exmg/exm-button.svg)](https://www.npmjs.com/package/@exmg/exm-button)
 
 # exm-button
 
@@ -7,7 +7,7 @@ Exmg button extends the material 3 md buttons but adds loading (spinner) animati
 ## Installation
 
 ```sh
-npm install @exm/exm-button
+npm install @exmg/exm-button
 ```
 
 ## Example Usage

@@ -1,6 +1,6 @@
 import { LitElement, html, css } from 'lit';
 import { customElement } from 'lit/decorators.js';
-import '@exm/exm-upload';
+import '@exmg/exm-upload';
 
 window.uploadDefaults = {
   customAdapterPath: '/demo/demos/exm-upload/xhr-json-adapter.js',

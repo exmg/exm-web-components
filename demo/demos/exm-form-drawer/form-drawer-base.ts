@@ -1,6 +1,6 @@
 import { html, PropertyValues } from 'lit';
 import { property } from 'lit/decorators.js';
-import '@exm/exm-form-drawer/exm-form-drawer.js';
+import '@exmg/exm-form-drawer/exm-form-drawer.js';
 import { style } from './form-drawer-base-styles.js';
 import { BaseElement } from './base-element.js';
 

@@ -1,6 +1,6 @@
 import { LitElement, html, css } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
-import '@exm/exm-breadcrumbs/exm-breadcrumbs.js';
+import '@exmg/exm-breadcrumbs/exm-breadcrumbs.js';
 import './page-example.js';
 import { style } from '../demo-page-styles-css.js';
 

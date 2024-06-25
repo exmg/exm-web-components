@@ -1,6 +1,6 @@
 {
-  "name": "@exm/exm-form",
-  "version": "1.0.1",
+  "name": "@exmg/exm-form",
+  "version": "0.0.1",
   "type": "module",
   "main": "index.js",
   "module": "index.js",
@@ -29,7 +29,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@exm/exm-button": "file:../exm-button",
+    "@exmg/exm-button": "^0.0.1",
     "@material/typography": "^14.0.0",
     "lit": "^3.0.0",
     "tslib": "^2.6.2"
@@ -42,5 +42,6 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "gitHead": "1973df6ecaaf0a57b688f5eb8852516295bc04d6"
 }

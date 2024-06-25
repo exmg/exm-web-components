@@ -1,4 +1,4 @@
-import { ExmgDialogConfirmBase, exmgDialogConfirmStyles } from '@exm/exm-dialogs';
+import { ExmgDialogConfirmBase, exmgDialogConfirmStyles } from '@exmg/exm-dialogs';
 
 import { customElement } from 'lit/decorators.js';
 

@@ -1,10 +1,10 @@
 import { LitElement, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import '@exm/exm-button/exm-button.js';
+import '@exmg/exm-button/exm-button.js';
 import '@polymer/paper-input/paper-input.js';
-import '@exm/exm-paper-combobox/exm-paper-combobox.js';
-import '@exm/exm-form/exm-form.js';
-import '@exm/exm-form-drawer/exm-form-drawer.js';
+import '@exmg/exm-paper-combobox/exm-paper-combobox.js';
+import '@exmg/exm-form/exm-form.js';
+import '@exmg/exm-form-drawer/exm-form-drawer.js';
 
 @customElement('exm-drawer-demo-styled')
 export class Drawer extends LitElement {

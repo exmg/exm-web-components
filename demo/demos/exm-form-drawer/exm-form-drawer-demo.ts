@@ -1,6 +1,6 @@
 import { LitElement, html } from 'lit';
 import { customElement, query, state } from 'lit/decorators.js';
-import '@exm/exm-form-drawer/exm-form-drawer.js';
+import '@exmg/exm-form-drawer/exm-form-drawer.js';
 import './exm-form-drawer-standard.js';
 import './user-update-drawer.js';
 import '@material/web/tabs/internal/tabs.js';

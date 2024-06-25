@@ -1,8 +1,8 @@
 import { LitElement, html, css } from 'lit';
 import { customElement, property, query } from 'lit/decorators.js';
-import '@exm/exm-upload';
+import '@exmg/exm-upload';
 import { observer } from '@exmg/lit-base';
-import { ExmgUpload } from '@exm/exm-upload';
+import { ExmgUpload } from '@exmg/exm-upload';
 import { ifDefined } from 'lit/directives/if-defined.js';
 import './file-image-upload-form.js';
 

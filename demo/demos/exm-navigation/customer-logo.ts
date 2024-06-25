@@ -1,7 +1,7 @@
 import { LitElement, html, css, nothing } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
-import { ColorMode, ThemeUtils } from '@exm/exm-theme';
-import { ThemeMixin } from '@exm/exm-theme';
+import { ColorMode, ThemeUtils } from '@exmg/exm-theme';
+import { ThemeMixin } from '@exmg/exm-theme';
 
 @customElement('customer-logo')
 export class CustomerLogo extends ThemeMixin(LitElement) {
