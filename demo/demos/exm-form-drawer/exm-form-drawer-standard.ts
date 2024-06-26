@@ -3,7 +3,7 @@ import { customElement, property, query } from 'lit/decorators.js';
 import '@exmg/exm-form-drawer/exm-form-drawer.js';
 import '@material/web/button/text-button.js';
 import { ExmFormDrawer, formDrawerStyles } from '@exmg/exm-form-drawer';
-import { exmgFormStyles } from '@exmg/exm-form';
+import { formStyles } from '@exmg/exm-form';
 
 export const regexEmail = '[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,3}$';
 function sleep(ms: number) {
@@ -12,7 +12,7 @@ function sleep(ms: number) {
 
 @customElement('exm-form-drawer-standard')
 export class Drawer extends LitElement {
-  static styles = [formDrawerStyles, exmgFormStyles];
+  static styles = [formDrawerStyles, formStyles];
 
   @property({ type: Boolean })
   opened = false;

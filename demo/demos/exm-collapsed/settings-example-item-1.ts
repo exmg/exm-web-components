@@ -3,7 +3,7 @@ import { customElement, property } from 'lit/decorators.js';
 
 import '@exmg/exm-collapsed/exm-collapsed.js';
 import '@exmg/exm-form/exm-form.js';
-import { exmgFormStyles } from '@exmg/exm-form';
+import { formStyles } from '@exmg/exm-form';
 
 import '@material/web/button/text-button.js';
 import '@material/web/icon/icon.js';
@@ -17,7 +17,7 @@ export class SettingsExampleItem1 extends LitElement {
   opened = false;
 
   static styles = [
-    exmgFormStyles,
+    formStyles,
     css`
       :host {
         display: block;

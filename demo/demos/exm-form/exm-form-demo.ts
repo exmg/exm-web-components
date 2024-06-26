@@ -2,7 +2,7 @@ import { LitElement, html } from 'lit';
 import { customElement } from 'lit/decorators.js';
 
 import '@exmg/exm-form/exm-form.js';
-import { ExmForm, exmgFormStyles } from '@exmg/exm-form';
+import { ExmForm, formStyles } from '@exmg/exm-form';
 import { style } from '../demo-page-styles-css.js';
 
 import './form-base-example.js';
@@ -14,7 +14,7 @@ function sleep(ms) {
 
 @customElement('exm-form-demo')
 export class ExmFormDemo extends LitElement {
-  static styles = [style, exmgFormStyles];
+  static styles = [style, formStyles];
 
   async doFormAction(e: CustomEvent<unknown>) {
     const formDialog = e.target as ExmForm;

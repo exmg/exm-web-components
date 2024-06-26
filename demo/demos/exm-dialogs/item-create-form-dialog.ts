@@ -1,8 +1,8 @@
 import { html, css } from 'lit';
 import { property } from 'lit/decorators.js';
 
-import { ExmDialogFormBase, exmgDialogFormStyles } from '@exmg/exm-dialogs';
-import { exmgFormStyles } from '@exmg/exm-form';
+import { ExmDialogFormBase, dialogFormStyles } from '@exmg/exm-dialogs';
+import { formStyles } from '@exmg/exm-form';
 
 import '@material/web/textfield/filled-text-field.js';
 import '@material/web/radio/radio.js';
@@ -18,8 +18,8 @@ export class ItemCreateFormDialog extends ExmDialogFormBase {
   title = 'Create Customer';
 
   static override styles = [
-    exmgDialogFormStyles,
-    exmgFormStyles,
+    dialogFormStyles,
+    formStyles,
     css`
       .wrapper {
         display: flex;

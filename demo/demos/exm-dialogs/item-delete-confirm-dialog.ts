@@ -1,4 +1,4 @@
-import { ExmDialogConfirmBase, exmgDialogConfirmStyles } from '@exmg/exm-dialogs';
+import { ExmDialogConfirmBase, dialogConfirmStyles } from '@exmg/exm-dialogs';
 
 import { customElement } from 'lit/decorators.js';
 
@@ -8,7 +8,7 @@ function sleep(ms) {
 
 @customElement('item-delete-confirm-dialog')
 export class ItemDeleteConfirmDialog extends ExmDialogConfirmBase {
-  static override styles = [exmgDialogConfirmStyles];
+  static override styles = [dialogConfirmStyles];
 
   async doAction() {
     // Simulate slow connection
