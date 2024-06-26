@@ -27,7 +27,7 @@ import {
   navigationActiveHasSubmenu,
   navigationDrawerPersistent,
   navigationSubSelected,
-  ExmgNavigationBase,
+  ExmNavigationBase,
   exmgNavigationDrawerStyles,
 } from '@exmg/exm-navigation';
 import { style } from './exm-navigation-demo-styles-css.js';
@@ -40,7 +40,7 @@ import { initTheme } from '@exmg/exm-theme';
 initTheme();
 
 @customElement('exm-navigation-demo-impl')
-export class ExmgNavigationDemoImpl extends ExmgNavigationBase {
+export class ExmNavigationDemoImpl extends ExmNavigationBase {
   static styles = [baseStyle, style, exmgNavigationDrawerStyles];
 
   menu = MENU;

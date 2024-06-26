@@ -1,6 +1,6 @@
 import { customElement } from 'lit/decorators.js';
 import { style } from './styles/exm-breadcrumbs-styles-css.js';
-import { ExmgBreadcrumbsBase } from './exm-breadcrumbs-base.js';
+import { ExmBreadcrumbsBase } from './exm-breadcrumbs-base.js';
 
 /**
  * exm-breadcrumbs
@@ -24,12 +24,12 @@ import { ExmgBreadcrumbsBase } from './exm-breadcrumbs-base.js';
  *
  */
 @customElement('exm-breadcrumbs')
-export class ExmgBreadcrumbs extends ExmgBreadcrumbsBase {
+export class ExmBreadcrumbs extends ExmBreadcrumbsBase {
   static styles = style;
 }
 
 declare global {
   interface HTMLElementTagNameMap {
-    'exm-breadcrumbs': ExmgBreadcrumbs;
+    'exm-breadcrumbs': ExmBreadcrumbs;
   }
 }

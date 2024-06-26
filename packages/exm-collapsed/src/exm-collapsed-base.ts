@@ -22,13 +22,13 @@ const toggleClass = (className: string, el: HTMLElement, val?: boolean) => {
   }
 };
 
-export class ExmgCollapsedBase extends ExmgElement {
+export class ExmCollapsedBase extends ExmgElement {
   /**
    * Whether or not the element is opened or not
    * @type {Boolean}
    */
   @property({ type: Boolean, reflect: true })
-  @observer(function (this: ExmgCollapsedBase) {
+  @observer(function (this: ExmCollapsedBase) {
     this._openedChanged();
   })
   opened = false;

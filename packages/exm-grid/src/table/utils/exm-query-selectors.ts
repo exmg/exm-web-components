@@ -1,4 +1,4 @@
-export class ExmgQuerySelectors {
+export class ExmQuerySelectors {
   private table: HTMLTableElement;
   private tableBody: HTMLElement;
   constructor(t: HTMLTableElement, tb: HTMLTableSectionElement) {

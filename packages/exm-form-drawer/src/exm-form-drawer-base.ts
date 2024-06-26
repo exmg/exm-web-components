@@ -7,7 +7,7 @@ import '@material/web/button/text-button.js';
 import { ExmgElement } from '@exmg/lit-base';
 import { serializeForm } from '@exmg/exm-form';
 
-export class ExmgFormDrawerBase extends ExmgElement {
+export class ExmFormDrawerBase extends ExmgElement {
   /**
    * Opened state of the form-drawer
    * @type {Boolean}

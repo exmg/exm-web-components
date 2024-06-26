@@ -18,7 +18,7 @@ import { style } from './styles/exm-copy-to-clipboard-styles-css.js';
  * @extends ExmgElement
  */
 @customElement('exm-copy-to-clipboard')
-export class ExmgCopyToClipboard extends ExmgElement {
+export class ExmCopyToClipboard extends ExmgElement {
   /**
    * Value to be copied
    * @type {String}
@@ -144,6 +144,6 @@ export class ExmgCopyToClipboard extends ExmgElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'exm-copy-to-clipboard': ExmgCopyToClipboard;
+    'exm-copy-to-clipboard': ExmCopyToClipboard;
   }
 }

@@ -9,7 +9,7 @@ import {
   navigationSubSelected,
 } from './exm-navigation-signals.js';
 import { property, query } from 'lit/decorators.js';
-import { ExmgNavigationDrawer } from './exm-navigation-drawer.js';
+import { ExmNavigationDrawer } from './exm-navigation-drawer.js';
 
 export interface MenuItem {
   id: string;
@@ -21,12 +21,12 @@ export interface MenuItem {
 }
 
 // eslint-disable-next-line
-export class ExmgNavigationBase extends SignalWatcher(LitElement) {
+export class ExmNavigationBase extends SignalWatcher(LitElement) {
   @property({ type: String })
   pageId = 'chat';
 
   @query('#drawer')
-  drawer?: ExmgNavigationDrawer;
+  drawer?: ExmNavigationDrawer;
 
   menu: MenuItem[] = [];
   expandedItems: { [k: string]: boolean } = {};

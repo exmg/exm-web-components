@@ -14,12 +14,12 @@ import { property, state } from 'lit/decorators.js';
 import { repeat } from 'lit/directives/repeat.js';
 
 import { style } from './styles/exm-chip-input-dropdown-css.js';
-import { ExmgChip } from './exm-chip.js';
+import { ExmChip } from './exm-chip.js';
 import { Chip } from '@material/web/chips/internal/chip.js';
 
 declare global {
   interface HTMLElementTagNameMap {
-    'exm-chip-input-dropdown': ExmgChipInputDropdown;
+    'exm-chip-input-dropdown': ExmChipInputDropdown;
   }
 }
 
@@ -29,12 +29,12 @@ declare global {
  * @suppress {visibility}
  */
 @customElement('exm-chip-input-dropdown')
-export class ExmgChipInputDropdown extends ChipSet {
+export class ExmChipInputDropdown extends ChipSet {
   @property({ type: String }) label = '';
   @property({ type: String }) dropdownTitle = 'Select items';
   @property({ type: String }) btnAddText = 'Add items';
 
-  @property({ type: Array }) selectedChips?: ExmgChip[];
+  @property({ type: Array }) selectedChips?: ExmChip[];
 
   @state() private menuOpen = false;
 
@@ -66,7 +66,7 @@ export class ExmgChipInputDropdown extends ChipSet {
   }
 
   private _removeSelected(val: string) {
-    const index = (this.selectedChips || []).findIndex((el: ExmgChip) => el.value === val);
+    const index = (this.selectedChips || []).findIndex((el: ExmChip) => el.value === val);
     if (index > -1) {
       (this.selectedChips || []).splice(index, 1); // 2nd parameter means remove one item only
       // @ts-ignore

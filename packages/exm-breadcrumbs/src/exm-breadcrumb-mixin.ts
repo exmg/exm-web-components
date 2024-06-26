@@ -1,4 +1,4 @@
-import { ExmgBreadcrumbs } from './exm-breadcrumbs.js';
+import { ExmBreadcrumbs } from './exm-breadcrumbs.js';
 import { observer, ExmgElement, Constructor } from '@exmg/lit-base/index.js';
 import { BreadcrumbItem } from './types.js';
 import { property } from 'lit/decorators.js';
@@ -7,11 +7,11 @@ import { property } from 'lit/decorators.js';
  * @class
  * @abstract
  * @extends ExmgElement
- * @property {ExmgBreadcrumbs|undefined} breadcrumbsElement - Reference to the breadcrumbs element.
+ * @property {ExmBreadcrumbs|undefined} breadcrumbsElement - Reference to the breadcrumbs element.
  * @property {BreadcrumbItem[]|undefined} breadcrumbs - The breadcrumbs array.
  */
 export abstract class BreadcrumbsClass extends ExmgElement {
-  breadcrumbsElement?: ExmgBreadcrumbs;
+  breadcrumbsElement?: ExmBreadcrumbs;
   breadcrumbs?: BreadcrumbItem[];
 }
 

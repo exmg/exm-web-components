@@ -19,7 +19,7 @@
 
 ## Features {#features}
 
-ExMachina WebComponents packages features and documentations can be found in [Exmg Notion page](https://www.notion.so/exmachina/1396d2022f444059903bd1863e78c23d?v=5350291887d24646b67ac6b4b7c9202d)
+ExMachina WebComponents packages features and documentations can be found in [Exm Notion page](https://www.notion.so/exmachina/1396d2022f444059903bd1863e78c23d?v=5350291887d24646b67ac6b4b7c9202d)
 
 ## Setup {#setup}
 

@@ -2,7 +2,7 @@
 
 # exm-button
 
-Exmg button extends the material 3 md buttons but adds loading (spinner) animation when loading attribute is set to element. This button extends the material @material/web/button.
+Exm button extends the material 3 md buttons but adds loading (spinner) animation when loading attribute is set to element. This button extends the material @material/web/button.
 
 ## Installation
 

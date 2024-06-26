@@ -53,6 +53,6 @@ _None_
 
 ## Additional references
 
-- [Additional Documentation](https://exmg.github.io/exmachina-web-components/ExmgCopyToClipboard.html)
+- [Additional Documentation](https://exmg.github.io/exmachina-web-components/ExmCopyToClipboard.html)
 
 - [Demo](https://exmg.github.io/exmachina-web-components/demo/?el=exm-copy-to-clipboard)

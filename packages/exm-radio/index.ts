@@ -1,1 +1,1 @@
-export { ExmgRadioItem } from './src/exm-radio-item.js';
+export { ExmRadioItem } from './src/exm-radio-item.js';

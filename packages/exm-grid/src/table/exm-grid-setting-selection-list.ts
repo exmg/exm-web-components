@@ -10,7 +10,7 @@ import { style } from '../styles/exm-grid-setting-selection-list-styles-css.js';
 import { Menu } from '@material/web/menu/menu.js';
 
 @customElement('exm-grid-setting-selection-list')
-export class ExmgGridSettingSelectionList extends ExmgElement {
+export class ExmGridSettingSelectionList extends ExmgElement {
   @property({ type: String })
   tooltip = '';
 
@@ -134,6 +134,6 @@ export class ExmgGridSettingSelectionList extends ExmgElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'exm-grid-setting-selection-list': ExmgGridSettingSelectionList;
+    'exm-grid-setting-selection-list': ExmGridSettingSelectionList;
   }
 }

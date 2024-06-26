@@ -11,7 +11,7 @@ import { ExmgElement } from '@exmg/lit-base';
 
 export const CLOSE_ACTION = 'close';
 
-export class ExmgDialogConfirmBase extends ExmgElement {
+export class ExmDialogConfirmBase extends ExmgElement {
   /**
    * Opens the dialog when set to `true` and closes it when set to `false`.
    */

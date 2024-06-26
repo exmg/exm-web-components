@@ -2,7 +2,7 @@ import { LitElement, html, css } from 'lit';
 import { customElement } from 'lit/decorators.js';
 
 @customElement('exm-navigation-demo')
-export class ExmgNavigationDemo extends LitElement {
+export class ExmNavigationDemo extends LitElement {
   static styles = [
     css`
       :host {

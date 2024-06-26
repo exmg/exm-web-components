@@ -1,5 +1,5 @@
 import { exmgDialogUploadStyles } from '@exmg/exm-upload';
-import { ExmgDialogUploadBase } from '@exmg/exm-upload';
+import { ExmDialogUploadBase } from '@exmg/exm-upload';
 import { html } from 'lit';
 import { customElement } from 'lit/decorators.js';
 
@@ -8,7 +8,7 @@ function sleep(ms: number) {
 }
 
 @customElement('example-upload-dialog')
-export class ExampleUploadDialog extends ExmgDialogUploadBase {
+export class ExampleUploadDialog extends ExmDialogUploadBase {
   static override styles = [exmgDialogUploadStyles];
 
   async doAction(url: string) {

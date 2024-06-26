@@ -5,7 +5,7 @@ import '@exmg/exm-chip-input/exm-chip-input-dropdown.js';
 import '@exmg/exm-chip-input/exm-chip-input.js';
 import '@exmg/exm-chip-input/exm-chip.js';
 import '@exmg/exm-form/exm-form.js';
-import { ExmgForm } from '@exmg/exm-form/exm-form.js';
+import { ExmForm } from '@exmg/exm-form/exm-form.js';
 
 import '@material/web/chips/chip-set.js';
 import '@material/web/chips/filter-chip.js';
@@ -17,7 +17,7 @@ import '@material/web/labs/card/outlined-card.js';
 import { candies } from './data.js';
 
 @customElement('exm-chip-input-demo')
-export class ExmgChipInputDemo extends LitElement {
+export class ExmChipInputDemo extends LitElement {
   static styles = [
     css`
       :host {
@@ -40,7 +40,7 @@ export class ExmgChipInputDemo extends LitElement {
   ];
 
   async doFormAction(e: CustomEvent<unknown>) {
-    const formDialog = e.target as ExmgForm;
+    const formDialog = e.target as ExmForm;
     try {
       formDialog.submitting = true;
       console.log('e', e);

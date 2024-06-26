@@ -1,12 +1,12 @@
 import { html, css, LitElement } from 'lit';
 import { customElement, query } from 'lit/decorators.js';
 import { markdown } from './markdown.js';
-import { ExmgDialogUpload } from '@exmg/exm-upload/exm-dialog-upload.js';
+import { ExmDialogUpload } from '@exmg/exm-upload/exm-dialog-upload.js';
 import { MarkdownEditorElement } from '@exmg/exm-markdown-editor';
 import '@exmg/exm-markdown-editor';
 
 @customElement('exm-markdown-editor-image-upload-demo')
-export class ExmgMarkdownEditorImageUploadDemo extends LitElement {
+export class ExmMarkdownEditorImageUploadDemo extends LitElement {
   static styles = [
     css`
       :host {
@@ -15,7 +15,7 @@ export class ExmgMarkdownEditorImageUploadDemo extends LitElement {
     `,
   ];
 
-  @query('exm-dialog-upload') imageUploadDialog?: ExmgDialogUpload;
+  @query('exm-dialog-upload') imageUploadDialog?: ExmDialogUpload;
   @query('#upload') uploadImageMarkdown?: MarkdownEditorElement;
 
   handleImageUpload() {
@@ -41,6 +41,6 @@ export class ExmgMarkdownEditorImageUploadDemo extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'exm-markdown-editor-image-upload-demo': ExmgMarkdownEditorImageUploadDemo;
+    'exm-markdown-editor-image-upload-demo': ExmMarkdownEditorImageUploadDemo;
   }
 }

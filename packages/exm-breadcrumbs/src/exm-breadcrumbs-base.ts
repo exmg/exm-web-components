@@ -12,7 +12,7 @@ export const arrowSeparator = html`
   </svg>
 `;
 
-export class ExmgBreadcrumbsBase extends ExmgElement {
+export class ExmBreadcrumbsBase extends ExmgElement {
   /**
    * The items displayed by the breadcrumbs
    * @type {Array}

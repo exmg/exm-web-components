@@ -7,7 +7,7 @@ import '@polymer/paper-dialog/paper-dialog.js';
 import { style } from './styles/exm-drawer-styles-css.js';
 
 @customElement('exm-drawer')
-export class ExmgDrawer extends LitElement {
+export class ExmDrawer extends LitElement {
   /**
    * The opened state of the drawer
    * @type {Boolean}
@@ -73,6 +73,6 @@ export class ExmgDrawer extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'exm-drawer': ExmgDrawer;
+    'exm-drawer': ExmDrawer;
   }
 }

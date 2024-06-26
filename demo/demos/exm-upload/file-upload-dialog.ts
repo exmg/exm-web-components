@@ -2,9 +2,9 @@ import { LitElement, css, html } from 'lit';
 import { customElement, property, query } from 'lit/decorators.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
 
-import { ExmgDialogForm } from '@exmg/exm-dialogs';
+import { ExmDialogForm } from '@exmg/exm-dialogs';
 import '@exmg/exm-upload';
-import { ExmgUpload } from '@exmg/exm-upload';
+import { ExmUpload } from '@exmg/exm-upload';
 import '@exmg/exm-upload/src/exm-upload-dialog.js';
 
 @customElement('file-upload-dialog')
@@ -13,7 +13,7 @@ export class FileUploadDialog extends LitElement {
    * Reference to dialog
    */
   @query('#dialog')
-  dialog?: ExmgDialogForm;
+  dialog?: ExmDialogForm;
 
   /**
    * Optional property. If not set it will look for the window.emconfig.backendHost
@@ -81,7 +81,7 @@ export class FileUploadDialog extends LitElement {
         >
           <div slot="drop-text">
             Drag and drop, of
-            <a href="#" @click=${this.shadowRoot?.querySelector<ExmgUpload>('exm-upload')?.openFileSelector}>browse</a>
+            <a href="#" @click=${this.shadowRoot?.querySelector<ExmUpload>('exm-upload')?.openFileSelector}>browse</a>
             je bestanden
           </div>
         </exm-upload>

@@ -26,7 +26,7 @@ import {
 } from './types/exm-grid-toolbar-types.js';
 
 @customElement('exm-grid-toolbar')
-export class ExmgGridToolbar extends ExmgElement {
+export class ExmGridToolbar extends ExmgElement {
   static styles = [
     css`
       exm-grid-toolbar-filters {
@@ -313,6 +313,6 @@ export class ExmgGridToolbar extends ExmgElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'exm-grid-toolbar': ExmgGridToolbar;
+    'exm-grid-toolbar': ExmGridToolbar;
   }
 }

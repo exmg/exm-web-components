@@ -1,6 +1,6 @@
 import { LitElement, html, css } from 'lit';
 import { customElement, query } from 'lit/decorators.js';
-import { ExmgDialogUpload } from '@exmg/exm-upload/exm-dialog-upload.js';
+import { ExmDialogUpload } from '@exmg/exm-upload/exm-dialog-upload.js';
 import '@exmg/exm-upload/exm-upload.js';
 import './example-upload-dialog.js';
 import { ExampleUploadDialog } from './example-upload-dialog.js';
@@ -20,9 +20,9 @@ function sleep(ms: number) {
 }
 
 @customElement('exm-upload-dialog-demo')
-export class ExmgUploadDialogDemo extends LitElement {
+export class ExmUploadDialogDemo extends LitElement {
   @query('exm-dialog-upload')
-  fileUploadDialog?: ExmgDialogUpload;
+  fileUploadDialog?: ExmDialogUpload;
 
   static styles = [
     css`
@@ -37,7 +37,7 @@ export class ExmgUploadDialogDemo extends LitElement {
   ];
 
   async handleSubmit(e: CustomEvent<{ urls: string[] }>) {
-    const dialog = e.target as ExmgDialogUpload;
+    const dialog = e.target as ExmDialogUpload;
     try {
       dialog.submitting = true;
 

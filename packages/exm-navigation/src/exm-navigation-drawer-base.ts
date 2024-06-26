@@ -17,9 +17,9 @@ import { SignalWatcher } from '@lit-labs/preact-signals';
 import { observer } from '@exmg/lit-base';
 
 // eslint-disable-next-line
-export class ExmgNavigationDrawerBase extends SignalWatcher(LitElement) {
+export class ExmNavigationDrawerBase extends SignalWatcher(LitElement) {
   @property({ type: Boolean })
-  @observer(function (this: ExmgNavigationDrawerBase, value: boolean) {
+  @observer(function (this: ExmNavigationDrawerBase, value: boolean) {
     navigationDrawerOpen.value = value;
     this.updateInlineStyles();
   })
@@ -29,7 +29,7 @@ export class ExmgNavigationDrawerBase extends SignalWatcher(LitElement) {
   drawer?: Drawer;
 
   @property({ type: Boolean })
-  @observer(function (this: ExmgNavigationDrawerBase, value: boolean) {
+  @observer(function (this: ExmNavigationDrawerBase, value: boolean) {
     navigationDrawerPersistent.value = value;
   })
   persistent = false;

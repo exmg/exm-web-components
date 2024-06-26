@@ -2,15 +2,15 @@ import { LitElement, html, css } from 'lit';
 import { customElement, query } from 'lit/decorators.js';
 import '@exmg/exm-upload/exm-upload.js';
 import '@exmg/exm-upload/exm-upload-input.js';
-import { ExmgUploadInput } from '@exmg/exm-upload/exm-upload-input.js';
+import { ExmUploadInput } from '@exmg/exm-upload/exm-upload-input.js';
 import '@material/web/textfield/filled-text-field.js';
 import '@material/web/iconbutton/icon-button.js';
 import '@material/web/icon/icon.js';
 
 @customElement('exm-input-demo')
-export class ExmgInputDemo extends LitElement {
+export class ExmInputDemo extends LitElement {
   @query('exm-upload-input')
-  input?: ExmgUploadInput;
+  input?: ExmUploadInput;
 
   static styles = [
     css`

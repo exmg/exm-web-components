@@ -15,7 +15,7 @@ import {
 import '@exmg/exm-grid/src/table/exm-grid-smart-toolbar.js';
 
 @customElement('exm-grid-smart-toolbar-demo')
-export class ExmgGridSmartToolbarDemo extends LitElement {
+export class ExmGridSmartToolbarDemo extends LitElement {
   private actions: ActionWithCondition<ActionAmountSelectedItemsCondition>[] = [
     {
       id: 'export',

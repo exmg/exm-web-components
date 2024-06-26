@@ -1,6 +1,6 @@
 import { customElement } from 'lit/decorators/custom-element.js';
 import '@material/web/progress/circular-progress.js';
-import { ExmgFilledButtonBase } from './exm-filled-button-base.js';
+import { ExmFilledButtonBase } from './exm-filled-button-base.js';
 
 import { style } from './styles/exm-filled-button-styles-css.js';
 
@@ -14,12 +14,12 @@ import { style } from './styles/exm-filled-button-styles-css.js';
  * @extends ButtonFilledBase
  */
 @customElement('exm-filled-button')
-export class ExmgFilledButton extends ExmgFilledButtonBase {
+export class ExmFilledButton extends ExmFilledButtonBase {
   static styles = [style];
 }
 
 declare global {
   interface HTMLElementTagNameMap {
-    'exm-filled-button': ExmgFilledButton;
+    'exm-filled-button': ExmFilledButton;
   }
 }

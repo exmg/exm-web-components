@@ -1,11 +1,11 @@
-export { ExmgNavigationRailNavItem } from './src/exm-navigation-rail-nav-item.js';
-export { ExmgNavigationRailNav } from './src/exm-navigation-rail-nav.js';
-export { ExmgNavigationRailBase } from './src/exm-navigation-rail-base.js';
-export { ExmgNavigationRail } from './src/exm-navigation-rail.js';
-export { ExmgNavigationDrawerBase } from './src/exm-navigation-drawer-base.js';
-export { ExmgNavigationDrawer } from './src/exm-navigation-drawer.js';
-export { ExmgNavigationToolbarBase } from './src/exm-navigation-toolbar-base.js';
-export { ExmgNavigationBase } from './src/exm-navigation-base.js';
+export { ExmNavigationRailNavItem } from './src/exm-navigation-rail-nav-item.js';
+export { ExmNavigationRailNav } from './src/exm-navigation-rail-nav.js';
+export { ExmNavigationRailBase } from './src/exm-navigation-rail-base.js';
+export { ExmNavigationRail } from './src/exm-navigation-rail.js';
+export { ExmNavigationDrawerBase } from './src/exm-navigation-drawer-base.js';
+export { ExmNavigationDrawer } from './src/exm-navigation-drawer.js';
+export { ExmNavigationToolbarBase } from './src/exm-navigation-toolbar-base.js';
+export { ExmNavigationBase } from './src/exm-navigation-base.js';
 
 export {
   navigationItemHover,

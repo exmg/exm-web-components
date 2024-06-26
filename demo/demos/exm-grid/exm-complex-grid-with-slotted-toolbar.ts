@@ -14,10 +14,10 @@ import '@exmg/exm-grid/src/table/exm-grid-base-toolbar.js';
 import { style as tableStyles } from '@exmg/exm-grid/src/styles/exm-grid-styles-css.js';
 import { style as demoStyles } from './demo-common-css.js';
 
-import { DEFAULT_SORT_COLUMN, DEFAULT_SORT_DIRECTION, ExmgBaseGridDemo } from './exm-grid-base.js';
+import { DEFAULT_SORT_COLUMN, DEFAULT_SORT_DIRECTION, ExmBaseGridDemo } from './exm-grid-base.js';
 
 @customElement('demo-complex-grid-with-slotted-toolbar')
-export class ExmgComplexGridWithSlottedToolbar extends ExmgBaseGridDemo {
+export class ExmComplexGridWithSlottedToolbar extends ExmBaseGridDemo {
   static styles = [
     tableStyles,
     demoStyles,

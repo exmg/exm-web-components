@@ -23,7 +23,7 @@ export interface EventSelectPayload {
 }
 
 @customElement('exm-grid-toolbar-filters')
-export class ExmgGridToolbarFilters extends ExmgElement {
+export class ExmGridToolbarFilters extends ExmgElement {
   /**
    * Gets or sets the selected element. The default is to use the index of the item.
    * @type {string}

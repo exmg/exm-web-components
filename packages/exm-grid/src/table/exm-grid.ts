@@ -4,15 +4,15 @@ import { property, customElement, state } from 'lit/decorators.js';
 import { cache } from 'lit/directives/cache.js';
 import '@exmg/exm-sortable/exm-sortable.js';
 import { style as exmgGridTableStyles } from '../styles/exm-grid-styles-css.js';
-import { ExmgRowSelectable } from './featrues/exm-row-selectable.js';
-import { ExmgQuerySelectors } from './utils/exm-query-selectors.js';
-import { ExmgRowExpandable } from './featrues/exm-row-expandable.js';
-import { ExmgColumnSortable } from './featrues/exm-column-sortable.js';
-import { ExmgRowSortable } from './featrues/exm-row-sortable.js';
+import { ExmRowSelectable } from './featrues/exm-row-selectable.js';
+import { ExmQuerySelectors } from './utils/exm-query-selectors.js';
+import { ExmRowExpandable } from './featrues/exm-row-expandable.js';
+import { ExmColumnSortable } from './featrues/exm-column-sortable.js';
+import { ExmRowSortable } from './featrues/exm-row-sortable.js';
 import { EventDetailRowsOrderChanged, EventDetailRowsOrderUpdated, SORT_DIRECTION } from './types/exm-grid-types.js';
 
 type GenericPropertyValues<T, V = unknown> = Map<T, V>;
-type Props = Exclude<keyof ExmgGrid, number | symbol>;
+type Props = Exclude<keyof ExmGrid, number | symbol>;
 
 type SmartPropertyValue = GenericPropertyValues<Props>;
 
@@ -50,7 +50,7 @@ type SmartPropertyValue = GenericPropertyValues<Props>;
  * `--exm-table-checkbox-cell-width` | width of cell with checkbox | `24px;`
  */
 @customElement('exm-grid')
-export class ExmgGrid extends ExmgElement {
+export class ExmGrid extends ExmgElement {
   static styles = [exmgGridTableStyles];
 
   /**
@@ -136,24 +136,24 @@ export class ExmgGrid extends ExmgElement {
   tableLayout: 'fixed' | 'auto' = 'auto';
 
   @state()
-  private querySelectors?: ExmgQuerySelectors;
+  private querySelectors?: ExmQuerySelectors;
 
   @property({ type: Boolean, reflect: true, attribute: 'data-with-toolbar' })
   withToolbar = false;
 
-  private rowSelectableFeature?: ExmgRowSelectable;
+  private rowSelectableFeature?: ExmRowSelectable;
 
-  private rowExpandableFeature?: ExmgRowExpandable;
+  private rowExpandableFeature?: ExmRowExpandable;
 
-  private rowSortableFeature?: ExmgRowSortable;
+  private rowSortableFeature?: ExmRowSortable;
 
-  private columnSortableFeature?: ExmgColumnSortable;
+  private columnSortableFeature?: ExmColumnSortable;
 
   private componentReady = false;
 
-  private getQuerySelectors(): ExmgQuerySelectors {
+  private getQuerySelectors(): ExmQuerySelectors {
     if (!this.querySelectors) {
-      throw new Error('ExmgQuerySelector not initialized yet');
+      throw new Error('ExmQuerySelector not initialized yet');
     }
     return this.querySelectors;
   }
@@ -291,14 +291,14 @@ export class ExmgGrid extends ExmgElement {
     const table = this.shadowRoot!.host.querySelector<HTMLTableElement>('table')!;
     const tableBody = table.querySelector<HTMLTableSectionElement>('tbody.grid-data')!;
 
-    this.querySelectors = new ExmgQuerySelectors(table, tableBody);
+    this.querySelectors = new ExmQuerySelectors(table, tableBody);
 
     this.initGridAttributes();
 
     const bodyRows = this.querySelectors.getBodyRows();
 
     if (this.sortable) {
-      this.columnSortableFeature = new ExmgColumnSortable(
+      this.columnSortableFeature = new ExmColumnSortable(
         this.querySelectors,
         (event: Event) => this.dispatchEvent(event),
         this.defaultSortColumn,
@@ -308,12 +308,12 @@ export class ExmgGrid extends ExmgElement {
     }
 
     if (this.canSortRows()) {
-      this.rowSortableFeature = new ExmgRowSortable(this.querySelectors);
+      this.rowSortableFeature = new ExmRowSortable(this.querySelectors);
       this.rowSortableFeature.initFeature();
     }
 
     if (this.rowsSelectable) {
-      this.rowSelectableFeature = new ExmgRowSelectable(
+      this.rowSelectableFeature = new ExmRowSelectable(
         this.querySelectors,
         (event: Event) => this.dispatchEvent(event),
         this.disableRowClickSelection,
@@ -323,7 +323,7 @@ export class ExmgGrid extends ExmgElement {
     }
 
     if (this.expandableToggleSelector) {
-      this.rowExpandableFeature = new ExmgRowExpandable(this.querySelectors, this.expandableToggleSelector);
+      this.rowExpandableFeature = new ExmRowExpandable(this.querySelectors, this.expandableToggleSelector);
       this.rowExpandableFeature.initFeature();
     }
 
@@ -403,6 +403,6 @@ export class ExmgGrid extends ExmgElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'exm-grid': ExmgGrid;
+    'exm-grid': ExmGrid;
   }
 }

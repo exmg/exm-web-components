@@ -1,7 +1,7 @@
 import { html, css } from 'lit';
 import { property } from 'lit/decorators.js';
 
-import { ExmgDialogFormBase, exmgDialogFormStyles } from '@exmg/exm-dialogs';
+import { ExmDialogFormBase, exmgDialogFormStyles } from '@exmg/exm-dialogs';
 import { exmgFormStyles } from '@exmg/exm-form';
 
 import '@material/web/textfield/filled-text-field.js';
@@ -13,7 +13,7 @@ function sleep(ms) {
 }
 
 @customElement('item-create-form-dialog')
-export class ItemCreateFormDialog extends ExmgDialogFormBase {
+export class ItemCreateFormDialog extends ExmDialogFormBase {
   @property({ type: String })
   title = 'Create Customer';
 

@@ -5,7 +5,7 @@ import { navigationItemHover, navigationRailActive, navigationActiveHasSubmenu }
 import '@material/web/focus/md-focus-ring.js';
 import { observer } from '@exmg/lit-base';
 
-export class ExmgNavigationRailNavItemBase extends LitElement {
+export class ExmNavigationRailNavItemBase extends LitElement {
   @property({ type: String })
   icon = '';
 
@@ -16,7 +16,7 @@ export class ExmgNavigationRailNavItemBase extends LitElement {
   label?: string;
 
   @property({ type: Boolean, reflect: true })
-  @observer(function (this: ExmgNavigationRailNavItemBase, value: boolean) {
+  @observer(function (this: ExmNavigationRailNavItemBase, value: boolean) {
     if (this.itemId) {
       navigationActiveHasSubmenu.value[this.itemId] = value && this.hasSubMenu;
       if (navigationActiveHasSubmenu.value[this.itemId] && value) {

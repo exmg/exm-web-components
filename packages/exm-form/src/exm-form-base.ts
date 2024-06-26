@@ -87,7 +87,7 @@ export const serializeForm = (form) => {
   return obj;
 };
 
-export class ExmgFormBase extends ExmgElement {
+export class ExmFormBase extends ExmgElement {
   /**
    * Submit button copy
    */

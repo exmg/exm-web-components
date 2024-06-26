@@ -10,7 +10,7 @@ window.uploadDefaults = {
 };
 
 @customElement('exm-upload-default-demo')
-export class ExmgUploadDefaultDemo extends LitElement {
+export class ExmUploadDefaultDemo extends LitElement {
   static styles = [
     css`
       :host {

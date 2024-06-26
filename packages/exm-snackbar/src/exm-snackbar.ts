@@ -7,7 +7,7 @@ import { style as newStyles } from './styles/exm-snackbar-styles-css.js';
 import { styles } from '@material/mwc-snackbar/mwc-snackbar.css.js';
 
 @customElement('exm-snackbar')
-export class ExmgSnackbar extends SnackbarBase {
+export class ExmSnackbar extends SnackbarBase {
   /**
    * Sets the Snackbar variant, options from MWC
    * @type {String}
@@ -50,6 +50,6 @@ export class ExmgSnackbar extends SnackbarBase {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'exm-snackbar': ExmgSnackbar;
+    'exm-snackbar': ExmSnackbar;
   }
 }

@@ -7,7 +7,7 @@ import '@material/web/icon/icon.js';
 import '@material/web/iconbutton/icon-button.js';
 
 @customElement('exm-grid-base-toolbar-demo')
-export class ExmgGridBaseToolbarDemo extends LitElement {
+export class ExmGridBaseToolbarDemo extends LitElement {
   @state()
   private actions: any[] = [
     {

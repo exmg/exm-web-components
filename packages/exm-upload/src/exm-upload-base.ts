@@ -5,7 +5,7 @@ import { repeat } from 'lit/directives/repeat.js';
 
 import '@material/web/icon/icon.js';
 
-import { ExmgUploadCrop } from './exm-upload-crop.js';
+import { ExmUploadCrop } from './exm-upload-crop.js';
 import { FileData, FileUploadError } from './types.js';
 
 // File upload imports
@@ -19,7 +19,7 @@ import { ExmgElement, observer } from '@exmg/lit-base';
 
 import Cropper from 'cropperjs';
 
-export class ExmgUploadBase extends ExmgElement {
+export class ExmUploadBase extends ExmgElement {
   /**
    * The id of the element that the upload is anchored to. This element
    * must be a sibling of the upload.
@@ -90,7 +90,7 @@ export class ExmgUploadBase extends ExmgElement {
    * The CropperJS config see: https://github.com/fengyuanchen/cropperjs#options
    */
   @property({ type: Object })
-  @observer(function (this: ExmgUploadBase, value: Cropper.Options) {
+  @observer(function (this: ExmUploadBase, value: Cropper.Options) {
     this._cropperConfig = { ...this._cropperConfig, ...value };
   })
   cropperConfig: Cropper.Options = {};
@@ -124,7 +124,7 @@ export class ExmgUploadBase extends ExmgElement {
   _uploaded = false;
 
   @query('#crop-dialog')
-  cropSection?: ExmgUploadCrop;
+  cropSection?: ExmUploadCrop;
 
   /**
    * Allow cropping can only be used when fixedResolution is not set
@@ -142,7 +142,7 @@ export class ExmgUploadBase extends ExmgElement {
   fileElement?: HTMLInputElement;
 
   @query('.item-container')
-  itemContainer?: ExmgUploadCrop;
+  itemContainer?: ExmUploadCrop;
 
   getValues() {
     return this.files.filter((file) => file.status === 'UPLOADED').map((file) => file.url);

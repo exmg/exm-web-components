@@ -64,6 +64,6 @@ _None_
 
 ## Additional references
 
-- [Additional Documentation](https://exmg.github.io/exmachina-web-components/ExmgTooltip.html)
+- [Additional Documentation](https://exmg.github.io/exmachina-web-components/ExmTooltip.html)
 
 - [Demo](https://exmg.github.io/exmachina-web-components/demo/?el=exm-tooltip)

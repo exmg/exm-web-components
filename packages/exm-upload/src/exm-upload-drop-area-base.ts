@@ -5,7 +5,7 @@ import { classMap } from 'lit/directives/class-map.js';
 import { DragAndDropMixin } from './mixins/exm-upload-drag-drop-mixin.js';
 import { ExmgElement } from '@exmg/lit-base';
 
-export class ExmgUploadDropAreaBase extends DragAndDropMixin(ExmgElement) {
+export class ExmUploadDropAreaBase extends DragAndDropMixin(ExmgElement) {
   @property({ type: String })
   description?: string;
 

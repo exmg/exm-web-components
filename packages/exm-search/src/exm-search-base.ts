@@ -7,7 +7,7 @@ import '@material/web/icon/icon.js';
 import '@material/web/iconbutton/icon-button.js';
 import '@material/web/focus/md-focus-ring.js';
 
-export class ExmgSearchBase extends ExmgElement {
+export class ExmSearchBase extends ExmgElement {
   bubbles = false;
 
   @state()

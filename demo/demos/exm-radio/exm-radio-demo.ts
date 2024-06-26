@@ -7,7 +7,7 @@ import '@exmg/exm-form/exm-form.js';
 import '@material/web/icon/icon.js';
 
 @customElement('exm-radio-demo')
-export class ExmgRadioDemo extends LitElement {
+export class ExmRadioDemo extends LitElement {
   static styles = [
     style,
     css`

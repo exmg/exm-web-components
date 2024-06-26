@@ -13,7 +13,7 @@ import { serializeForm } from '@exmg/exm-form';
 
 export const CLOSE_ACTION = 'close';
 
-export class ExmgDialogFormBase extends ExmgElement {
+export class ExmDialogFormBase extends ExmgElement {
   /**
    * Opens the dialog when set to `true` and closes it when set to `false`.
    */

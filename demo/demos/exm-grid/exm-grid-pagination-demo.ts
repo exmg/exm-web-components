@@ -3,7 +3,7 @@ import { customElement, state } from 'lit/decorators.js';
 import '@exmg/exm-grid/src/table/exm-grid-pagination.js';
 
 @customElement('exm-grid-pagination-demo')
-export class ExmgGridSmartToolbarDemo extends LitElement {
+export class ExmGridSmartToolbarDemo extends LitElement {
   @state()
   private pageIndex = 0;
 

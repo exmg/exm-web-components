@@ -16,7 +16,7 @@ npm install @exmg/exm-snackbar
 
 ```html
   <exm-button unelevated @click=${() =>
-    this.shadowRoot?.querySelector<ExmgSnackbar>('#default-snackbar')?.show()}>
+    this.shadowRoot?.querySelector<ExmSnackbar>('#default-snackbar')?.show()}>
     Open default
   </exm-button>
   <exm-snackbar id="default-snackbar" labelText="Default auto close"></exm-snackbar>
@@ -70,6 +70,6 @@ npm install @exmg/exm-snackbar
 
 ## Additional references
 
-- [Additional Documentation](https://exmg.github.io/exmachina-web-components/ExmgSnackbar.html)
+- [Additional Documentation](https://exmg.github.io/exmachina-web-components/ExmSnackbar.html)
 
 - [Demo](https://exmg.github.io/exmachina-web-components/demo/?el=exm-snackbar)

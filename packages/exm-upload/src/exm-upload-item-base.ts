@@ -12,7 +12,7 @@ import { UploadService } from './upload/index.js';
 import { ExmgElement } from '@exmg/lit-base';
 import { UploadConfig } from './upload/types.js';
 
-export class ExmgUploadItemBase extends ExmgElement {
+export class ExmUploadItemBase extends ExmgElement {
   /**
    * Optional property. If not set it will look for the window.emconfig.backendHost
    */

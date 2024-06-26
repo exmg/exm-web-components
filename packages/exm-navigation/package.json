@@ -12,7 +12,7 @@
     "./exm-navigation-drawer.js": "./src/exm-navigation-drawer.js",
     "./exm-navigation-toolbar.js": "./src/exm-navigation-toolbar.js",
     "./exm-navigation-drawer-nav.js": "./src/exm-navigation-drawer-nav.js",
-    "./exm-navigation-base.js": "./src/ExmgNavigationBase.js"
+    "./exm-navigation-base.js": "./src/ExmNavigationBase.js"
   },
   "dependencies": {
     "@exmg/lit-base": "^2.0.1",

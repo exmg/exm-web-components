@@ -1,6 +1,6 @@
 import { html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import { ExmgFormDrawerBase, formDrawerStyles } from '@exmg/exm-form-drawer';
+import { ExmFormDrawerBase, formDrawerStyles } from '@exmg/exm-form-drawer';
 import { ifDefined } from 'lit/directives/if-defined.js';
 import { exmgFormStyles } from '@exmg/exm-form';
 
@@ -18,7 +18,7 @@ export interface UserData {
 }
 
 @customElement('user-update-drawer')
-export class UserUpdateDrawer extends ExmgFormDrawerBase {
+export class UserUpdateDrawer extends ExmFormDrawerBase {
   static override styles = [formDrawerStyles, exmgFormStyles];
 
   @property({ type: Object })

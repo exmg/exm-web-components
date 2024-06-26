@@ -12,7 +12,7 @@ let maskId = 0;
  * Material 3 radio item
  */
 @customElement('exm-radio-item')
-export class ExmgRadioItem extends Radio {
+export class ExmRadioItem extends Radio {
   // Unique maskId is required because of a Safari bug that fail to persist
   // reference to the mask. This should be removed once the bug is fixed.
   private readonly maskIdOverride = `cutout${++maskId}`;
@@ -62,6 +62,6 @@ export class ExmgRadioItem extends Radio {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'exm-radio-item': ExmgRadioItem;
+    'exm-radio-item': ExmRadioItem;
   }
 }

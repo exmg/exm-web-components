@@ -1,15 +1,15 @@
 import { ReactiveControllerHost } from 'lit';
 import { observer } from '@exmg/lit-base/index.js';
 import { BreadcrumbItem } from './types.js';
-import { ExmgBreadcrumbs } from './exm-breadcrumbs.js';
+import { ExmBreadcrumbs } from './exm-breadcrumbs.js';
 
 export interface BreadcrumbsControllerConfig {
-  breadcrumbsElement?: ExmgBreadcrumbs;
+  breadcrumbsElement?: ExmBreadcrumbs;
 }
 
 export class BreadcrumbsController {
   _host: ReactiveControllerHost;
-  breadcrumbsElement?: ExmgBreadcrumbs;
+  breadcrumbsElement?: ExmBreadcrumbs;
 
   setBreadcrumbsBind: (e: CustomEvent<{ items: BreadcrumbItem[] }>) => void;
   resetBreadcrumbsBind: () => void;

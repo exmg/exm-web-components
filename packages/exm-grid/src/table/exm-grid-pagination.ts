@@ -17,7 +17,7 @@ import { FilterItem } from './exm-grid-toolbar-filters.js';
  * `--exm-theme-table-pagination-color` | pagination foreground (mostly text) color | `var(--mdc-theme-on-surface, #02182b);`
  */
 @customElement('exm-grid-pagination')
-export class ExmgGridPagination extends ExmgElement {
+export class ExmGridPagination extends ExmgElement {
   static styles = [style];
 
   @property({ type: String, attribute: 'page-size-label' })
@@ -203,6 +203,6 @@ export class ExmgGridPagination extends ExmgElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'exm-grid-pagination': ExmgGridPagination;
+    'exm-grid-pagination': ExmGridPagination;
   }
 }

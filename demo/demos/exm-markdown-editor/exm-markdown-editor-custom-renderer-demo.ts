@@ -4,7 +4,7 @@ import { markdown } from './markdown.js';
 import './exm-markdown-editor-custom-demo.js';
 
 @customElement('exm-markdown-editor-custom-renderer-demo')
-export class ExmgMarkdownEditorCustomRendererDemo extends LitElement {
+export class ExmMarkdownEditorCustomRendererDemo extends LitElement {
   static styles = [
     css`
       :host {
@@ -22,6 +22,6 @@ export class ExmgMarkdownEditorCustomRendererDemo extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'exm-markdown-editor-custom-renderer-demo': ExmgMarkdownEditorCustomRendererDemo;
+    'exm-markdown-editor-custom-renderer-demo': ExmMarkdownEditorCustomRendererDemo;
   }
 }

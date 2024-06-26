@@ -8,7 +8,7 @@ import { ExmgElement } from '@exmg/lit-base';
 
 import Cropper from 'cropperjs';
 
-export class ExmgUploadCropBase extends ExmgElement {
+export class ExmUploadCropBase extends ExmgElement {
   @property({ type: Object })
   cropperConfig: any = {};
 

@@ -1,10 +1,10 @@
 import { LitElement, html, css } from 'lit';
 import { customElement } from 'lit/decorators.js';
 import '@exmg/exm-upload';
-import { ExmgUpload } from '@exmg/exm-upload';
+import { ExmUpload } from '@exmg/exm-upload';
 
 @customElement('exm-upload-customize-demo')
-export class ExmgUploadCustomizeDemo extends LitElement {
+export class ExmUploadCustomizeDemo extends LitElement {
   static styles = [
     css`
       :host {
@@ -33,7 +33,7 @@ export class ExmgUploadCustomizeDemo extends LitElement {
       </div>
       <div slot="drop-text">
         Drag and drop, of
-        <a href="#" @click=${this.shadowRoot?.querySelector<ExmgUpload>('exm-upload')?.openFileSelector}>browse</a>
+        <a href="#" @click=${this.shadowRoot?.querySelector<ExmUpload>('exm-upload')?.openFileSelector}>browse</a>
         je bestanden
       </div>
     </exm-upload>`;

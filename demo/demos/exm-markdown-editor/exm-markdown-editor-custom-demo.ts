@@ -9,7 +9,7 @@ import { Editor } from 'codemirror';
 import { customElement } from 'lit/decorators.js';
 
 @customElement('exm-markdown-editor-custom-demo')
-export class ExmgMarkdownEditorCustomDemo extends MarkdownEditorElement {
+export class ExmMarkdownEditorCustomDemo extends MarkdownEditorElement {
   editorActions: MarkdownActions = {
     ...markdownActions,
     underline: (editor: Editor) => {
@@ -74,6 +74,6 @@ export class ExmgMarkdownEditorCustomDemo extends MarkdownEditorElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'exm-markdown-editor-custom-demo': ExmgMarkdownEditorCustomDemo;
+    'exm-markdown-editor-custom-demo': ExmMarkdownEditorCustomDemo;
   }
 }

@@ -18,7 +18,7 @@ import {
 } from './types/exm-grid-smart-toolbar-types.js';
 
 @customElement('exm-grid-smart-toolbar')
-export class ExmgGridSmartToolbar extends ExmgElement {
+export class ExmGridSmartToolbar extends ExmgElement {
   @property({ type: String })
   description = '';
 
@@ -148,6 +148,6 @@ export class ExmgGridSmartToolbar extends ExmgElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'exm-grid-smart-toolbar': ExmgGridSmartToolbar;
+    'exm-grid-smart-toolbar': ExmGridSmartToolbar;
   }
 }

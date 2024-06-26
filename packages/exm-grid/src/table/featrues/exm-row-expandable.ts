@@ -1,10 +1,10 @@
-import { ExmgQuerySelectors } from '../utils/exm-query-selectors.js';
+import { ExmQuerySelectors } from '../utils/exm-query-selectors.js';
 
-export class ExmgRowExpandable {
-  private querySelectors: ExmgQuerySelectors;
+export class ExmRowExpandable {
+  private querySelectors: ExmQuerySelectors;
   private expandableToggleSelector: string;
 
-  constructor(qs: ExmgQuerySelectors, ets: string) {
+  constructor(qs: ExmQuerySelectors, ets: string) {
     this.querySelectors = qs;
     this.expandableToggleSelector = ets;
   }

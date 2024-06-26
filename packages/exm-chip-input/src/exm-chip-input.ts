@@ -9,7 +9,7 @@ import { property } from 'lit/decorators.js';
 
 declare global {
   interface HTMLElementTagNameMap {
-    'exm-chip-input': ExmgChipInput;
+    'exm-chip-input': ExmChipInput;
   }
 }
 
@@ -19,7 +19,7 @@ declare global {
  * @suppress {visibility}
  */
 @customElement('exm-chip-input')
-export class ExmgChipInput extends ChipSet {
+export class ExmChipInput extends ChipSet {
   @property({ type: String }) label = '';
 
   static override styles = [styles, style];

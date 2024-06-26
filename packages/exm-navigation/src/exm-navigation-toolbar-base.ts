@@ -5,7 +5,7 @@ import '@material/web/iconbutton/icon-button.js';
 import '@material/web/icon/icon.js';
 import '@material/mwc-top-app-bar-fixed';
 
-export class ExmgNavigationToolbarBase extends ExmgElement {
+export class ExmNavigationToolbarBase extends ExmgElement {
   protected firstUpdated() {
     const appToolbar = this.shadowRoot!.querySelector('mwc-top-app-bar-fixed');
 

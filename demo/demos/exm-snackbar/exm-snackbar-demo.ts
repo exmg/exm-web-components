@@ -6,7 +6,7 @@ import '@material/web/button/text-button.js';
 import '@material/web/button/filled-button.js';
 import '@material/web/icon/icon.js';
 import '@material/web/iconbutton/icon-button.js';
-import { ExmgSnackbar } from '@exmg/exm-snackbar';
+import { ExmSnackbar } from '@exmg/exm-snackbar';
 import { style } from '../demo-page-styles-css.js';
 
 @customElement('exm-snackbar-demo')
@@ -32,14 +32,14 @@ export class SnackbarDemo extends LitElement {
       <div class="main centered">
         <div>
           <h1>Default auto close</h1>
-          <md-filled-button @click=${() => this.shadowRoot?.querySelector<ExmgSnackbar>('#default-snackbar')?.show()}>
+          <md-filled-button @click=${() => this.shadowRoot?.querySelector<ExmSnackbar>('#default-snackbar')?.show()}>
             Open default
           </md-filled-button>
           <exm-snackbar id="default-snackbar" labelText="Default auto close"></exm-snackbar>
         </div>
         <div>
           <h1>Default leading</h1>
-          <md-filled-button @click=${() => this.shadowRoot?.querySelector<ExmgSnackbar>('#leading-snackbar')?.show()}>
+          <md-filled-button @click=${() => this.shadowRoot?.querySelector<ExmSnackbar>('#leading-snackbar')?.show()}>
             Open leading
           </md-filled-button>
           <exm-snackbar id="leading-snackbar" leading labelText="Default leading"></exm-snackbar>
@@ -48,7 +48,7 @@ export class SnackbarDemo extends LitElement {
           <h1>Auto close with custom timing (10 sec)</h1>
           <md-filled-button
             unelevated
-            @click=${() => this.shadowRoot?.querySelector<ExmgSnackbar>('#custom-time-snackbar')?.show()}
+            @click=${() => this.shadowRoot?.querySelector<ExmSnackbar>('#custom-time-snackbar')?.show()}
           >
             Open custom timing
           </md-filled-button>
@@ -63,7 +63,7 @@ export class SnackbarDemo extends LitElement {
           <h1>Stacked</h1>
           <md-filled-button
             unelevated
-            @click=${() => this.shadowRoot?.querySelector<ExmgSnackbar>('#stacked-snackbar')?.show()}
+            @click=${() => this.shadowRoot?.querySelector<ExmSnackbar>('#stacked-snackbar')?.show()}
           >
             Open stacked
           </md-filled-button>
@@ -80,7 +80,7 @@ export class SnackbarDemo extends LitElement {
           <h1>Manual close</h1>
           <md-filled-button
             unelevated
-            @click=${() => this.shadowRoot?.querySelector<ExmgSnackbar>('#manual-snackbar')?.show()}
+            @click=${() => this.shadowRoot?.querySelector<ExmSnackbar>('#manual-snackbar')?.show()}
           >
             Open manual close
           </md-filled-button>
@@ -97,7 +97,7 @@ export class SnackbarDemo extends LitElement {
           <h1>Dismiss button</h1>
           <md-filled-button
             unelevated
-            @click=${() => this.shadowRoot?.querySelector<ExmgSnackbar>('#dismiss-snackbar')?.show()}
+            @click=${() => this.shadowRoot?.querySelector<ExmSnackbar>('#dismiss-snackbar')?.show()}
           >
             Open dismiss
           </md-filled-button>
@@ -114,7 +114,7 @@ export class SnackbarDemo extends LitElement {
           <h1>Positive snackbar</h1>
           <md-filled-button
             unelevated
-            @click=${() => this.shadowRoot?.querySelector<ExmgSnackbar>('#positive-snackbar')?.show()}
+            @click=${() => this.shadowRoot?.querySelector<ExmSnackbar>('#positive-snackbar')?.show()}
           >
             Open positive
           </md-filled-button>
@@ -133,7 +133,7 @@ export class SnackbarDemo extends LitElement {
           <h1>Negative snackbar</h1>
           <md-filled-button
             unelevated
-            @click=${() => this.shadowRoot?.querySelector<ExmgSnackbar>('#negative-snackbar')?.show()}
+            @click=${() => this.shadowRoot?.querySelector<ExmSnackbar>('#negative-snackbar')?.show()}
           >
             Open negative
           </md-filled-button>
@@ -152,7 +152,7 @@ export class SnackbarDemo extends LitElement {
           <h1>Info snackbar</h1>
           <md-filled-button
             unelevated
-            @click=${() => this.shadowRoot?.querySelector<ExmgSnackbar>('#info-snackbar')?.show()}
+            @click=${() => this.shadowRoot?.querySelector<ExmSnackbar>('#info-snackbar')?.show()}
           >
             Open info
           </md-filled-button>
@@ -171,7 +171,7 @@ export class SnackbarDemo extends LitElement {
           <h1>Snackbar with custom offset</h1>
           <md-filled-button
             unelevated
-            @click=${() => this.shadowRoot?.querySelector<ExmgSnackbar>('#offset-snackbar')?.show()}
+            @click=${() => this.shadowRoot?.querySelector<ExmSnackbar>('#offset-snackbar')?.show()}
           >
             Open custom offset
           </md-filled-button>
@@ -191,7 +191,7 @@ export class SnackbarDemo extends LitElement {
           <h1>Custom color snackbar</h1>
           <md-filled-button
             unelevated
-            @click=${() => this.shadowRoot?.querySelector<ExmgSnackbar>('#custom-snackbar')?.show()}
+            @click=${() => this.shadowRoot?.querySelector<ExmSnackbar>('#custom-snackbar')?.show()}
           >
             Open custom
           </md-filled-button>

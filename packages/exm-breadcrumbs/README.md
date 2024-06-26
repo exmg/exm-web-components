@@ -57,6 +57,6 @@ _None_
 
 ## Additional references
 
-- [Additional Documentation](https://exmg.github.io/exmachina-web-components/ExmgBreadcrumbs.html)
+- [Additional Documentation](https://exmg.github.io/exmachina-web-components/ExmBreadcrumbs.html)
 
 - [Demo](https://exmg.github.io/exmachina-web-components/demo/?el=exm-breadcrumbs)

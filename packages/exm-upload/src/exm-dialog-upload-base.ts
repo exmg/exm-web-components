@@ -9,12 +9,12 @@ import '@material/web/iconbutton/icon-button.js';
 
 import { property, query, state } from 'lit/decorators.js';
 import { ExmgElement } from '@exmg/lit-base';
-import { ExmgUpload } from './exm-upload.js';
+import { ExmUpload } from './exm-upload.js';
 import { FileData } from './types.js';
 
 export const CLOSE_ACTION = 'close';
 
-export class ExmgDialogUploadBase extends ExmgElement {
+export class ExmDialogUploadBase extends ExmgElement {
   /**
    * Opens the dialog when set to `true` and closes it when set to `false`.
    */
@@ -61,7 +61,7 @@ export class ExmgDialogUploadBase extends ExmgElement {
   _hasItems = false;
 
   protected getUploadElement() {
-    return this.shadowRoot!.querySelector('exm-upload') as ExmgUpload;
+    return this.shadowRoot!.querySelector('exm-upload') as ExmUpload;
   }
 
   /**

@@ -24,7 +24,7 @@ import { html, nothing } from 'lit';
 
 declare global {
   interface HTMLElementTagNameMap {
-    'exm-chip': ExmgChip;
+    'exm-chip': ExmChip;
   }
 }
 
@@ -41,13 +41,13 @@ const FilterChipBaseClass = mixinConstraintValidation(
  * @suppress {visibility}
  */
 @customElement('exm-chip')
-export class ExmgChip extends FilterChipBaseClass {
+export class ExmChip extends FilterChipBaseClass {
   static override styles = [sharedStyles, elevatedStyles, trailingIconStyles, selectableStyles, styles];
 
   @property({ type: Boolean }) removable = false;
 
   @property({ type: Boolean, reflect: true })
-  @observer(function (this: ExmgChip, selected: boolean) {
+  @observer(function (this: ExmChip, selected: boolean) {
     this.checked = selected;
   })
   selected = false;
@@ -163,7 +163,7 @@ export class ExmgChip extends FilterChipBaseClass {
         return [this];
       }
 
-      return this.selectionController.controls as [ExmgChip, ...ExmgChip[]];
+      return this.selectionController.controls as [ExmChip, ...ExmChip[]];
     });
   }
 

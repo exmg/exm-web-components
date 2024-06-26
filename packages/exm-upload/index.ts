@@ -1,13 +1,13 @@
-export { ExmgUpload } from './src/exm-upload.js';
-export { ExmgUploadBase } from './src/exm-upload-base.js';
-export { ExmgUploadCrop } from './src/exm-upload-crop.js';
-export { ExmgUploadCropBase } from './src/exm-upload-crop-base.js';
-export { ExmgUploadDropArea } from './src/exm-upload-drop-area.js';
-export { ExmgUploadDropAreaBase } from './src/exm-upload-drop-area-base.js';
-export { ExmgUploadItem } from './src/exm-upload-item.js';
-export { ExmgUploadItemBase } from './src/exm-upload-item-base.js';
-export { ExmgDialogUpload } from './src/exm-dialog-upload.js';
-export { ExmgDialogUploadBase } from './src/exm-dialog-upload-base.js';
+export { ExmUpload } from './src/exm-upload.js';
+export { ExmUploadBase } from './src/exm-upload-base.js';
+export { ExmUploadCrop } from './src/exm-upload-crop.js';
+export { ExmUploadCropBase } from './src/exm-upload-crop-base.js';
+export { ExmUploadDropArea } from './src/exm-upload-drop-area.js';
+export { ExmUploadDropAreaBase } from './src/exm-upload-drop-area-base.js';
+export { ExmUploadItem } from './src/exm-upload-item.js';
+export { ExmUploadItemBase } from './src/exm-upload-item-base.js';
+export { ExmDialogUpload } from './src/exm-dialog-upload.js';
+export { ExmDialogUploadBase } from './src/exm-dialog-upload-base.js';
 
 export { FileData, FileUploadConfig } from './src/types.js';
 export { UploadAdapter, UploadConfig } from './src/upload/types.js';

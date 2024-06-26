@@ -9,7 +9,7 @@ import {
 import '@exmg/exm-grid/src/table/exm-grid-toolbar.js';
 
 @customElement('exm-grid-toolbar-demo')
-export class ExmgGridToolbarDemo extends LitElement {
+export class ExmGridToolbarDemo extends LitElement {
   private actions: Action[] = [
     {
       id: 'export',

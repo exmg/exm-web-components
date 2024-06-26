@@ -2,7 +2,7 @@ import { LitElement, html } from 'lit';
 import { customElement, property, query } from 'lit/decorators.js';
 import '@exmg/exm-form-drawer/exm-form-drawer.js';
 import '@material/web/button/text-button.js';
-import { ExmgFormDrawer, formDrawerStyles } from '@exmg/exm-form-drawer';
+import { ExmFormDrawer, formDrawerStyles } from '@exmg/exm-form-drawer';
 import { exmgFormStyles } from '@exmg/exm-form';
 
 export const regexEmail = '[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,3}$';
@@ -36,7 +36,7 @@ export class Drawer extends LitElement {
   disableStickyHeader = false;
 
   @query('exm-form-drawer')
-  form?: ExmgFormDrawer;
+  form?: ExmFormDrawer;
 
   handleOpenedChanged(e: CustomEvent) {
     this.opened = e.detail.value;
@@ -63,7 +63,7 @@ export class Drawer extends LitElement {
   }
 
   async doFormAction(e: CustomEvent) {
-    const formDialog = e.target as ExmgFormDrawer;
+    const formDialog = e.target as ExmFormDrawer;
     try {
       formDialog.submitting = true;
 

@@ -2,10 +2,10 @@ import { LitElement, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import '@exmg/exm-collapsed';
 import { style } from './styles/exm-upload-input-css.js';
-import { ExmgUpload } from './exm-upload.js';
+import { ExmUpload } from './exm-upload.js';
 
 @customElement('exm-upload-input')
-export class ExmgUploadInput extends LitElement {
+export class ExmUploadInput extends LitElement {
   @property({ type: Boolean })
   opened = false;
 
@@ -15,7 +15,7 @@ export class ExmgUploadInput extends LitElement {
   static styles = [style];
 
   getUploadElement() {
-    return this.querySelector('exm-upload') as ExmgUpload;
+    return this.querySelector('exm-upload') as ExmUpload;
   }
 
   getInputElement() {

@@ -2,13 +2,13 @@ import { LitElement, html, css } from 'lit';
 import { customElement, property, query } from 'lit/decorators.js';
 
 import '@exmg/exm-upload';
-import { ExmgUpload, FileData } from '@exmg/exm-upload';
+import { ExmUpload, FileData } from '@exmg/exm-upload';
 import { ifDefined } from 'lit/directives/if-defined.js';
 import './file-upload-form.js';
 
 @customElement('file-upload-section')
 export class FileUploadSection extends LitElement {
-  @query('exm-upload') exmgUpload?: ExmgUpload;
+  @query('exm-upload') exmgUpload?: ExmUpload;
   @property({ type: Array }) files: FileData[] = [];
   @property({ type: String }) accept?: string;
   @property({ type: String }) maxSize: string = '1gb';

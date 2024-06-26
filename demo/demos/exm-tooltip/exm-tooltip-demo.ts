@@ -4,7 +4,7 @@ import '@exmg/exm-tooltip/exm-tooltip.js';
 import { style } from '../demo-page-styles-css.js';
 
 @customElement('exm-tooltip-demo')
-export class ExmgTooltipDemo extends LitElement {
+export class ExmTooltipDemo extends LitElement {
   static styles = [
     style,
     css`

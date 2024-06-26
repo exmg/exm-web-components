@@ -2,7 +2,7 @@ import { LitElement, html, css } from 'lit';
 import { customElement, property, query } from 'lit/decorators.js';
 import '@exmg/exm-upload';
 import { observer } from '@exmg/lit-base';
-import { ExmgUpload } from '@exmg/exm-upload';
+import { ExmUpload } from '@exmg/exm-upload';
 import { ifDefined } from 'lit/directives/if-defined.js';
 import './file-image-upload-form.js';
 
@@ -38,16 +38,16 @@ window.uploadDefaults = {
 };
 
 @customElement('exm-upload-image-demo')
-export class ExmgUploadImageDemo extends LitElement {
+export class ExmUploadImageDemo extends LitElement {
   @query('exm-upload')
-  upload?: ExmgUpload;
+  upload?: ExmUpload;
 
   @property({ type: String }) accept? = '.png,.jpg,.jpeg';
   @property({ type: String }) maxSize? = '256kb';
   @property({ type: String }) fixedResolution? = '1200x677';
   @property({ type: Boolean }) allowCropping = true;
   @property({ type: String })
-  @observer(function (this: ExmgUploadImageDemo, value: string) {
+  @observer(function (this: ExmUploadImageDemo, value: string) {
     const aspectRatio = convertStringToRatio(value);
     this.cropperConfig = aspectRatio
       ? {

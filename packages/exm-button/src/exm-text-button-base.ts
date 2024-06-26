@@ -4,7 +4,7 @@ import { MdTextButton } from '@material/web/button/text-button.js';
 import '@material/web/progress/circular-progress.js';
 import { FormSubmitterType } from '@material/web/internal/controller/form-submitter.js';
 
-export class ExmgTextButtonBase extends MdTextButton {
+export class ExmTextButtonBase extends MdTextButton {
   /**
    * Whether or not the button is in loading state
    * @type {Boolean}

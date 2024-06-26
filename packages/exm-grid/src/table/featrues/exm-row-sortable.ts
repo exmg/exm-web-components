@@ -1,9 +1,9 @@
-import { ExmgQuerySelectors } from '../utils/exm-query-selectors.js';
+import { ExmQuerySelectors } from '../utils/exm-query-selectors.js';
 
-export class ExmgRowSortable {
-  private querySelectors: ExmgQuerySelectors;
+export class ExmRowSortable {
+  private querySelectors: ExmQuerySelectors;
 
-  constructor(qs: ExmgQuerySelectors) {
+  constructor(qs: ExmQuerySelectors) {
     this.querySelectors = qs;
   }
 

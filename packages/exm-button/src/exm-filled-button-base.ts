@@ -4,7 +4,7 @@ import { MdFilledButton } from '@material/web/button/filled-button.js';
 import '@material/web/progress/circular-progress.js';
 import { FormSubmitterType } from '@material/web/internal/controller/form-submitter.js';
 
-export class ExmgFilledButtonBase extends MdFilledButton {
+export class ExmFilledButtonBase extends MdFilledButton {
   /**
    * Whether or not the button is in loading state
    * @type {Boolean}

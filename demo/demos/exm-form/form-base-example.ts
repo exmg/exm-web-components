@@ -1,9 +1,9 @@
-import { ExmgFormBase, exmgFormBaseStyles, exmgFormStyles } from '@exmg/exm-form';
+import { ExmFormBase, exmgFormBaseStyles, exmgFormStyles } from '@exmg/exm-form';
 import { html } from 'lit';
 import { customElement } from 'lit/decorators.js';
 
 @customElement('form-base-example')
-export class FormBaseExample extends ExmgFormBase {
+export class FormBaseExample extends ExmFormBase {
   static styles = [exmgFormBaseStyles, exmgFormStyles];
 
   hasAsideContent = true;

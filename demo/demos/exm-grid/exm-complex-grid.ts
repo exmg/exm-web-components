@@ -16,10 +16,10 @@ import { style as tableStyles } from '@exmg/exm-grid/src/styles/exm-grid-styles-
 import { style as demoStyles } from './demo-common-css.js';
 
 import { createIcon } from './exm-icons.js';
-import { DEFAULT_SORT_COLUMN, DEFAULT_SORT_DIRECTION, ExmgBaseGridDemo } from './exm-grid-base.js';
+import { DEFAULT_SORT_COLUMN, DEFAULT_SORT_DIRECTION, ExmBaseGridDemo } from './exm-grid-base.js';
 
 @customElement('demo-complex-grid')
-export class ExmgComplexGrid extends ExmgBaseGridDemo {
+export class ExmComplexGrid extends ExmBaseGridDemo {
   // language=CSS
   static styles = [
     tableStyles,

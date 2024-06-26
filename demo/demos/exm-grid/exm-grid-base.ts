@@ -69,7 +69,7 @@ const getItemByPage = (pageIndex: number, pageSize: number): Income[] => {
   return filteredItems.slice(startIndex, endIndex);
 };
 
-export abstract class ExmgBaseGridDemo extends LitElement {
+export abstract class ExmBaseGridDemo extends LitElement {
   @property({ type: Array })
   items: Income[];
 

@@ -14,7 +14,7 @@ import './exm-input-demo.js';
 import { style } from '../demo-page-styles-css.js';
 
 @customElement('exm-upload-demo')
-export class ExmgUploadDemo extends LitElement {
+export class ExmUploadDemo extends LitElement {
   @query('md-tabs')
   tabs?: Tabs;
 

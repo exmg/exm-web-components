@@ -496,6 +496,6 @@ By default grid has `table-layout` set to `auto` It can be changed to `fixed`
 
 ## Additional references
 
-- [Additional Documentation](https://exmg.github.io/exmachina-web-components/ExmgGrid.html)
+- [Additional Documentation](https://exmg.github.io/exmachina-web-components/ExmGrid.html)
 
 - [Demo](https://exmg.github.io/exmachina-web-components/demo/?el=exm-grid)

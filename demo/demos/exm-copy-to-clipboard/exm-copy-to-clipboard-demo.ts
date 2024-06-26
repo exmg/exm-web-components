@@ -5,7 +5,7 @@ import '@exmg/exm-copy-to-clipboard/exm-copy-to-clipboard.js';
 import { style } from '../demo-page-styles-css.js';
 
 @customElement('exm-copy-to-clipboard-demo')
-export class ExmgCopyToClipboardDemo extends LitElement {
+export class ExmCopyToClipboardDemo extends LitElement {
   static styles = [style];
   render() {
     return html`

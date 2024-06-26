@@ -1,5 +1,5 @@
 import { style } from './styles/exm-upload-styles-css.js';
-import { ExmgUploadBase } from './exm-upload-base.js';
+import { ExmUploadBase } from './exm-upload-base.js';
 import { customElement } from 'lit/decorators.js';
 
 /**
@@ -14,12 +14,12 @@ import { customElement } from 'lit/decorators.js';
  */
 
 @customElement('exm-upload')
-export class ExmgUpload extends ExmgUploadBase {
+export class ExmUpload extends ExmUploadBase {
   static styles = style;
 }
 
 declare global {
   interface HTMLElementTagNameMap {
-    'exm-upload': ExmgUpload;
+    'exm-upload': ExmUpload;
   }
 }

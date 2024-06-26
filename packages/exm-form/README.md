@@ -49,7 +49,7 @@ npm install @exmg/exm-form
 
 ```js
    async function doFormAction(e: CustomEvent<unknown>) {
-    const formDialog = e.target as ExmgForm;
+    const formDialog = e.target as ExmForm;
     try {
       formDialog.submitting = true;
       // Do server call

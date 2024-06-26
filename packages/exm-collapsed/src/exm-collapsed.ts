@@ -1,20 +1,20 @@
 import { customElement } from 'lit/decorators.js';
-import { ExmgCollapsedBase } from './exm-collapsed-base.js';
+import { ExmCollapsedBase } from './exm-collapsed-base.js';
 import { style } from './styles/exm-collapsed-styles-css.js';
 
 /**
  * 'exm-collapsed' element contains a slot that can be expanded or collapsed to reveal additional content or information.
  *
  * @customElement exm-collapsed
- * @extends ExmgCollapsedBase
+ * @extends ExmCollapsedBase
  */
 @customElement('exm-collapsed')
-export class ExmgCollapsed extends ExmgCollapsedBase {
+export class ExmCollapsed extends ExmCollapsedBase {
   static styles = [style];
 }
 
 declare global {
   interface HTMLElementTagNameMap {
-    'exm-collapsed': ExmgCollapsed;
+    'exm-collapsed': ExmCollapsed;
   }
 }

@@ -4,9 +4,9 @@ import '@material/web/button/filled-button.js';
 import '@polymer/paper-input/paper-input.js';
 
 import '@exmg/exm-dialogs/exm-dialog-confirm.js';
-import { ExmgDialogConfirm } from '@exmg/exm-dialogs/exm-dialog-confirm.js';
+import { ExmDialogConfirm } from '@exmg/exm-dialogs/exm-dialog-confirm.js';
 import '@exmg/exm-dialogs/exm-dialog-form.js';
-import { ExmgDialogForm } from '@exmg/exm-dialogs/exm-dialog-form.js';
+import { ExmDialogForm } from '@exmg/exm-dialogs/exm-dialog-form.js';
 import '@material/web/textfield/filled-text-field.js';
 import { style } from '../demo-page-styles-css.js';
 
@@ -14,7 +14,7 @@ import './item-delete-confirm-dialog.js';
 import './item-create-form-dialog.js';
 
 function clickHandler(e: Event) {
-  ((e.target as Element).nextElementSibling as ExmgDialogConfirm | ExmgDialogForm)?.show();
+  ((e.target as Element).nextElementSibling as ExmDialogConfirm | ExmDialogForm)?.show();
 }
 
 function sleep(ms) {
@@ -74,7 +74,7 @@ export class DialogDemo extends LitElement {
   ];
 
   async handleSubmit(e: Event) {
-    const dialog = e.target as ExmgDialogConfirm;
+    const dialog = e.target as ExmDialogConfirm;
     try {
       dialog.submitting = true;
 
@@ -89,7 +89,7 @@ export class DialogDemo extends LitElement {
   }
 
   async doFormAction(e: CustomEvent<unknown>) {
-    const formDialog = e.target as ExmgDialogForm;
+    const formDialog = e.target as ExmDialogForm;
     try {
       formDialog.submitting = true;
 

@@ -1,14 +1,14 @@
 import { customElement } from 'lit/decorators.js';
 import { style } from './styles/exm-navigation-toolbar-css.js';
-import { ExmgNavigationToolbarBase } from './exm-navigation-toolbar-base.js';
+import { ExmNavigationToolbarBase } from './exm-navigation-toolbar-base.js';
 
 @customElement('exm-navigation-toolbar')
-export class ExmgNavigationToolbar extends ExmgNavigationToolbarBase {
+export class ExmNavigationToolbar extends ExmNavigationToolbarBase {
   static styles = [style];
 }
 
 declare global {
   interface HTMLElementTagNameMap {
-    'exm-navigation-toolbar': ExmgNavigationToolbar;
+    'exm-navigation-toolbar': ExmNavigationToolbar;
   }
 }

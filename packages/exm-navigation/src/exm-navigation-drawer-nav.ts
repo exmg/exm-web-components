@@ -9,7 +9,7 @@ import { ExmgElement } from '@exmg/lit-base';
 
 @customElement('exm-navigation-drawer-nav')
 // eslint-disable-next-line
-export class ExmgNavigationDrawerNav extends SignalWatcher(ExmgElement) {
+export class ExmNavigationDrawerNav extends SignalWatcher(ExmgElement) {
   static styles = [
     css`
       :host {

@@ -1,7 +1,7 @@
 import { customElement } from 'lit/decorators/custom-element.js';
 
 import { style } from './styles/exm-tooltip-styles-css.js';
-import { ExmgTooltipBase } from './exm-tooltip-base.js';
+import { ExmTooltipBase } from './exm-tooltip-base.js';
 
 /**
  * `exm-tooltip`
@@ -29,12 +29,12 @@ import { ExmgTooltipBase } from './exm-tooltip-base.js';
  */
 
 @customElement('exm-tooltip')
-export class ExmgTooltip extends ExmgTooltipBase {
+export class ExmTooltip extends ExmTooltipBase {
   static styles = style;
 }
 
 declare global {
   interface HTMLElementTagNameMap {
-    'exm-tooltip': ExmgTooltip;
+    'exm-tooltip': ExmTooltip;
   }
 }

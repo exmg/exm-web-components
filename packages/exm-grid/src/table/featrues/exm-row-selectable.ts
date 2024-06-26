@@ -1,4 +1,4 @@
-import { ExmgQuerySelectors } from '../utils/exm-query-selectors.js';
+import { ExmQuerySelectors } from '../utils/exm-query-selectors.js';
 import { EventDetailSelectedRowsChange } from '../types/exm-grid-types.js';
 
 const checkCheckbox = (checkboxElement: HTMLInputElement) => {
@@ -27,17 +27,17 @@ const syncCheckboxAttrFromProp = (checkboxElement: HTMLInputElement) => {
   }
 };
 
-export class ExmgRowSelectable {
+export class ExmRowSelectable {
   allCheckbox?: HTMLInputElement;
 
   selectedRows: HTMLTableRowElement[] = [];
 
-  private querySelectors: ExmgQuerySelectors;
+  private querySelectors: ExmQuerySelectors;
   private dispatchEvent: (event: Event) => boolean;
   private selectableCheckboxSelector?: string;
   private disableRowClickSelection: boolean;
 
-  constructor(qs: ExmgQuerySelectors, de: (event: Event) => boolean, drcs: boolean, scs?: string) {
+  constructor(qs: ExmQuerySelectors, de: (event: Event) => boolean, drcs: boolean, scs?: string) {
     this.querySelectors = qs;
     this.dispatchEvent = de;
     this.selectableCheckboxSelector = scs;

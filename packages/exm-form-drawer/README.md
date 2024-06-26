@@ -126,6 +126,6 @@ event from **exm-form-drawer**. Please read https://github.com/ExmgElements/exm-
 
 ## Additional references
 
-- [Additional Documentation](https://exmg.github.io/exmachina-web-components/ExmgFormDrawer.html)
+- [Additional Documentation](https://exmg.github.io/exmachina-web-components/ExmFormDrawer.html)
 
 - [Demo](https://exmg.github.io/exmachina-web-components/demo/?el=exm-form-drawer)

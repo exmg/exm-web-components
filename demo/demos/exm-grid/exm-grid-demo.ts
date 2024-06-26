@@ -13,12 +13,12 @@ import './exm-grid-smart-toolbar-demo.js';
 import './exm-grid-toolbar-demo.js';
 import './search-toolbar-demo.js';
 import '../../src/theme/color-pallet.js';
-import { ExmgBaseGridDemo } from './exm-grid-base.js';
+import { ExmBaseGridDemo } from './exm-grid-base.js';
 
 import { style } from '../demo-page-styles-css.js';
 
 @customElement('exm-grid-demo')
-export class ExmgGridDemo extends ExmgBaseGridDemo {
+export class ExmGridDemo extends ExmBaseGridDemo {
   static styles = [
     style,
     tableStyles,

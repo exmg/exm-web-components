@@ -1,7 +1,7 @@
 import { html } from 'lit';
 import { customElement } from 'lit/decorators.js';
 import { repeat } from 'lit/directives/repeat.js';
-import { ExmgBaseGridDemo } from './exm-grid-base.js';
+import { ExmBaseGridDemo } from './exm-grid-base.js';
 
 import '@exmg/exm-grid/src/table/exm-grid-smart-toolbar.js';
 import '@exmg/exm-grid/src/table/exm-grid.js';
@@ -11,7 +11,7 @@ import { style as tableStyles } from '@exmg/exm-grid/src/styles/exm-grid-styles-
 import { style as demoStyles } from './demo-common-css.js';
 
 @customElement('search-toolbar-demo')
-export class SearchToolbarDemo extends ExmgBaseGridDemo {
+export class SearchToolbarDemo extends ExmBaseGridDemo {
   static styles = [demoStyles, tableStyles];
 
   private description = 'Table 1';

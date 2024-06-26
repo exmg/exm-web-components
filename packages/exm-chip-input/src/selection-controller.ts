@@ -27,7 +27,7 @@ export interface SelectionElement extends HTMLElement {
  *   @property({ type: Boolean }) removable = false;
  *
  *    @property({ type: Boolean, reflect: true })
- *    @observer(function (this: ExmgChip, selected: boolean) {
+ *    @observer(function (this: ExmChip, selected: boolean) {
  *      this.checked = selected;
  *    })
  *    selected = false;

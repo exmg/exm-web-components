@@ -9,7 +9,7 @@ import { style } from '../styles/exm-grid-base-toolbar-styles-css.js';
  *
  */
 @customElement('exm-grid-base-toolbar')
-export class ExmgGridBaseToolbar extends ExmgElement {
+export class ExmGridBaseToolbar extends ExmgElement {
   static styles = [style];
 
   @state()
@@ -89,6 +89,6 @@ export class ExmgGridBaseToolbar extends ExmgElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'exm-grid-base-toolbar': ExmgGridBaseToolbar;
+    'exm-grid-base-toolbar': ExmGridBaseToolbar;
   }
 }

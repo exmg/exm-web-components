@@ -1,13 +1,13 @@
-import { ExmgQuerySelectors } from '../utils/exm-query-selectors.js';
+import { ExmQuerySelectors } from '../utils/exm-query-selectors.js';
 import { EventDetailSortChange, SORT_DIRECTION } from '../types/exm-grid-types.js';
 
-export class ExmgColumnSortable {
-  private querySelectors: ExmgQuerySelectors;
+export class ExmColumnSortable {
+  private querySelectors: ExmQuerySelectors;
   private dispatchEvent: (event: Event) => boolean;
   private defaultSortColumn?: string;
   private defaultSortDirection?: SORT_DIRECTION;
 
-  constructor(qs: ExmgQuerySelectors, de: (e: Event) => boolean, dsc?: string, dsd?: SORT_DIRECTION) {
+  constructor(qs: ExmQuerySelectors, de: (e: Event) => boolean, dsc?: string, dsd?: SORT_DIRECTION) {
     this.querySelectors = qs;
     this.dispatchEvent = de;
     this.defaultSortColumn = dsc;
