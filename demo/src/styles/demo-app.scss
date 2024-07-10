@@ -78,7 +78,9 @@ main {
       }
     }
   }
-
+  .sidemenu {
+    overflow-y: scroll;
+  }
   .sidemenu md-list.nav {
     --md-list-container-color: transparent;
   }
