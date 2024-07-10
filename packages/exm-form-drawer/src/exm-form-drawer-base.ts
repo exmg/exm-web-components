@@ -213,8 +213,8 @@ export class ExmFormDrawerBase extends ExmgElement {
       <exm-drawer
         ?opened="${this.opened}"
         ?no-cancel-on-outside-click="${this.noCancelOnOutsideClick}"
-        scroll-action=${ifDefined(this.scrollAction)}
         @exm-drawer-opened-changed=${this.handleDrawerOpenedChanged}
+        scroll-action=${ifDefined(this.scrollAction)}
         style="max-width: ${this.style.maxWidth || '547px'}"
       >
         <div class="header">
