@@ -204,12 +204,17 @@ export class ExmFormDrawerBase extends ExmgElement {
     return html`<div class="error"><div>${this.errorMessage}</div></div>`;
   }
 
+  protected handleDrawerOpenedChanged(e: CustomEvent) {
+    this.opened = e.detail.value;
+  }
+
   protected render() {
     return html`
       <exm-drawer
         ?opened="${this.opened}"
         ?no-cancel-on-outside-click="${this.noCancelOnOutsideClick}"
         scroll-action=${ifDefined(this.scrollAction)}
+        @exm-drawer-opened-changed=${this.handleDrawerOpenedChanged}
         style="max-width: ${this.style.maxWidth || '547px'}"
       >
         <div class="header">
