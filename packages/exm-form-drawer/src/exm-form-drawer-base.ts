@@ -206,6 +206,9 @@ export class ExmFormDrawerBase extends ExmgElement {
 
   protected handleDrawerOpenedChanged(e: CustomEvent) {
     this.opened = e.detail.value;
+    if (this.opened) {
+      this._checkFormValidity();
+    }
   }
 
   protected render() {
