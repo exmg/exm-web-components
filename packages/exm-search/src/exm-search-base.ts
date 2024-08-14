@@ -1,5 +1,5 @@
 import { ExmgElement } from '@exmg/lit-base';
-import { html, nothing } from 'lit';
+import { html, nothing, PropertyValues } from 'lit';
 import { property, query, state } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 
@@ -22,17 +22,14 @@ export class ExmSearchBase extends ExmgElement {
   @query('#searchInput')
   search?: HTMLInputElement;
 
+  detectOutsideBind?: (e: Event) => void;
+
   constructor() {
     super();
 
     // Set default tabindex to 0
     const tabindex = this.getAttribute('tabindex');
     this.setAttribute('tabindex', tabindex || '0');
-
-    // Add focus event listener to focus input
-    this.addEventListener('focus', () => {
-      this.focus();
-    });
   }
 
   protected fire<T>(eventName: string, detail?: T, bubbles?: boolean) {
@@ -49,13 +46,36 @@ export class ExmSearchBase extends ExmgElement {
     this._hasFocus = true;
   }
 
+  protected firstUpdated(_changedProperties: PropertyValues): void {
+    this.detectOutsideBind = this.detectOutsideClick.bind(this);
+    document.addEventListener('click', this.detectOutsideBind);
+  }
+
+  disconnectedCallback() {
+    this.detectOutsideBind && document.removeEventListener('click', this.detectOutsideBind);
+    super.disconnectedCallback();
+  }
+
+  detectOutsideClick(e: Event) {
+    const path = e.composedPath();
+    if (path.length > 0) {
+      // @ts-ignore
+      const container = path.find((el) => el.id === 'clickbox');
+      // const container = actualTarget.closest('#clickbox');
+      if (!container) {
+        // Clicked outside the box
+        this._hasFocus = false;
+      }
+    }
+  }
+
   render() {
     const classMapValues = {
       search: true,
       hasFocus: this._hasFocus,
     };
     return html`
-      <div class=${classMap(classMapValues)}>
+      <div id="clickbox" class=${classMap(classMapValues)}>
         <div class="mode-input">
           <md-focus-ring for="searchInput" inward></md-focus-ring>
           <md-icon class="search">search</md-icon>
@@ -65,7 +85,6 @@ export class ExmSearchBase extends ExmgElement {
             value=${this.filterValue ? this.filterValue : ''}
             onfocus="let value = this.value; this.value = null; this.value = value"
             @keyup=${this._handleKeyUp}
-            @blur=${this._handleInputBlur}
           />
           ${this.filterValue
             ? html`
@@ -73,7 +92,7 @@ export class ExmSearchBase extends ExmgElement {
               `
             : nothing}
         </div>
-        <div class="mode-default" @click=${() => (this._hasFocus = true)}>
+        <div class="mode-default" @click=${() => this.focus()}>
           <md-icon class="search">search</md-icon>
           <span class="interactive-content">${this._getValue()}</span>
           ${this.filterValue
@@ -94,13 +113,15 @@ export class ExmSearchBase extends ExmgElement {
     this.fire('search-value-change', { value: this.filterValue }, this.bubbles);
   }
 
-  _handleClear(e: CustomEvent) {
+  _handleClear(e: Event) {
+    e.stopPropagation();
     e.preventDefault();
     this.filterValue = null;
     if (this.search) {
       this.search.value = '';
     }
     this._notifyChange();
+    this.search?.focus();
   }
 
   _handleKeyUp(e: KeyboardEvent) {
@@ -114,10 +135,6 @@ export class ExmSearchBase extends ExmgElement {
     if (e.key === 'Escape') {
       this._hasFocus = false;
     }
-  }
-
-  _handleInputBlur() {
-    this._hasFocus = false;
   }
 
   updated(changedProperties: Map<string, any>) {
