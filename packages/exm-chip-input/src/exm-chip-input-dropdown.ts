@@ -51,7 +51,7 @@ export class ExmChipInputDropdown extends ChipSet {
     const clickedElement = e.target as Element;
     const elementType = clickedElement.tagName;
 
-    if (elementType === 'exm-CHIP') {
+    if (elementType === 'EXM-CHIP') {
       // @ts-ignore
       this.selectedChips = this.chips.filter((chip) => chip.selected);
     }
