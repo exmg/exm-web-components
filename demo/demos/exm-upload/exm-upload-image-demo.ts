@@ -31,12 +31,6 @@ const convertStringToRatio = (ratioString: string) => {
   return numerator / denominator;
 };
 
-window.uploadDefaults = {
-  headers: {
-    'Allow-Access-Control-Origin': '*',
-  },
-};
-
 @customElement('exm-upload-image-demo')
 export class ExmUploadImageDemo extends LitElement {
   @query('exm-upload')
@@ -71,6 +65,14 @@ export class ExmUploadImageDemo extends LitElement {
       }
     `,
   ];
+
+  protected firstUpdated() {
+    window.uploadDefaults = {
+      headers: {
+        'Allow-Access-Control-Origin': '*',
+      },
+    };
+  }
 
   _handlePropertyChange(e: CustomEvent<{ name: string; value: string }>) {
     const { name, value } = e.detail;

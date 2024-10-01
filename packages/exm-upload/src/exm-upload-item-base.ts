@@ -57,9 +57,7 @@ export class ExmUploadItemBase extends ExmgElement {
       responseType: this.responseType,
     };
 
-    if (this.customAdapterPath) {
-      payload.customAdapterPath = this.customAdapterPath || window.uploadDefaults.customAdapterPath;
-    }
+    payload.customAdapterPath = this.customAdapterPath || window.uploadDefaults.customAdapterPath;
 
     this.uploadService = await UploadService.create(this.serverType!, payload);
 
