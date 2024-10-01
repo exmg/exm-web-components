@@ -1,15 +1,6 @@
-import { LitElement, html, css } from 'lit';
+import { LitElement, html, css, PropertyValues } from 'lit';
 import { customElement } from 'lit/decorators.js';
 import '@exmg/exm-upload';
-
-window.uploadDefaults = {
-  customAdapterPath: '/demo/demos/exm-upload/xhr-json-adapter.js',
-  uploadUrl: 'http://localhost:3000/upload',
-  headers: {
-    'x-adminSession': 'sessionid',
-    'Allow-Access-Control-Origin': '*',
-  },
-};
 
 @customElement('exm-upload-custom-demo')
 export class ExmUploadCustomDemo extends LitElement {
@@ -21,6 +12,17 @@ export class ExmUploadCustomDemo extends LitElement {
       }
     `,
   ];
+
+  protected firstUpdated(_changedProperties: PropertyValues): void {
+    window.uploadDefaults = {
+      customAdapterPath: '/demo/demos/exm-upload/xhr-json-adapter.js',
+      uploadUrl: 'http://localhost:3000/upload',
+      headers: {
+        'x-adminSession': 'sessionid',
+        'Allow-Access-Control-Origin': '*',
+      },
+    };
+  }
 
   render() {
     return html` <pre>

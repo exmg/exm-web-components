@@ -3,12 +3,6 @@ import { customElement } from 'lit/decorators.js';
 
 import './file-upload-section.js';
 
-window.uploadDefaults = {
-  headers: {
-    'Allow-Access-Control-Origin': '*',
-  },
-};
-
 @customElement('exm-upload-default-demo')
 export class ExmUploadDefaultDemo extends LitElement {
   static styles = [
@@ -18,6 +12,14 @@ export class ExmUploadDefaultDemo extends LitElement {
       }
     `,
   ];
+
+  protected firstUpdated() {
+    window.uploadDefaults = {
+      headers: {
+        'Allow-Access-Control-Origin': '*',
+      },
+    };
+  }
 
   render() {
     return html` <file-upload-section></file-upload-section>`;

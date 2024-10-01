@@ -5,12 +5,6 @@ import '@exmg/exm-upload/exm-upload.js';
 import './example-upload-dialog.js';
 import { ExampleUploadDialog } from './example-upload-dialog.js';
 
-window.uploadDefaults = {
-  headers: {
-    'Allow-Access-Control-Origin': '*',
-  },
-};
-
 function clickHandler(e: Event) {
   ((e.target as Element).nextElementSibling as ExampleUploadDialog)?.show();
 }
@@ -23,6 +17,14 @@ function sleep(ms: number) {
 export class ExmUploadDialogDemo extends LitElement {
   @query('exm-dialog-upload')
   fileUploadDialog?: ExmDialogUpload;
+
+  protected firstUpdated() {
+    window.uploadDefaults = {
+      headers: {
+        'Allow-Access-Control-Origin': '*',
+      },
+    };
+  }
 
   static styles = [
     css`
