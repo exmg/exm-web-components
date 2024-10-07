@@ -156,6 +156,7 @@ export class ExmFormDrawerBase extends ExmgElement {
 
   protected async handleSubmit() {
     const form = this.getForm();
+    this.errorMessage = null;
 
     // Return when there are invalid fields
     if (!this.formValid) {
@@ -175,7 +176,7 @@ export class ExmFormDrawerBase extends ExmgElement {
         this.fire('action-error', { message: this.errorMessage }, true);
       } finally {
         this.submitting = false;
-        if (!this.keepOpenedOnSubmitSuccess) {
+        if (this.errorMessage === null && !this.keepOpenedOnSubmitSuccess) {
           this.opened = false;
         }
       }

@@ -36,7 +36,7 @@
       url: 'https://www.npmjs.com/package/@exmg/exm-form',
     },{
       name: '@exmg/exm-form-drawer',
-      version: '1.0.2',
+      version: '1.0.3',
       url: 'https://www.npmjs.com/package/@exmg/exm-form-drawer',
     },{
       name: '@exmg/exm-grid',
@@ -76,7 +76,7 @@
       url: 'https://www.npmjs.com/package/@exmg/exm-tooltip',
     },{
       name: '@exmg/exm-upload',
-      version: '1.0.2',
+      version: '1.0.3',
       url: 'https://www.npmjs.com/package/@exmg/exm-upload',
     },
   ];

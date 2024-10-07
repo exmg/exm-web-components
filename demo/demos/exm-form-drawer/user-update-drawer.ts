@@ -42,6 +42,7 @@ export class UserUpdateDrawer extends ExmFormDrawerBase {
 
     if (this.isEditMode()) {
       console.log('Item updates', formData);
+      throw new Error('Error message');
     } else {
       console.log('Item created', formData);
     }

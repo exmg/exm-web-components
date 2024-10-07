@@ -44,3 +44,12 @@ form {
   padding: 0.5rem 1rem;
   box-sizing: border-box;
 }
+
+.error {
+  background-color: var(--md-sys-color-error-container);
+  color: var(--md-sys-color-on-error-container);
+  padding: 0.5rem;
+  > * {
+    margin: 1rem;
+  }
+}
