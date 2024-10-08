@@ -26,7 +26,7 @@ export class ExmUploadItemBase extends ExmgElement {
    * The upload response type
    */
   @property({ type: String })
-  serverType: 'xhr' | 'local' | 'custom' = 'xhr';
+  serverType: 'xhr' | 'local' | 'form-data' | 'custom' = 'xhr';
 
   /**
    * The upload response type
