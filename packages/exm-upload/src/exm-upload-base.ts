@@ -84,7 +84,7 @@ export class ExmUploadBase extends ExmgElement {
    * The upload response type
    */
   @property({ type: String })
-  serverType: 'xhr' | 'custom' | 'local' = 'xhr';
+  serverType: 'xhr' | 'local' | 'form-data' | 'custom' = 'xhr';
 
   /**
    * The CropperJS config see: https://github.com/fengyuanchen/cropperjs#options
