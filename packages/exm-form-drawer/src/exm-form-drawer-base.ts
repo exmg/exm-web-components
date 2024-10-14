@@ -125,7 +125,6 @@ export class ExmFormDrawerBase extends ExmgElement {
   }
 
   protected async _checkFormValidity() {
-    await this.updateComplete;
     const form = this.getForm();
 
     const formElements = form?.elements;
@@ -157,6 +156,9 @@ export class ExmFormDrawerBase extends ExmgElement {
   protected async handleSubmit() {
     const form = this.getForm();
     this.errorMessage = null;
+
+    // Check form validity
+    this._checkFormValidity();
 
     // Return when there are invalid fields
     if (!this.formValid) {

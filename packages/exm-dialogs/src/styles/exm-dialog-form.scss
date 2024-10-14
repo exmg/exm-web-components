@@ -15,3 +15,13 @@
   display: block;
   text-align: left;
 }
+
+.error {
+  background-color: var(--md-sys-color-error-container);
+  color: var(--md-sys-color-on-error-container);
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  > * {
+    margin: 1rem;
+  }
+}

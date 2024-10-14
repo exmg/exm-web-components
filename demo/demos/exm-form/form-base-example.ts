@@ -2,6 +2,10 @@ import { ExmFormBase, formBaseStyles, formStyles } from '@exmg/exm-form';
 import { html } from 'lit';
 import { customElement } from 'lit/decorators.js';
 
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
 @customElement('form-base-example')
 export class FormBaseExample extends ExmFormBase {
   static styles = [formBaseStyles, formStyles];
@@ -10,6 +14,13 @@ export class FormBaseExample extends ExmFormBase {
 
   protected renderToolbar() {
     return html` <div class="toolbar"><div class="title">Create contact</div></div>`;
+  }
+
+  doAction(formData: unknown): Promise<void> {
+    console.log('Form data', formData);
+
+    // @ts-ignore
+    return sleep(3000);
   }
 
   protected renderAside() {

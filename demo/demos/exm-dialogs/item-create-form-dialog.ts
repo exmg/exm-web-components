@@ -35,7 +35,10 @@ export class ItemCreateFormDialog extends ExmDialogFormBase {
     // Simulate slow connection
     await sleep(1000);
 
-    console.log('Item created', formData);
+    if (formData) {
+      throw new Error('Error message');
+    }
+    // console.log('Item created', formData);
   }
 
   protected override renderFormContent() {

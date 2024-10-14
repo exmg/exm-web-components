@@ -1,4 +1,4 @@
-import { html } from 'lit';
+import { html, nothing } from 'lit';
 
 import '@material/web/dialog/dialog.js';
 import { MdDialog } from '@material/web/dialog/dialog.js';
@@ -65,6 +65,8 @@ export class ExmDialogFormBase extends ExmgElement {
 
   boundHandleBlur?: (e: Event) => void;
 
+  @property({ type: String }) errorMessage?: string | null;
+
   protected getForm() {
     return this.shadowRoot!.querySelector('form');
   }
@@ -75,6 +77,7 @@ export class ExmDialogFormBase extends ExmgElement {
    */
   show() {
     this.open = true;
+    this._checkFormValidity();
   }
 
   /**
@@ -94,6 +97,17 @@ export class ExmDialogFormBase extends ExmgElement {
     } else {
       this.show();
     }
+  }
+
+  private handleCancelBtnClick() {
+    this.reset();
+    this.close();
+  }
+
+  reset() {
+    this.errorMessage = null;
+    const form = this.getForm();
+    form!.reset();
   }
 
   protected _handleBlur(e: Event) {
@@ -141,6 +155,10 @@ export class ExmDialogFormBase extends ExmgElement {
 
   protected async handleSubmit() {
     const form = this.getForm();
+    this.errorMessage = null;
+
+    // Check form validity
+    this._checkFormValidity();
 
     // Return when there are invalid fields
     if (!this.formValid) {
@@ -156,14 +174,21 @@ export class ExmDialogFormBase extends ExmgElement {
         await this.doAction(data);
         this.fire('action-success');
       } catch (error) {
+        this.showError(error instanceof Error ? error.message : 'Unknown error');
         this.fire('action-error', { message: error instanceof Error ? error.message : 'Unkbnown error' }, true);
       } finally {
         this.submitting = false;
-        this.open = false;
+        if (this.errorMessage === null) {
+          this.open = false;
+        }
       }
     } else {
       this.fire('action-submit', data, true);
     }
+  }
+
+  showError(message: string) {
+    this.errorMessage = message;
   }
 
   /**
@@ -171,6 +196,10 @@ export class ExmDialogFormBase extends ExmgElement {
    */
   protected renderFormContent() {
     return html`<slot></slot>`;
+  }
+
+  protected renderError() {
+    return html`<div class="error"><div>${this.errorMessage}</div></div>`;
   }
 
   protected render() {
@@ -185,11 +214,15 @@ export class ExmDialogFormBase extends ExmgElement {
         <md-icon-button @click=${() => this.close()}><md-icon>close</md-icon></md-icon-button>
         <span class="headline">${this.title}</span>
       </span>
+
       <div slot="content">
+        ${this.errorMessage ? this.renderError() : nothing}
         <div class="content">${this.renderFormContent()}</div>
       </div>
       <div slot="actions">
-        <md-text-button slot="footer" dialogFocus @click=${() => this.close()}>${this.cancelBtn}</md-text-button>
+        <md-text-button slot="footer" dialogFocus @click=${() => this.handleCancelBtnClick()}
+          >${this.cancelBtn}</md-text-button
+        >
         <exm-filled-button
           slot="footer"
           @click=${this.handleSubmit}

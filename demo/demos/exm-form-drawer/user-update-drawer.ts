@@ -40,6 +40,10 @@ export class UserUpdateDrawer extends ExmFormDrawerBase {
     // Simulate slow connection
     await sleep(1000);
 
+    if (formData) {
+      throw new Error('Error message');
+    }
+
     if (this.isEditMode()) {
       console.log('Item updates', formData);
       throw new Error('Error message');
