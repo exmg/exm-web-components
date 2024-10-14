@@ -28,7 +28,10 @@ class UploadService {
     this.adapter.abort && this.adapter.abort();
   }
 
-  static async create(destination: 'xhr' | 'local' | 'custom', config?: UploadConfig): Promise<UploadService> {
+  static async create(
+    destination: 'xhr' | 'local' | 'form-data' | 'custom',
+    config?: UploadConfig,
+  ): Promise<UploadService> {
     let adapter: UploadAdapter;
     switch (destination) {
       case 'local':
@@ -36,6 +39,9 @@ class UploadService {
         break;
       case 'xhr':
         adapter = await instantiateClass('./adapters/xhr-adapter.js', config);
+        break;
+      case 'form-data':
+        adapter = await instantiateClass('./adapters/form-data-adapter.js', config);
         break;
       case 'custom':
         adapter = await instantiateClass(config?.customAdapterPath, config);

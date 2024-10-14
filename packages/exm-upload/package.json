@@ -1,6 +1,6 @@
 {
   "name": "@exmg/exm-upload",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "dependencies": {
     "@exmg/exm-button": "^1.0.1",
     "@exmg/exm-collapsed": "^1.0.1",
