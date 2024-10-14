@@ -1,6 +1,6 @@
 {
   "name": "@exmg/exm-form",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "type": "module",
   "main": "index.js",
   "module": "index.js",
@@ -29,7 +29,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@exmg/exm-button": "^1.0.1",
+    "@exmg/exm-button": "^1.0.2",
     "@material/typography": "^14.0.0",
     "lit": "^3.0.0",
     "tslib": "^2.6.2"
