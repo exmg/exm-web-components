@@ -37,6 +37,9 @@ export class ExmUploadItemBase extends ExmgElement {
   @property({ type: Object })
   uploadService?: UploadService;
 
+  /*
+   * File item to display
+   */
   @property({ type: Object })
   item?: FileData;
 
