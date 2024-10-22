@@ -38,6 +38,9 @@
   overflow: hidden;
   text-overflow: ellipsis;
   text-align: center;
+  a {
+    color: var(--md-sys-color-primary);
+  }
 }
 
 .drop.dropHover {
