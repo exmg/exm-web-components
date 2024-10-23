@@ -76,7 +76,7 @@
       url: 'https://www.npmjs.com/package/@exmg/exm-tooltip',
     },{
       name: '@exmg/exm-upload',
-      version: '1.0.6',
+      version: '1.0.7',
       url: 'https://www.npmjs.com/package/@exmg/exm-upload',
     },
   ];
