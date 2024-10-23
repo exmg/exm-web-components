@@ -1,6 +1,6 @@
 {
   "name": "@exmg/exm-dialogs",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "type": "module",
   "main": "index.js",
   "module": "index.js",
@@ -22,8 +22,8 @@
   "homepage": "https://github.com/exmg/exmachina-web-components",
   "license": "MIT",
   "dependencies": {
-    "@exmg/exm-button": "^1.0.2",
-    "@exmg/exm-form": "^1.0.3",
+    "@exmg/exm-button": "^1.0.3",
+    "@exmg/exm-form": "^1.0.4",
     "@exmg/lit-base": "^3.0.0",
     "@polymer/iron-form": "^3.0.0",
     "@polymer/paper-dialog": "^3.0.0",

@@ -1,6 +1,6 @@
 {
   "name": "@exmg/exm-grid",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "type": "module",
   "description": "exmg grid element",
   "contributors": [
@@ -28,7 +28,7 @@
     "directory": "packages/exm-grid"
   },
   "dependencies": {
-    "@exmg/exm-sortable": "^1.0.1",
+    "@exmg/exm-sortable": "^1.0.2",
     "@exmg/lit-base": "^3.0.0",
     "@material/typography": "^14.0.0",
     "@material/web": "^2.2.0",

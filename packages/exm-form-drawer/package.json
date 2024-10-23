@@ -1,6 +1,6 @@
 {
   "name": "@exmg/exm-form-drawer",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "type": "module",
   "main": "index.js",
   "module": "index.js",
@@ -30,8 +30,8 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@exmg/exm-button": "^1.0.2",
-    "@exmg/exm-form": "^1.0.3",
+    "@exmg/exm-button": "^1.0.3",
+    "@exmg/exm-form": "^1.0.4",
     "@material/typography": "^14.0.0",
     "@polymer/neon-animation": "^3.0.1",
     "@polymer/paper-dialog": "^3.0.1",
