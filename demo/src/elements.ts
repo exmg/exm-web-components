@@ -28,7 +28,7 @@
       url: 'https://www.npmjs.com/package/@exmg/exm-copy-to-clipboard',
     },{
       name: '@exmg/exm-dialogs',
-      version: '1.0.3',
+      version: '1.0.4',
       url: 'https://www.npmjs.com/package/@exmg/exm-dialogs',
     },{
       name: '@exmg/exm-form',
@@ -36,7 +36,7 @@
       url: 'https://www.npmjs.com/package/@exmg/exm-form',
     },{
       name: '@exmg/exm-form-drawer',
-      version: '1.0.5',
+      version: '1.0.6',
       url: 'https://www.npmjs.com/package/@exmg/exm-form-drawer',
     },{
       name: '@exmg/exm-grid',
@@ -76,7 +76,7 @@
       url: 'https://www.npmjs.com/package/@exmg/exm-tooltip',
     },{
       name: '@exmg/exm-upload',
-      version: '1.0.5',
+      version: '1.0.6',
       url: 'https://www.npmjs.com/package/@exmg/exm-upload',
     },
   ];

@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "@exmg/exm-sortable": "^1.0.1",
-    "@exmg/lit-base": "^2.0.1",
+    "@exmg/lit-base": "^3.0.0",
     "@material/typography": "^14.0.0",
     "@material/web": "^2.2.0",
     "@polymer/iron-dropdown": "^3.0.1",

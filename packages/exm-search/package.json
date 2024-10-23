@@ -9,7 +9,7 @@
     "./exm-search.js": "./src/exm-search.js"
   },
   "dependencies": {
-    "@exmg/lit-base": "^2.0.1",
+    "@exmg/lit-base": "^3.0.0",
     "@material/web": "^2.2.0",
     "lit": "^3.0.0",
     "tslib": "^2.6.2"
