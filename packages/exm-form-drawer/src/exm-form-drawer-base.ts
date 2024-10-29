@@ -131,8 +131,12 @@ export class ExmFormDrawerBase extends ExmgElement {
     let allValid = true;
 
     for (const el of formElements || []) {
+      let isValid = true;
       // @ts-ignore
-      const isValid = typeof el.reportValidity === 'function' && el.checkValidity();
+      if (typeof el.reportValidity === 'function') {
+        // @ts-ignore
+        isValid = el.checkValidity();
+      }
       if (!isValid) {
         allValid = false;
       }

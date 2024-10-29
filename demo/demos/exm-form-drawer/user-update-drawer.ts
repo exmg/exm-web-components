@@ -98,6 +98,7 @@ export class UserUpdateDrawer extends ExmFormDrawerBase {
           value=${ifDefined(this.user?.phone)}
           required
         ></md-outlined-text-field>
+        <md-icon-button><md-icon>close</md-icon></md-icon-button>
       </form>
     `;
   }
