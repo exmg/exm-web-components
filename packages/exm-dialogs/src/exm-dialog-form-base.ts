@@ -224,9 +224,7 @@ export class ExmDialogFormBase extends ExmgElement {
         <div class="content">${this.renderFormContent()}</div>
       </div>
       <div slot="actions">
-        <md-text-button slot="footer" dialogFocus @click=${() => this.handleCancelBtnClick()}
-          >${this.cancelBtn}</md-text-button
-        >
+        <md-text-button slot="footer" @click=${() => this.handleCancelBtnClick()}>${this.cancelBtn}</md-text-button>
         <exm-filled-button
           slot="footer"
           @click=${this.handleSubmit}
