@@ -1,14 +1,14 @@
 import { html, nothing } from 'lit';
-import { property, state } from 'lit/decorators.js';
+import { property } from 'lit/decorators.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
 import './exm-drawer.js';
 import '@exmg/exm-button/exm-filled-button.js';
 import '@material/web/button/text-button.js';
 import { ExmgElement } from '@exmg/lit-base';
 import { serializeForm } from '@exmg/exm-form';
-import { async, debounce } from '@exmg/lit-base/index.js';
+import { ExmFormValidateMixin } from '@exmg/exm-form';
 
-export class ExmFormDrawerBase extends ExmgElement {
+export class ExmFormDrawerBase extends ExmFormValidateMixin(ExmgElement) {
   /**
    * Opened state of the form-drawer
    * @type {Boolean}
@@ -63,10 +63,6 @@ export class ExmFormDrawerBase extends ExmgElement {
    */
   @property({ type: Boolean }) submitting = false;
 
-  @state() private formValid = false;
-
-  boundHandleChange?: (e: Event) => void;
-
   /**
    * Scroll action of the drawer
    * @type {'lock' | 'refit' | 'cancel' | undefined}
@@ -75,38 +71,6 @@ export class ExmFormDrawerBase extends ExmgElement {
   scrollAction?: 'lock' | 'refit' | 'cancel' | undefined;
 
   @property({ type: String }) errorMessage?: string | null;
-  private _debouncer?: debounce.Debouncer;
-
-  protected getForm() {
-    return this.shadowRoot!.querySelector('form');
-  }
-
-  protected _handleInputChange(e: Event) {
-    const target = e.target as HTMLElement;
-
-    // Only check validation every 200ms max
-    this._debouncer = debounce.Debouncer.debounce(this._debouncer!, async.timeOut.after(200), () => {
-      // @ts-ignore
-      typeof target.reportValidity === 'function' && target.reportValidity();
-
-      this._checkFormValidity();
-    });
-  }
-
-  protected firstUpdated() {
-    const form = this.getForm();
-
-    this.boundHandleChange = this._handleInputChange.bind(this);
-    form!.addEventListener('keyup', this.boundHandleChange, true);
-    form!.addEventListener('input', this.boundHandleChange, true);
-  }
-
-  disconnectedCallback() {
-    const form = this.getForm();
-    this.boundHandleChange && form!.addEventListener('keyup', this.boundHandleChange, true);
-    this.boundHandleChange && form!.addEventListener('input', this.boundHandleChange, true);
-    super.disconnectedCallback();
-  }
 
   /**
    * Opens and shows the drawer.
@@ -133,27 +97,6 @@ export class ExmFormDrawerBase extends ExmgElement {
     }
   }
 
-  protected async _checkFormValidity() {
-    const form = this.getForm();
-
-    const formElements = form?.elements;
-    let allValid = true;
-
-    for (const el of formElements || []) {
-      let isValid = true;
-      // @ts-ignore
-      if (typeof el.reportValidity === 'function') {
-        // @ts-ignore
-        isValid = el.checkValidity();
-      }
-      if (!isValid) {
-        allValid = false;
-      }
-    }
-
-    this.formValid = allValid;
-  }
-
   reset() {
     this.errorMessage = null;
     const form = this.getForm();
@@ -171,7 +114,7 @@ export class ExmFormDrawerBase extends ExmgElement {
     this.errorMessage = null;
 
     // Check form validity
-    this._checkFormValidity();
+    this.checkFormValidity();
 
     // Return when there are invalid fields
     if (!this.formValid) {
@@ -223,7 +166,7 @@ export class ExmFormDrawerBase extends ExmgElement {
   protected handleDrawerOpenedChanged(e: CustomEvent) {
     this.opened = e.detail.value;
     if (this.opened) {
-      this._checkFormValidity();
+      this.checkFormValidity();
     }
   }
 

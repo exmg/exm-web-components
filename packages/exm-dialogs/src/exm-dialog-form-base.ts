@@ -6,16 +6,15 @@ import '@exmg/exm-button/exm-filled-button.js';
 import '@material/web/button/text-button.js';
 import '@material/web/iconbutton/icon-button.js';
 import '@material/web/icon/icon.js';
+import { ExmFormValidateMixin } from '@exmg/exm-form';
 
-import { property, query, state } from 'lit/decorators.js';
+import { property, query } from 'lit/decorators.js';
 import { ExmgElement } from '@exmg/lit-base';
 import { serializeForm } from '@exmg/exm-form';
 
-import { async, debounce } from '@exmg/lit-base/index.js';
-
 export const CLOSE_ACTION = 'close';
 
-export class ExmDialogFormBase extends ExmgElement {
+export class ExmDialogFormBase extends ExmFormValidateMixin(ExmgElement) {
   /**
    * Opens the dialog when set to `true` and closes it when set to `false`.
    */
@@ -61,18 +60,9 @@ export class ExmDialogFormBase extends ExmgElement {
    */
   @property({ type: Boolean }) submitting = false;
 
-  @state() private formValid = false;
-
   @query('md-dialog') protected dialog!: MdDialog;
 
-  boundHandleChange?: (e: Event) => void;
-  private _debouncer?: debounce.Debouncer;
-
   @property({ type: String }) errorMessage?: string | null;
-
-  protected getForm() {
-    return this.shadowRoot!.querySelector('form');
-  }
 
   /**
    * Opens and shows the dialog. This is equivalent to setting the `open`
@@ -80,7 +70,7 @@ export class ExmDialogFormBase extends ExmgElement {
    */
   show() {
     this.open = true;
-    this._checkFormValidity();
+    this.checkFormValidity();
   }
 
   /**
@@ -113,54 +103,6 @@ export class ExmDialogFormBase extends ExmgElement {
     form!.reset();
   }
 
-  protected _handleBlur(e: Event) {
-    const target = e.target as HTMLElement;
-
-    // Only check validation every 200ms max
-    this._debouncer = debounce.Debouncer.debounce(this._debouncer!, async.timeOut.after(200), () => {
-      // @ts-ignore
-      typeof target.reportValidity === 'function' && target.reportValidity();
-
-      this._checkFormValidity();
-    });
-  }
-
-  protected firstUpdated() {
-    const form = this.getForm();
-
-    this.boundHandleChange = this._handleBlur.bind(this);
-    form!.addEventListener('keyup', this.boundHandleChange, true);
-    form!.addEventListener('input', this.boundHandleChange, true);
-  }
-
-  disconnectedCallback() {
-    const form = this.getForm();
-    this.boundHandleChange && form!.addEventListener('keyup', this.boundHandleChange, true);
-    this.boundHandleChange && form!.addEventListener('input', this.boundHandleChange, true);
-    super.disconnectedCallback();
-  }
-
-  protected _checkFormValidity() {
-    const form = this.getForm();
-
-    const formElements = form?.elements;
-    let allValid = true;
-
-    for (const el of formElements || []) {
-      let isValid = true;
-      // @ts-ignore
-      if (typeof el.reportValidity === 'function') {
-        // @ts-ignore
-        isValid = el.checkValidity();
-      }
-      if (!isValid) {
-        allValid = false;
-      }
-    }
-
-    this.formValid = allValid;
-  }
-
   /**
    * Action method that needs to be implemented
    * @param {CustomEvent} e
@@ -172,7 +114,7 @@ export class ExmDialogFormBase extends ExmgElement {
     this.errorMessage = null;
 
     // Check form validity
-    this._checkFormValidity();
+    this.checkFormValidity();
 
     // Return when there are invalid fields
     if (!this.formValid) {

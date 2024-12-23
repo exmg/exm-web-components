@@ -4,20 +4,16 @@ import { state } from 'lit/decorators.js';
 
 export type Constructor<T> = new (...args: any[]) => T;
 
-export abstract class FormvalidateMixinClass extends LitElement {
-  getForm?(): HTMLFormElement | null;
-}
+export abstract class FormValidateMixinClass extends LitElement {}
 
-export declare class FormvalidateMixinInterface {
+export declare class FormValidateMixinInterface {
   formValid: boolean;
+  getForm(): HTMLFormElement | null;
   checkFormValidity(): void;
 }
 
-export const FormvalidateMixin = <T extends Constructor<LitElement & FormvalidateMixinClass>>(superClass: T) => {
-  class SelectedStateElement extends superClass {
-    /**
-     * Used for mixin detection because `instanceof` does not work with mixins.
-     */
+export const ExmFormValidateMixin = <T extends Constructor<LitElement & FormValidateMixinClass>>(superClass: T) => {
+  class FormvalidateMixinElement extends superClass {
     @state()
     formValid = false;
 
@@ -77,5 +73,5 @@ export const FormvalidateMixin = <T extends Constructor<LitElement & Formvalidat
     }
   }
 
-  return SelectedStateElement as Constructor<FormvalidateMixinInterface> & T;
+  return FormvalidateMixinElement as Constructor<FormValidateMixinInterface> & T;
 };

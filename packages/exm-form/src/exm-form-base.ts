@@ -7,6 +7,7 @@ import '@material/web/divider/divider.js';
 
 import { ExmgElement } from '@exmg/lit-base';
 import { classMap } from 'lit/directives/class-map.js';
+import { ExmFormValidateMixin } from './exm-form-validate-mixin.js';
 
 export const CLOSE_ACTION = 'close';
 
@@ -87,7 +88,7 @@ export const serializeForm = (form) => {
   return obj;
 };
 
-export class ExmFormBase extends ExmgElement {
+export class ExmFormBase extends ExmFormValidateMixin(ExmgElement) {
   /**
    * Submit button copy
    */
@@ -103,18 +104,12 @@ export class ExmFormBase extends ExmgElement {
    */
   @property({ type: Boolean }) submitting = false;
 
-  @property({ type: Boolean }) formValid = false;
-
   boundHandleBlur?: (e: Event) => void;
   boundHandleKeyup?: (e: Event) => void;
 
   @property({ type: Boolean }) hasAsideContent = false;
 
   @property({ type: String }) errorMessage?: string | null;
-
-  protected getForm() {
-    return this.shadowRoot!.querySelector('form');
-  }
 
   reset() {
     const form = this.getForm();
@@ -123,59 +118,6 @@ export class ExmFormBase extends ExmgElement {
 
   submit() {
     this.handleSubmit();
-  }
-
-  protected _handleKeyup() {
-    this._checkFormValidity();
-  }
-
-  protected _handleBlur(e: Event) {
-    // @ts-ignore
-    typeof e.target.reportValidity === 'function' && e.target.reportValidity();
-    this._checkFormValidity();
-  }
-
-  protected async firstUpdated() {
-    const form = this.getForm();
-
-    this.boundHandleBlur = this._handleBlur.bind(this);
-    form!.addEventListener('blur', this.boundHandleBlur, true);
-
-    this.boundHandleKeyup = this._handleKeyup.bind(this);
-    form!.addEventListener('keyup', this.boundHandleKeyup, true);
-
-    await this.updateComplete;
-    this._checkFormValidity();
-  }
-
-  disconnectedCallback() {
-    const form = this.getForm();
-
-    this.boundHandleBlur && form!.removeEventListener('blur', this.boundHandleBlur, true);
-    this.boundHandleKeyup && form!.removeEventListener('keyup', this.boundHandleKeyup, true);
-
-    super.disconnectedCallback();
-  }
-
-  protected _checkFormValidity() {
-    const form = this.getForm();
-
-    const formElements = form?.elements;
-    let allValid = true;
-
-    for (const el of formElements || []) {
-      let isValid = true;
-      // @ts-ignore
-      if (typeof el.reportValidity === 'function') {
-        // @ts-ignore
-        isValid = el.checkValidity();
-      }
-      if (!isValid) {
-        allValid = false;
-      }
-    }
-
-    this.formValid = allValid;
   }
 
   /**
@@ -189,7 +131,7 @@ export class ExmFormBase extends ExmgElement {
     const form = this.getForm();
 
     // Check form validity
-    this._checkFormValidity();
+    this.checkFormValidity();
 
     // Return when there are invalid fields
     if (!this.formValid) {
