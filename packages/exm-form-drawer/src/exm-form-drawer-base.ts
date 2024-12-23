@@ -6,6 +6,7 @@ import '@exmg/exm-button/exm-filled-button.js';
 import '@material/web/button/text-button.js';
 import { ExmgElement } from '@exmg/lit-base';
 import { serializeForm } from '@exmg/exm-form';
+import { async, debounce } from '@exmg/lit-base/index.js';
 
 export class ExmFormDrawerBase extends ExmgElement {
   /**
@@ -64,7 +65,7 @@ export class ExmFormDrawerBase extends ExmgElement {
 
   @state() private formValid = false;
 
-  boundHandleBlur?: (e: Event) => void;
+  boundHandleChange?: (e: Event) => void;
 
   /**
    * Scroll action of the drawer
@@ -74,28 +75,36 @@ export class ExmFormDrawerBase extends ExmgElement {
   scrollAction?: 'lock' | 'refit' | 'cancel' | undefined;
 
   @property({ type: String }) errorMessage?: string | null;
+  private _debouncer?: debounce.Debouncer;
 
   protected getForm() {
     return this.shadowRoot!.querySelector('form');
   }
 
-  protected _handleBlur(e: Event) {
-    // @ts-ignore
-    typeof e.target.reportValidity === 'function' && e.target.reportValidity();
+  protected _handleInputChange(e: Event) {
+    const target = e.target as HTMLElement;
 
-    this._checkFormValidity();
+    // Only check validation every 200ms max
+    this._debouncer = debounce.Debouncer.debounce(this._debouncer!, async.timeOut.after(200), () => {
+      // @ts-ignore
+      typeof target.reportValidity === 'function' && target.reportValidity();
+
+      this._checkFormValidity();
+    });
   }
 
   protected firstUpdated() {
     const form = this.getForm();
 
-    this.boundHandleBlur = this._handleBlur.bind(this);
-    form!.addEventListener('blur', this.boundHandleBlur, true);
+    this.boundHandleChange = this._handleInputChange.bind(this);
+    form!.addEventListener('keyup', this.boundHandleChange, true);
+    form!.addEventListener('input', this.boundHandleChange, true);
   }
 
   disconnectedCallback() {
     const form = this.getForm();
-    this.boundHandleBlur && form!.addEventListener('blur', this.boundHandleBlur, true);
+    this.boundHandleChange && form!.addEventListener('keyup', this.boundHandleChange, true);
+    this.boundHandleChange && form!.addEventListener('input', this.boundHandleChange, true);
     super.disconnectedCallback();
   }
 

@@ -3,6 +3,8 @@ import { customElement, property } from 'lit/decorators.js';
 import { ExmFormDrawerBase, formDrawerStyles } from '@exmg/exm-form-drawer';
 import { ifDefined } from 'lit/directives/if-defined.js';
 import { formStyles } from '@exmg/exm-form';
+import '@material/web/select/outlined-select.js';
+import '@material/web/select/select-option.js';
 
 function sleep(ms: number) {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -98,7 +100,18 @@ export class UserUpdateDrawer extends ExmFormDrawerBase {
           value=${ifDefined(this.user?.phone)}
           required
         ></md-outlined-text-field>
-        <md-icon-button><md-icon>close</md-icon></md-icon-button>
+        <div class="row">
+          <md-outlined-select name="test" required label="Test">
+            <md-select-option aria-label="blank"></md-select-option>
+            <md-select-option value="apple">
+              <div slot="headline">Apple</div>
+            </md-select-option>
+            <md-select-option value="apricot">
+              <div slot="headline">Apricot</div>
+            </md-select-option>
+          </md-outlined-select>
+          <md-outlined-text-field name="phone" label="Phone" required></md-outlined-text-field>
+        </div>
       </form>
     `;
   }

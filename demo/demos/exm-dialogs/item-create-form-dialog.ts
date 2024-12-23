@@ -5,6 +5,8 @@ import { ExmDialogFormBase, dialogFormStyles } from '@exmg/exm-dialogs';
 import { formStyles } from '@exmg/exm-form';
 
 import '@material/web/textfield/filled-text-field.js';
+import '@material/web/select/filled-select.js';
+import '@material/web/select/select-option.js';
 import '@material/web/radio/radio.js';
 import { customElement } from 'lit/decorators.js';
 
@@ -59,6 +61,15 @@ export class ItemCreateFormDialog extends ExmDialogFormBase {
             ></md-filled-text-field>
           </div>
           <div class="row">
+            <md-filled-select name="test" required label="Test">
+              <md-select-option aria-label="blank"></md-select-option>
+              <md-select-option value="apple">
+                <div slot="headline">Apple</div>
+              </md-select-option>
+              <md-select-option value="apricot">
+                <div slot="headline">Apricot</div>
+              </md-select-option>
+            </md-filled-select>
             <md-filled-text-field name="phone" label="Phone" required></md-filled-text-field>
           </div>
           <div class="section-title extra-margin" id="group-title" role="heading" aria-level="4">Starting position</div>

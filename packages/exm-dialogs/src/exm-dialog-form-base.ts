@@ -11,6 +11,8 @@ import { property, query, state } from 'lit/decorators.js';
 import { ExmgElement } from '@exmg/lit-base';
 import { serializeForm } from '@exmg/exm-form';
 
+import { async, debounce } from '@exmg/lit-base/index.js';
+
 export const CLOSE_ACTION = 'close';
 
 export class ExmDialogFormBase extends ExmgElement {
@@ -63,7 +65,8 @@ export class ExmDialogFormBase extends ExmgElement {
 
   @query('md-dialog') protected dialog!: MdDialog;
 
-  boundHandleBlur?: (e: Event) => void;
+  boundHandleChange?: (e: Event) => void;
+  private _debouncer?: debounce.Debouncer;
 
   @property({ type: String }) errorMessage?: string | null;
 
@@ -111,22 +114,29 @@ export class ExmDialogFormBase extends ExmgElement {
   }
 
   protected _handleBlur(e: Event) {
-    // @ts-ignore
-    typeof e.target.reportValidity === 'function' && e.target.reportValidity();
+    const target = e.target as HTMLElement;
 
-    this._checkFormValidity();
+    // Only check validation every 200ms max
+    this._debouncer = debounce.Debouncer.debounce(this._debouncer!, async.timeOut.after(200), () => {
+      // @ts-ignore
+      typeof target.reportValidity === 'function' && target.reportValidity();
+
+      this._checkFormValidity();
+    });
   }
 
   protected firstUpdated() {
     const form = this.getForm();
 
-    this.boundHandleBlur = this._handleBlur.bind(this);
-    form!.addEventListener('blur', this.boundHandleBlur, true);
+    this.boundHandleChange = this._handleBlur.bind(this);
+    form!.addEventListener('keyup', this.boundHandleChange, true);
+    form!.addEventListener('input', this.boundHandleChange, true);
   }
 
   disconnectedCallback() {
     const form = this.getForm();
-    this.boundHandleBlur && form!.addEventListener('blur', this.boundHandleBlur, true);
+    this.boundHandleChange && form!.addEventListener('keyup', this.boundHandleChange, true);
+    this.boundHandleChange && form!.addEventListener('input', this.boundHandleChange, true);
     super.disconnectedCallback();
   }
 

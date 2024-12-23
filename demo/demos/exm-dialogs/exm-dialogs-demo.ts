@@ -2,6 +2,8 @@ import { LitElement, html, css } from 'lit';
 import { customElement } from 'lit/decorators/custom-element.js';
 import '@material/web/button/filled-button.js';
 import '@polymer/paper-input/paper-input.js';
+import '@material/web/select/filled-select.js';
+import '@material/web/select/select-option.js';
 
 import '@exmg/exm-dialogs/exm-dialog-confirm.js';
 import { ExmDialogConfirm } from '@exmg/exm-dialogs/exm-dialog-confirm.js';
@@ -144,6 +146,15 @@ export class DialogDemo extends LitElement {
                 required
               ></md-filled-text-field>
               <md-filled-text-field name="phone" label="Phone" required></md-filled-text-field>
+              <md-filled-select name="test" required label="Test" @focus-out=${() => console.log('out')}>
+                <md-select-option aria-label="blank"></md-select-option>
+                <md-select-option value="apple">
+                  <div slot="headline">Apple</div>
+                </md-select-option>
+                <md-select-option value="apricot">
+                  <div slot="headline">Apricot</div>
+                </md-select-option>
+              </md-filled-select>
             </form>
           </exm-dialog-form>
         </div>

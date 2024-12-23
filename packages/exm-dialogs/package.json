@@ -22,8 +22,8 @@
   "homepage": "https://github.com/exmg/exmachina-web-components",
   "license": "MIT",
   "dependencies": {
-    "@exmg/exm-button": "^1.0.3",
-    "@exmg/exm-form": "^1.0.5",
+    "@exmg/exm-button": "file:../exm-button",
+    "@exmg/exm-form": "file:../exm-form",
     "@exmg/lit-base": "^3.0.0",
     "@polymer/iron-form": "^3.0.0",
     "@polymer/paper-dialog": "^3.0.0",
