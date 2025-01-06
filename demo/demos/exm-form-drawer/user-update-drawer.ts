@@ -31,7 +31,7 @@ export class UserUpdateDrawer extends ExmFormDrawerBase {
     this.opened = true;
     this.title = this.isEditMode() ? 'Update User' : 'Create User';
 
-    this._checkFormValidity();
+    this.checkFormValidity();
   }
 
   isEditMode() {
