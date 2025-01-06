@@ -13,7 +13,7 @@
     "outDir": "./",
     "baseUrl": "./packages",
     "paths": {
-      "@exmg/exm-th": ["./*"]
+      "@exmg/exm-": ["./*"]
     },
     "composite": true,
     "importHelpers": true,
