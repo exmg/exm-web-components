@@ -8,7 +8,7 @@
 npm install @exmg/exm-grid
 ```
 
-Before start ensure that you have installed `web-animation-js`. It is required by `@exmg/exm-paper-combobox`.
+Before start ensure that you have installed `web-animation-js`. It is required by `@exmg/exm-paper-combobox`
 
 ```bash
 npm install web-animation-js
