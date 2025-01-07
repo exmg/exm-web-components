@@ -4,10 +4,10 @@
 
 The Exmg Form enhances form design by offering a more intuitive layout visualization, streamlining the user experience with several key features. These include:
 
-- Automated form validity checks, ensuring data integrity.
-- Dynamic submit button control, which enables or disables the button based on form completeness.
-- JSON output capability, allowing for easy data serialization and integration.
-- A loading spinner, providing a visual indicator for asynchronous form submissions.
+- Automated form validity checks, ensuring data integrity
+- Dynamic submit button control, which enables or disables the button based on form completeness
+- JSON output capability, allowing for easy data serialization and integration
+- A loading spinner, providing a visual indicator for asynchronous form submissions
 
 ## Installation
 

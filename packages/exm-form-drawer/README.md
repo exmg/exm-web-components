@@ -1,6 +1,6 @@
 # `<exm-form-drawer>` [![Published on npm](https://img.shields.io/npm/v/@exmg/exm-form-drawer.svg)](https://www.npmjs.com/package/@exmg/exm-form-drawer)
 
-This package provides dialog drawer functionality.
+This package provides dialog drawer functionality
 
 Components included:
 
