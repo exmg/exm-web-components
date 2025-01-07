@@ -1,8 +1,8 @@
 import { html, LitElement } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
 import { repeat } from 'lit/directives/repeat.js';
-import '@exmg/exm-grid/src/table/exm-grid-toolbar-filters.js';
-import '@exmg/exm-grid/src/table/exm-grid-base-toolbar.js';
+import '@exmg/exm-grid/exm-grid-toolbar-filters.js';
+import '@exmg/exm-grid/exm-grid-base-toolbar.js';
 import '@material/web/icon/icon.js';
 import '@material/web/iconbutton/icon-button.js';
 

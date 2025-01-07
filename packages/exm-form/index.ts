@@ -1,5 +1,5 @@
 export { ExmForm } from './src/exm-form.js';
-export { ExmFormValidateMixin } from './src/exm-form-validate-mixin.js';
+export { ExmFormValidateMixin, Constructor } from './src/exm-form-validate-mixin.js';
 export { ExmFormBase, serializeForm } from './src/exm-form-base.js';
 
 export { style as formStyles } from './src/styles/exm-form-css.js';

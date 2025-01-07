@@ -11,9 +11,9 @@
     "skipLibCheck": true,
     "noImplicitAny": false,
     "outDir": "./",
-    "baseUrl": "./packages",
+    "baseUrl": "./",
     "paths": {
-      "@exmg/exm-": ["./*"]
+      "@exmg/exm-*": ["packages/exm-*"]
     },
     "composite": true,
     "importHelpers": true,

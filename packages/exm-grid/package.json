@@ -12,6 +12,18 @@
     "grid"
   ],
   "main": "index.js",
+  "module": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./exm-grid-base-toolbar.js": "./src/table/exm-grid-base-toolbar.js",
+    "./exm-grid-pagination.js": "./src/table/exm-grid-pagination.js",
+    "./exm-grid-setting-selection-list.js": "./src/table/exm-grid-setting-selection-list.js",
+    "./exm-grid-smart-toolbar.js": "./src/table/exm-grid-smart-toolbar.js",
+    "./exm-grid-toolbar-filters.js": "./src/table/exm-grid-toolbar-filters.js",
+    "./exm-grid-toolbar.js": "./src/table/exm-grid-toolbar.js",
+    "./exm-grid.js": "./src/table/exm-grid.js",
+    "./exm-toolbar-search.js": "./src/search/exm-toolbar-search.js"
+  },
   "files": [
     "assets/*",
     "src/styles/**/*.scss",

@@ -1,16 +1,16 @@
 import { html } from 'lit';
 import { customElement } from 'lit/decorators.js';
 import { repeat } from 'lit/directives/repeat.js';
-import '@exmg/exm-grid/src/table/exm-grid.js';
-import '@exmg/exm-grid/src/table/exm-grid-pagination.js';
-import { style as tableStyles } from '@exmg/exm-grid/src/styles/exm-grid-styles-css.js';
+import '@exmg/exm-grid/exm-grid.js';
+import '@exmg/exm-grid/exm-grid-pagination.js';
+import { gridStyles } from '@exmg/exm-grid';
 import { style as demoStyles } from './demo-common-css.js';
 
 import { ExmBaseGridDemo } from './exm-grid-base.js';
 
 @customElement('demo-simple-grid')
 export class DemoSimpleGridTable extends ExmBaseGridDemo {
-  static styles = [demoStyles, tableStyles];
+  static styles = [demoStyles, gridStyles];
 
   private renderTableBody() {
     return repeat(

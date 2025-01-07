@@ -9,10 +9,10 @@ import '@material/web/menu/menu-item.js';
 import '@material/web/icon/icon.js';
 import '@material/web/iconbutton/icon-button.js';
 
-import '@exmg/exm-grid/src/table/exm-grid.js';
-import '@exmg/exm-grid/src/table/exm-grid-pagination.js';
-import '@exmg/exm-grid/src/table/exm-grid-smart-toolbar.js';
-import { style as tableStyles } from '@exmg/exm-grid/src/styles/exm-grid-styles-css.js';
+import '@exmg/exm-grid/exm-grid.js';
+import '@exmg/exm-grid/exm-grid-pagination.js';
+import '@exmg/exm-grid/exm-grid-smart-toolbar.js';
+import { gridStyles } from '@exmg/exm-grid';
 import { style as demoStyles } from './demo-common-css.js';
 
 import { createIcon } from './exm-icons.js';
@@ -22,7 +22,7 @@ import { DEFAULT_SORT_COLUMN, DEFAULT_SORT_DIRECTION, ExmBaseGridDemo } from './
 export class ExmComplexGrid extends ExmBaseGridDemo {
   // language=CSS
   static styles = [
-    tableStyles,
+    gridStyles,
     demoStyles,
     css`
       .expandable-toggle {

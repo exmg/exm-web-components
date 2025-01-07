@@ -1,7 +1,7 @@
 import { html, css } from 'lit';
 import { customElement } from 'lit/decorators.js';
 
-import { style as tableStyles } from '@exmg/exm-grid/src/styles/exm-grid-styles-css.js';
+import { gridStyles } from '@exmg/exm-grid';
 import { style as demoStyles } from './demo-common-css.js';
 
 import './exm-complex-grid-with-slotted-toolbar.js';
@@ -21,7 +21,7 @@ import { style } from '../demo-page-styles-css.js';
 export class ExmGridDemo extends ExmBaseGridDemo {
   static styles = [
     style,
-    tableStyles,
+    gridStyles,
     demoStyles,
     css`
       .expandable-toggle {

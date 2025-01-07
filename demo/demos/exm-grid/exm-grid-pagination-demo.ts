@@ -1,6 +1,6 @@
 import { html, LitElement } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
-import '@exmg/exm-grid/src/table/exm-grid-pagination.js';
+import '@exmg/exm-grid/exm-grid-pagination.js';
 
 @customElement('exm-grid-pagination-demo')
 export class ExmGridSmartToolbarDemo extends LitElement {

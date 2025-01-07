@@ -6,12 +6,12 @@ import '@polymer/paper-item';
 import '@material/web/icon/icon.js';
 import '@material/web/iconbutton/icon-button.js';
 
-import '@exmg/exm-grid/src/table/exm-grid-toolbar-filters.js';
-import '@exmg/exm-grid/src/table/exm-grid.js';
-import '@exmg/exm-grid/src/table/exm-grid-pagination.js';
-import '@exmg/exm-grid/src/table/exm-grid-base-toolbar.js';
+import '@exmg/exm-grid/exm-grid-toolbar-filters.js';
+import '@exmg/exm-grid/exm-grid.js';
+import '@exmg/exm-grid/exm-grid-pagination.js';
+import '@exmg/exm-grid/exm-grid-base-toolbar.js';
 
-import { style as tableStyles } from '@exmg/exm-grid/src/styles/exm-grid-styles-css.js';
+import { gridStyles } from '@exmg/exm-grid';
 import { style as demoStyles } from './demo-common-css.js';
 
 import { DEFAULT_SORT_COLUMN, DEFAULT_SORT_DIRECTION, ExmBaseGridDemo } from './exm-grid-base.js';
@@ -19,7 +19,7 @@ import { DEFAULT_SORT_COLUMN, DEFAULT_SORT_DIRECTION, ExmBaseGridDemo } from './
 @customElement('demo-complex-grid-with-slotted-toolbar')
 export class ExmComplexGridWithSlottedToolbar extends ExmBaseGridDemo {
   static styles = [
-    tableStyles,
+    gridStyles,
     demoStyles,
     css`
       .expandable-toggle {
