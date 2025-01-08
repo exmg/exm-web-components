@@ -1,6 +1,11 @@
 {
   "files.autoGuessEncoding": true,
-  "files.exclude": {},
+  "files.exclude": {
+    "**/*.js.map": true,
+    "**/*.d.ts": { "when": "$(basename).ts" },
+    "**/*-css.ts": { "when": "$(basename).ts" },
+    "**/*.js": { "when": "$(basename).ts" }
+  },
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
   },
